@@ -1,8 +1,8 @@
 Classes
 =======
 
-Perfil:
--------
+Perfil
+------
 
 #### Atributos:
 
@@ -22,10 +22,11 @@ Perfil:
 
 - Funcionario: (0..\*)
 - Projetos: (0..\*)
+- Pesquisa: (0..\*)
 
 
-Funcionario:
-------------
+Funcionario
+-----------
 
 #### Atributos:
 
@@ -39,8 +40,9 @@ Funcionario:
 
 - Perfil: (0..1)
 
-Projeto:
---------
+
+Projeto
+-------
 
 #### Atributos:
 
@@ -61,6 +63,23 @@ Projeto:
 - -pontosErro: **int**
 - -pontosTecnologia: **int**
 - -pontosDesign: **int**
+
+#### Métodos:
+
+#### Ligações:
+
+- Perfil: (0..1)
+
+
+Pesquisa
+--------
+
+#### Atributos:
+
+- -nome: **String**
+- -custoPontosPesquisa: **int**
+- -custoDinheiro: **float**
+- -tempoPesquisa: **int**
 
 #### Métodos:
 
