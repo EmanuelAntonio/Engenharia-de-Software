@@ -1,0 +1,1093 @@
+<?xml version="1.0" standalone="yes"?>
+<UCTDataSet xmlns="http://serliosoft.com/UCTData.xsd">
+  <VersionInfo>
+    <Version>5.1</Version>
+    <SavedWith>13.0.6683</SavedWith>
+    <CreatedWith>13.0.6683</CreatedWith>
+  </VersionInfo>
+  <Project>
+    <TrackChanges>false</TrackChanges>
+  </Project>
+  <TopLevelElement>
+    <RefID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</RefID>
+  </TopLevelElement>
+  <Package>
+    <UniqueID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</UniqueID>
+    <Name>ProgramDev Tycoon</Name>
+  </Package>
+  <Requirement>
+    <UniqueID>REQ-b6717086-2097-40a5-8b61-1cc57d36de17</UniqueID>
+    <UserID>REQ-1</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 1</Name>
+    <Description>O jogo deve permitir ao usuário criar um perfil dentro do software, onde ele definirá o seu nick que será utilizando durante toda a experiência e o nome da empresa de desenvolvimento de software que acaba de criar.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve permitir ao usu\'e1rio criar um perfil dentro do software, onde ele definir\'e1 o seu nick que ser\'e1 utilizando durante toda a experi\'eancia e o nome da empresa de desenvolvimento de software que acaba de criar.\par
+}
+</RichDescription>
+    <Sequence>0</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T19:40:09.5308285-03:00</DateAdded>
+    <DateModified>2018-04-23T20:13:07.8307984-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-08e096a8-9642-4ef5-b3a3-551a6d549a32</UniqueID>
+    <UserID>REQ-2</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 2</Name>
+    <Description>O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolução dos problemas propostos dentro do software. </Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolu\'e7\'e3o dos problemas propostos dentro do software. \par
+}
+</RichDescription>
+    <Sequence>1</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:13:12.7418446-03:00</DateAdded>
+    <DateModified>2018-04-23T20:18:46.9106348-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-61aba2a6-e6f6-4bc2-b543-e881486af06e</UniqueID>
+    <UserID>REQ-3</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 3</Name>
+    <Description>O enredo do jogo se passará durante os 40 primeiros anos da criação da engenharia de software e mostrará a evolução dos métodos de desenvolvimento de software.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O enredo do jogo se passar\'e1 durante os 40 primeiros anos da cria\'e7\'e3o da engenharia de software e mostrar\'e1 a evolu\'e7\'e3o dos m\'e9todos de desenvolvimento de software.\par
+}
+</RichDescription>
+    <Sequence>2</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:14:08.504822-03:00</DateAdded>
+    <DateModified>2018-04-23T20:19:05.5993099-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-e89dfa31-c8ba-4810-a026-0c97a57f441d</UniqueID>
+    <UserID>REQ-4</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 4</Name>
+    <Description>O jogo deve apresentar uma proposta de progressão de 3 fases, onde mostrará o desenvolvimento e a evolução da empresa durante o enredo do jogo.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve apresentar uma proposta de progress\'e3o de 3 fases, onde mostrar\'e1 o desenvolvimento e a evolu\'e7\'e3o da empresa durante o enredo do jogo.\par
+}
+</RichDescription>
+    <Sequence>3</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:14:24.0954904-03:00</DateAdded>
+    <DateModified>2018-04-23T20:19:39.9868308-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-66e1474d-8cc3-4732-ac14-fb2ccaa0e6f4</UniqueID>
+    <UserID>REQ-5</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 5</Name>
+    <Description>Cada fase do jogo representa uma evolução no tamanho da empresa, o que impactará nos recursos de contratação de funcionários e pesquisa. Inicialmente a empresa terá apenas um funcionário, o próprio usuário, na segunda fase é possível contratar até 2 funcionários e na última fase até 4.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Cada fase do jogo representa uma evolu\'e7\'e3o no tamanho da empresa, o que impactar\'e1 nos recursos de contrata\'e7\'e3o de funcion\'e1rios e pesquisa. Inicialmente a empresa ter\'e1 apenas um funcion\'e1rio, o pr\'f3prio usu\'e1rio, na segunda fase \'e9 poss\'edvel contratar at\'e9 2 funcion\'e1rios e na \'faltima fase at\'e9 4.\par
+}
+</RichDescription>
+    <Sequence>4</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:14:38.4995839-03:00</DateAdded>
+    <DateModified>2018-04-23T20:19:50.0023009-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-3959d051-fb4c-4a1b-a68c-9b02302cdd1e</UniqueID>
+    <UserID>REQ-6</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 6</Name>
+    <Description>O jogo de oferecer ao usuário a possibilidade de aceitar o desenvolvimento de um novo projeto que será feito por meio de uma opção no menu do jogo. Esses projetos deverão aparecer em um grupo de 5, que será atualizado de forma aleatória em cada 2 meses do tempo do jogo.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo de oferecer ao usu\'e1rio a possibilidade de aceitar o desenvolvimento de um novo projeto que ser\'e1 feito por meio de uma op\'e7\'e3o no menu do jogo. Esses projetos dever\'e3o aparecer em um grupo de 5, que ser\'e1 atualizado de forma aleat\'f3ria em cada 2 meses do tempo do jogo.\par
+}
+</RichDescription>
+    <Sequence>5</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:14:45.2943808-03:00</DateAdded>
+    <DateModified>2018-04-23T20:20:03.92525-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-0e95cc4c-4001-4bab-8505-acc40b061f50</UniqueID>
+    <UserID>REQ-7</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 7</Name>
+    <Description>Cada projeto tem um valor de pagamento pela conclusão, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experiência média de uso de software do usuário.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Cada projeto tem um valor de pagamento pela conclus\'e3o, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experi\'eancia m\'e9dia de uso de software do usu\'e1rio.\par
+}
+</RichDescription>
+    <Sequence>6</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:14:51.8326504-03:00</DateAdded>
+    <DateModified>2018-04-23T20:20:18.971181-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-ba1e02e7-f82e-4086-b40c-1620d6ee3509</UniqueID>
+    <UserID>REQ-8</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 8</Name>
+    <Description>Os tipos de empresas disponíveis serão: Supermercado, Padaria, Petrolífera, Posto de Gasolina, Contabilidade, Posto Avançado Alienígena, Banco, Escritório de Advocacia.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Os tipos de empresas dispon\'edveis ser\'e3o: Supermercado, Padaria, Petrol\'edfera, Posto de Gasolina, Contabilidade, Posto Avan\'e7ado Alien\'edgena, Banco, Escrit\'f3rio de Advocacia.\par
+}
+</RichDescription>
+    <Sequence>7</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:15:06.293358-03:00</DateAdded>
+    <DateModified>2018-04-23T20:20:52.3744909-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-8f0e9b24-6599-442e-b854-73e6e469fdd3</UniqueID>
+    <UserID>REQ-9</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 9</Name>
+    <Description>Os pontos de desenvolvimento de um projeto serão divididos em 3 etapas: Planejamento, Implementação e Validação. Cada etapa pode ocorrer mais de uma vez dependendo da metodologia aplicada, porém os pontos de prioridade são definidos apenas uma vez.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Os pontos de desenvolvimento de um projeto ser\'e3o divididos em 3 etapas: Planejamento, Implementa\'e7\'e3o e Valida\'e7\'e3o. Cada etapa pode ocorrer mais de uma vez dependendo da metodologia aplicada, por\'e9m os pontos de prioridade s\'e3o definidos apenas uma vez.\par
+}
+</RichDescription>
+    <Sequence>8</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:15:09.6111491-03:00</DateAdded>
+    <DateModified>2018-04-23T20:21:01.973929-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-17cd76c8-aaca-47ba-a94b-4197d4814beb</UniqueID>
+    <UserID>REQ-10</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 10</Name>
+    <Description>Os pontos de prioridade são distribuídos pelo usuário para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Domínio da Aplicação, Documentação. Etapa 2: Legibilidade do Código, Qualidade da Solução. Etapa 3:</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Os pontos de prioridade s\'e3o distribu\'eddos pelo usu\'e1rio para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Dom\'ednio da Aplica\'e7\'e3o, Documenta\'e7\'e3o. Etapa 2: Legibilidade do C\'f3digo, Qualidade da Solu\'e7\'e3o. Etapa 3:\par
+}
+</RichDescription>
+    <Sequence>9</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:15:14.2993517-03:00</DateAdded>
+    <DateModified>2018-04-23T20:21:14.5833612-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-09cfd271-815d-4bdc-9a01-1b4bc7d40d7b</UniqueID>
+    <UserID>REQ-11</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 11</Name>
+    <Description>Para cada projeto gerado, será definido os pontos de prioridade mais adequados para ele utilizando os atributos de tipo de empresa, tamanho da empresa e a experiência média de uso de software. Quanto mais próximo o usuário definir dos valores padrão, melhor será a satisfação do cliente no final.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Para cada projeto gerado, ser\'e1 definido os pontos de prioridade mais adequados para ele utilizando os atributos de tipo de empresa, tamanho da empresa e a experi\'eancia m\'e9dia de uso de software. Quanto mais pr\'f3ximo o usu\'e1rio definir dos valores padr\'e3o, melhor ser\'e1 a satisfa\'e7\'e3o do cliente no final.\par
+}
+</RichDescription>
+    <Sequence>10</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:15:17.907875-03:00</DateAdded>
+    <DateModified>2018-04-23T20:21:26.8012911-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-f028b9ea-c08d-4d1c-b1b6-79c37864dae5</UniqueID>
+    <UserID>REQ-12</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 12</Name>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão ponto de pesquisa, que futuramente serão usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o ponto de pesquisa, que futuramente ser\'e3o usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software.\par
+}
+</RichDescription>
+    <Sequence>11</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:15:25.7223411-03:00</DateAdded>
+    <DateModified>2018-04-23T20:21:37.7426001-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-b845f65e-8ba5-4054-8659-28875cda63de</UniqueID>
+    <UserID>REQ-13</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 13</Name>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de tecnologia, o que fará com que a empresa ganhe experiência em determinada área de conhecimento, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais pontos de tecnologia codificam funcionalidades mais rápido, o que gera um menor gasto de recursos.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de tecnologia, o que far\'e1 com que a empresa ganhe experi\'eancia em determinada \'e1rea de conhecimento, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais pontos de tecnologia codificam funcionalidades mais r\'e1pido, o que gera um menor gasto de recursos.\par
+}
+</RichDescription>
+    <Sequence>12</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:22.4295361-03:00</DateAdded>
+    <DateModified>2018-04-23T20:23:19.495579-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-92ff2d45-d4cc-4966-9744-38e69b844138</UniqueID>
+    <UserID>REQ-14</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 14</Name>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de design, o que fará com que a empresa ganhe experiência na área de interação humano computador, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais pontos de design desenvolvem melhores interfaces, o que impacta na satisfação do cliente.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de design, o que far\'e1 com que a empresa ganhe experi\'eancia na \'e1rea de intera\'e7\'e3o humano computador, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais pontos de design desenvolvem melhores interfaces, o que impacta na satisfa\'e7\'e3o do cliente.\par
+}
+</RichDescription>
+    <Sequence>13</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:26.346039-03:00</DateAdded>
+    <DateModified>2018-04-23T20:23:31.0629619-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-25ce2783-8b22-4239-8ae8-74ba601610b5</UniqueID>
+    <UserID>REQ-15</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 15</Name>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de erro, o que fará com que a satisfação do cliente caia na entrega do projeto.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de erro, o que far\'e1 com que a satisfa\'e7\'e3o do cliente caia na entrega do projeto.\par
+}
+</RichDescription>
+    <Sequence>14</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:30.4345107-03:00</DateAdded>
+    <DateModified>2018-04-23T20:23:41.8404701-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-04aa933b-0cd0-41a3-9247-a503b5cc9996</UniqueID>
+    <UserID>REQ-16</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 16</Name>
+    <Description>Todos os pontos, de erro, pesquisa, design e tecnologia serão criados de acordo com a escolha correta da metodologia de desenvolvimento, e os pontos de prioridades distribuídas pelo usuário.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Todos os pontos, de erro, pesquisa, design e tecnologia ser\'e3o criados de acordo com a escolha correta da metodologia de desenvolvimento, e os pontos de prioridades distribu\'eddas pelo usu\'e1rio.\par
+}
+</RichDescription>
+    <Sequence>15</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:33.9857302-03:00</DateAdded>
+    <DateModified>2018-04-23T20:24:32.0796846-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-36c544b9-52a3-4f17-819e-b91ff2c50be5</UniqueID>
+    <UserID>REQ-17</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 17</Name>
+    <Description>A empresa terá uma verba inicial para manutenção. A cada mês do jogo será descontado desta verba o custo de manutenção do local onde a empresa está instalada e dos salários dos funcionários. Para cada uma das 3 fases o valor da manutenção do local irá ser diferente, sendo maior a cada próxima fase. Se a empresa ficar no vermelho o jogo se encerará com a derrota do usuário.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa ter\'e1 uma verba inicial para manuten\'e7\'e3o. A cada m\'eas do jogo ser\'e1 descontado desta verba o custo de manuten\'e7\'e3o do local onde a empresa est\'e1 instalada e dos sal\'e1rios dos funcion\'e1rios. Para cada uma das 3 fases o valor da manuten\'e7\'e3o do local ir\'e1 ser diferente, sendo maior a cada pr\'f3xima fase. Se a empresa ficar no vermelho o jogo se encerar\'e1 com a derrota do usu\'e1rio.\par
+}
+</RichDescription>
+    <Sequence>16</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:37.0845269-03:00</DateAdded>
+    <DateModified>2018-04-23T20:25:08.7253879-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-c9269b53-c795-4978-bf56-96335e8032d7</UniqueID>
+    <UserID>REQ-18</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 18</Name>
+    <Description>A empresa poderá contratar novos funcionários, se houver vaga, para isso seria exibida uma tela para escolha da contratação, onde é mostrada o nível de design, tecnologia e pesquisa. Quanto maior for esses níveis, mais pontos eles gerarão. Além de exibir o salário daquele candidato. O salário dos candidatos será calculado a partir do nível médio daquela pessoa.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa poder\'e1 contratar novos funcion\'e1rios, se houver vaga, para isso seria exibida uma tela para escolha da contrata\'e7\'e3o, onde \'e9 mostrada o n\'edvel de design, tecnologia e pesquisa. Quanto maior for esses n\'edveis, mais pontos eles gerar\'e3o. Al\'e9m de exibir o sal\'e1rio daquele candidato. O sal\'e1rio dos candidatos ser\'e1 calculado a partir do n\'edvel m\'e9dio daquela pessoa.\par
+}
+</RichDescription>
+    <Sequence>17</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:40.6481887-03:00</DateAdded>
+    <DateModified>2018-04-23T20:25:18.9858102-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-9066d94e-829b-47d5-9cb1-9995d32721de</UniqueID>
+    <UserID>REQ-19</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 19</Name>
+    <Description>O salário do funcionário será reajustado a cada ano de acordo com o nível médio atual.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O sal\'e1rio do funcion\'e1rio ser\'e1 reajustado a cada ano de acordo com o n\'edvel m\'e9dio atual.\par
+}
+</RichDescription>
+    <Sequence>18</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:42.7329209-03:00</DateAdded>
+    <DateModified>2018-04-23T20:25:31.7504229-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-bd6a36fa-091d-425c-ab39-c2e5cab044dd</UniqueID>
+    <UserID>REQ-20</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 20</Name>
+    <Description>O jogo deverá permitir ao usuário que possa demitir algum funcionário e abrirá uma nova vaga para contratação.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo dever\'e1 permitir ao usu\'e1rio que possa demitir algum funcion\'e1rio e abrir\'e1 uma nova vaga para contrata\'e7\'e3o.\par
+}
+</RichDescription>
+    <Sequence>19</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:47.1276979-03:00</DateAdded>
+    <DateModified>2018-04-23T20:25:42.9096612-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-6f3923d7-b5b2-4d05-acc8-52291603b69c</UniqueID>
+    <UserID>REQ-21</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 21</Name>
+    <Description>A lista de candidatos às novas vagas deverá ter um total de 5 pessoas, onde essa lista será preenchida aleatoriamente e atualizada a cada 2 meses no tempo do jogo.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 A lista de candidatos \'e0s novas vagas dever\'e1 ter um total de 5 pessoas, onde essa lista ser\'e1 preenchida aleatoriamente e atualizada a cada 2 meses no tempo do jogo.\par
+}
+</RichDescription>
+    <Sequence>20</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:50.7637872-03:00</DateAdded>
+    <DateModified>2018-04-23T20:25:55.1757934-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-8d890fcf-f4ab-46f2-8c76-65a7f5834c49</UniqueID>
+    <UserID>REQ-22</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 22</Name>
+    <Description>O jogo deverá fornecer ao usuário a possibilidade de pesquisar novas metodologias apenas clicando em cima de algum funcionário. Esse funcionário não poderá ser utilizado dentro de um projeto enquanto estiver realizando esta atividade.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo dever\'e1 fornecer ao usu\'e1rio a possibilidade de pesquisar novas metodologias apenas clicando em cima de algum funcion\'e1rio. Esse funcion\'e1rio n\'e3o poder\'e1 ser utilizado dentro de um projeto enquanto estiver realizando esta atividade.\par
+}
+</RichDescription>
+    <Sequence>21</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:54.8453623-03:00</DateAdded>
+    <DateModified>2018-04-23T20:26:04.307928-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-4a478075-636e-422c-a2cb-ec38336dff1d</UniqueID>
+    <UserID>REQ-23</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 23</Name>
+    <Description>O jogo deverá fornecer ao usuário a possibilidade de criar a própria metodologia baseada nas metodologias já pesquisadas.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo dever\'e1 fornecer ao usu\'e1rio a possibilidade de criar a pr\'f3pria metodologia baseada nas metodologias j\'e1 pesquisadas.\par
+}
+</RichDescription>
+    <Sequence>22</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:57.3478098-03:00</DateAdded>
+    <DateModified>2018-04-23T20:26:17.1263664-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-436ee98b-ca10-4c39-9b40-d77bd32a10f3</UniqueID>
+    <UserID>REQ-24</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 24</Name>
+    <Description>O jogo deverá fornecer ao usuário a possibilidade de salvar o progresso do jogo. </Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo dever\'e1 fornecer ao usu\'e1rio a possibilidade de salvar o progresso do jogo. \par
+}
+</RichDescription>
+    <Sequence>23</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:16:59.6456439-03:00</DateAdded>
+    <DateModified>2018-04-23T20:26:26.6485033-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-7c5c0ab0-bcbf-4475-a6f9-d9e3173426ce</UniqueID>
+    <UserID>REQ-25</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Funcional 25</Name>
+    <Description>O jogo decorrerá até a era das metodologias ágeis, a história contada a partir desse momento não irá se alterar, mas o usuário poderá continuar jogando.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo decorrer\'e1 at\'e9 a era das metodologias \'e1geis, a hist\'f3ria contada a partir desse momento n\'e3o ir\'e1 se alterar, mas o usu\'e1rio poder\'e1 continuar jogando.\par
+}
+</RichDescription>
+    <Sequence>24</Sequence>
+    <Type>Functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:02.5818784-03:00</DateAdded>
+    <DateModified>2018-04-23T20:26:39.4213433-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-e5d40940-6933-4ec6-bdad-15e9056b9f2e</UniqueID>
+    <UserID>REQ-26</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 1</Name>
+    <Description>O jogo deve ser totalmente aderente aos principais conceitos de Orientação a Objeto (encapsulamento, herança, polimorfismo, tipificação forte, etc.).</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ser totalmente aderente aos principais conceitos de Orienta\'e7\'e3o a Objeto (encapsulamento, heran\'e7a, polimorfismo, tipifica\'e7\'e3o forte, etc.).\par
+}
+</RichDescription>
+    <Sequence>25</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:12.222599-03:00</DateAdded>
+    <DateModified>2018-04-23T20:26:52.003119-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-4f95f5b5-f426-42fc-b358-d411d7add0bd</UniqueID>
+    <UserID>REQ-27</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 2</Name>
+    <Description>O jogo deve ser desenvolvido utilizando a engine Unity.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ser desenvolvido utilizando a engine Unity.\par
+}
+</RichDescription>
+    <Sequence>26</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:30.7794874-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:04.612806-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-dccfc127-c40d-46fb-b8ab-53c5a510af33</UniqueID>
+    <UserID>REQ-28</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 3</Name>
+    <Description>O jogo deve ser desenvolvido utilizando a linguagem C#.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ser desenvolvido utilizando a linguagem C#.\par
+}
+</RichDescription>
+    <Sequence>27</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:33.3702194-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:12.259466-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-1c98ce49-2d34-4dad-9e03-5d63f0df4a05</UniqueID>
+    <UserID>REQ-29</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 4</Name>
+    <Description>O jogo deve ser desenvolvido para as plataformas windows e linux.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ser desenvolvido para as plataformas windows e linux.\par
+}
+</RichDescription>
+    <Sequence>28</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <DateAdded>2018-04-23T20:17:36.1579862-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:21.4215513-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-d6f60212-d438-4a00-8262-3140390e8fb4</UniqueID>
+    <UserID>REQ-30</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 5</Name>
+    <Description>O jogo deve ser desenvolvido em gráficos 3D utilizando o estilo de câmera isométrica.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ser desenvolvido em gr\'e1ficos 3D utilizando o estilo de c\'e2mera isom\'e9trica.\par
+}
+</RichDescription>
+    <Sequence>29</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:39.0238249-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:29.0993831-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-93ae1734-676a-4d28-96cf-26fdbe9fd73a</UniqueID>
+    <UserID>REQ-31</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 6</Name>
+    <Description>Os modelos 3D devem ser criados utilizando Blender 3D.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 Os modelos 3D devem ser criados utilizando Blender 3D.\par
+}
+</RichDescription>
+    <Sequence>30</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:17:42.694284-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:35.4838789-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-0cacbc35-df6f-475f-94b7-cd9ece33f04b</UniqueID>
+    <UserID>REQ-32</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 7</Name>
+    <Description>O jogo deve ter desempenho otimizado para funcionar em diferentes hardwares.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ter desempenho otimizado para funcionar em diferentes hardwares.\par
+}
+</RichDescription>
+    <Sequence>31</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:18:10.9576601-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:43.3748175-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-7bdef461-a173-4dca-a7e3-450b09923ec4</UniqueID>
+    <UserID>REQ-33</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 8</Name>
+    <Description>O jogo deve salvar o progresso do usuário automaticamente em intervalos de 1 minuto.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve salvar o progresso do usu\'e1rio automaticamente em intervalos de 1 minuto.\par
+}
+</RichDescription>
+    <Sequence>32</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <DateAdded>2018-04-23T20:18:21.346544-03:00</DateAdded>
+    <DateModified>2018-04-23T20:27:52.2377507-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-58afe3c0-30be-4323-b4b5-2f2435e26219</UniqueID>
+    <UserID>REQ-34</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 9</Name>
+    <Description>O jogo deve ao iniciar abrir o jogo salvo mais recente.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve ao iniciar abrir o jogo salvo mais recente.\par
+}
+</RichDescription>
+    <Sequence>33</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <Source />
+    <Status />
+    <AssignedTo />
+    <Release />
+    <DateAdded>2018-04-23T20:18:24.5927236-03:00</DateAdded>
+    <DateModified>2018-04-23T20:28:04.3903432-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <Requirement>
+    <UniqueID>REQ-a2a65395-1997-483b-8217-3327146c5ccb</UniqueID>
+    <UserID>REQ-35</UserID>
+    <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
+    <Name>Requisito Não Funcional 10</Name>
+    <Description>O jogo deve suportar ser iniciado em diferentes resoluções.</Description>
+    <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve suportar ser iniciado em diferentes resolu\'e7\'f5es.\par
+}
+</RichDescription>
+    <Sequence>34</Sequence>
+    <Type>Non-functional</Type>
+    <Priority>1</Priority>
+    <DateAdded>2018-04-23T20:18:27.4677389-03:00</DateAdded>
+    <DateModified>2018-04-23T20:28:09.5613573-03:00</DateModified>
+    <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
+  </Requirement>
+  <UserID>
+    <DefaultPrefix>UC-</DefaultPrefix>
+    <NextValue>1</NextValue>
+  </UserID>
+  <UserID>
+    <DefaultPrefix>A-</DefaultPrefix>
+    <NextValue>1</NextValue>
+  </UserID>
+  <UserID>
+    <DefaultPrefix>REQ-</DefaultPrefix>
+    <NextValue>36</NextValue>
+  </UserID>
+  <UserID>
+    <DefaultPrefix>DEF-</DefaultPrefix>
+    <NextValue>1</NextValue>
+  </UserID>
+  <UserID>
+    <DefaultPrefix>S-</DefaultPrefix>
+    <NextValue>1</NextValue>
+  </UserID>
+  <BuiltInField>
+    <UniqueID>1</UniqueID>
+    <Name>Priority</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>Priority of the use case.</Description>
+    <DefaultValue>1</DefaultValue>
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>2</UniqueID>
+    <Name>Level</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>The level of detail in the use case.</Description>
+    <DefaultValue />
+    <Choices>Summary;User;Subfunction</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>3</UniqueID>
+    <Name>Complexity</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>An indication of the difficulty of implementation.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>4</UniqueID>
+    <Name>UseCaseStatus</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>Status of the use case specification.</Description>
+    <DefaultValue />
+    <Choices>Name Only;Initial;Base;Complete;Deferred</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>5</UniqueID>
+    <Name>ImplStatus</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>Status of the use case implementation.</Description>
+    <DefaultValue />
+    <Choices>Scheduled;Started;Partially Complete;Complete;Partially Deferred;Deferred</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>6</UniqueID>
+    <Name>AssignedTo</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>Who is responsible for this use case.</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>7</UniqueID>
+    <Name>Release</Name>
+    <AppliesTo>0</AppliesTo>
+    <Category>Details</Category>
+    <Description>Which release this use case is applicable to.</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>100</UniqueID>
+    <Name>ReqType</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>The type of requirement.</Description>
+    <DefaultValue>Non-functional</DefaultValue>
+    <Choices>Functional;Non-functional;Business Rule;Constraint;Performance;Test;Change Request</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>101</UniqueID>
+    <Name>Priority</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>Priority of the requirement.</Description>
+    <DefaultValue>1</DefaultValue>
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>102</UniqueID>
+    <Name>Source</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>Where did the requirement originate?</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>103</UniqueID>
+    <Name>Status</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>Status of the requirement.</Description>
+    <DefaultValue />
+    <Choices>Proposed;Approved;Rejected;Deferred;Implemented;Mandatory;Obsolete</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>104</UniqueID>
+    <Name>AssignedTo</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>Who is responsible for this requirement?</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>105</UniqueID>
+    <Name>Release</Name>
+    <AppliesTo>3</AppliesTo>
+    <Category>Details</Category>
+    <Description>Which release this requirement is applicable to.</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>200</UniqueID>
+    <Name>Complexity</Name>
+    <AppliesTo>1</AppliesTo>
+    <Category>Details</Category>
+    <Description>Complexity of this actor's interactions with the system.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>300</UniqueID>
+    <Name>Priority</Name>
+    <AppliesTo>6</AppliesTo>
+    <Category>Details</Category>
+    <Description>Priority for resolving issue.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>301</UniqueID>
+    <Name>Status</Name>
+    <AppliesTo>6</AppliesTo>
+    <Category>Details</Category>
+    <Description>State of issue.</Description>
+    <DefaultValue />
+    <Choices>New;Assigned;Resolved;Deferred</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>302</UniqueID>
+    <Name>Type</Name>
+    <AppliesTo>6</AppliesTo>
+    <Category>Details</Category>
+    <Description>Type of issue.</Description>
+    <DefaultValue />
+    <Choices>Question;Approval;Clarification;Defect;Feature</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>303</UniqueID>
+    <Name>Complexity</Name>
+    <AppliesTo>6</AppliesTo>
+    <Category>Details</Category>
+    <Description>Complexity of issue to be resolved.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>304</UniqueID>
+    <Name>Risk</Name>
+    <AppliesTo>6</AppliesTo>
+    <Category>Details</Category>
+    <Description>Risk to project while unresolved.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>400</UniqueID>
+    <Name>Status</Name>
+    <AppliesTo>7</AppliesTo>
+    <Category>Details</Category>
+    <Description>State of test scenario.</Description>
+    <DefaultValue />
+    <Choices>New;Partially defined;Defined</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>401</UniqueID>
+    <Name>TestType</Name>
+    <AppliesTo>7</AppliesTo>
+    <Category>Details</Category>
+    <Description>Type of test.</Description>
+    <DefaultValue />
+    <Choices>Acceptance;Usability;Performance;Load;Security;Bounds;White box</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>402</UniqueID>
+    <Name>Complexity</Name>
+    <AppliesTo>7</AppliesTo>
+    <Category>Details</Category>
+    <Description>Complexity of test.</Description>
+    <DefaultValue />
+    <Choices>Low;Medium;High</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>403</UniqueID>
+    <Name>Priority</Name>
+    <AppliesTo>7</AppliesTo>
+    <Category>Details</Category>
+    <Description>Priority of the test scenario.</Description>
+    <DefaultValue>1</DefaultValue>
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>501</UniqueID>
+    <Name>Priority</Name>
+    <AppliesTo>9</AppliesTo>
+    <Category>Details</Category>
+    <Description>Priority of the user story.</Description>
+    <DefaultValue />
+    <Choices>Must;Should;Could;Won't</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>502</UniqueID>
+    <Name>Size</Name>
+    <AppliesTo>9</AppliesTo>
+    <Category>Details</Category>
+    <Description>The relative complexity of the user story.</Description>
+    <DefaultValue />
+    <Choices>X-Small;Small;Med;Large;X-Large</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>503</UniqueID>
+    <Name>AssignedTo</Name>
+    <AppliesTo>9</AppliesTo>
+    <Category>Details</Category>
+    <Description>Who is responsible for this user story?</Description>
+    <DefaultValue />
+    <Choices />
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+  <BuiltInField>
+    <UniqueID>504</UniqueID>
+    <Name>Status</Name>
+    <AppliesTo>9</AppliesTo>
+    <Category>Details</Category>
+    <Description>Status of the user story.</Description>
+    <DefaultValue />
+    <Choices>Backlog;Doing;Review;Done</Choices>
+    <ChoicesExclusive>false</ChoicesExclusive>
+    <Multiline>false</Multiline>
+  </BuiltInField>
+</UCTDataSet>
