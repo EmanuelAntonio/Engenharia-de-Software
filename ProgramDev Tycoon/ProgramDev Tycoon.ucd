@@ -20,10 +20,10 @@
     <UserID>REQ-1</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 1</Name>
-    <Description>O jogo deve permitir ao usuário criar um perfil dentro do software, onde ele definirá o seu nick que será utilizando durante toda a experiência e o nome da empresa de desenvolvimento de software que acaba de criar.</Description>
+    <Description>O jogo deve permitir ao usuário criar um perfil dentro do software, onde ele definirá o seu nick que será utilizado durante toda a experiência e o nome da empresa de desenvolvimento de software que acaba de criar.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve permitir ao usu\'e1rio criar um perfil dentro do software, onde ele definir\'e1 o seu nick que ser\'e1 utilizando durante toda a experi\'eancia e o nome da empresa de desenvolvimento de software que acaba de criar.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve permitir ao usu\'e1rio criar um perfil dentro do software, onde ele definir\'e1 o seu nick que ser\'e1 utilizado durante toda a experi\'eancia e o nome da empresa de desenvolvimento de software que acaba de criar.\par
 }
 </RichDescription>
     <Sequence>0</Sequence>
@@ -34,7 +34,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T19:40:09.5308285-03:00</DateAdded>
-    <DateModified>2018-04-23T20:13:07.8307984-03:00</DateModified>
+    <DateModified>2018-04-27T11:09:44.4671281-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -42,10 +42,10 @@
     <UserID>REQ-2</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 2</Name>
-    <Description>O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolução dos problemas propostos dentro do software. </Description>
+    <Description>O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolução dos problemas propostos dentro do software.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolu\'e7\'e3o dos problemas propostos dentro do software. \par
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve apresentar conceitos de engenharia de software por meio de dicas para resolu\'e7\'e3o dos problemas propostos dentro do software.\par
 }
 </RichDescription>
     <Sequence>1</Sequence>
@@ -56,7 +56,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:13:12.7418446-03:00</DateAdded>
-    <DateModified>2018-04-23T20:18:46.9106348-03:00</DateModified>
+    <DateModified>2018-04-27T11:09:58.3089262-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -100,7 +100,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:14:24.0954904-03:00</DateAdded>
-    <DateModified>2018-04-23T20:19:39.9868308-03:00</DateModified>
+    <DateModified>2018-04-27T11:10:19.8750967-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -108,10 +108,10 @@
     <UserID>REQ-5</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 5</Name>
-    <Description>Cada fase do jogo representa uma evolução no tamanho da empresa, o que impactará nos recursos de contratação de funcionários e pesquisa. Inicialmente a empresa terá apenas um funcionário, o próprio usuário, na segunda fase é possível contratar até 2 funcionários e na última fase até 4.</Description>
+    <Description>Cada fase do jogo representa uma evolução no tamanho da empresa, o que impactará nos recursos de contratação de funcionários e pesquisa. Inicialmente a empresa terá apenas um funcionário, o próprio usuário, na segunda fase é possível contratar até 2 funcionários adicionais e na última fase até 4 funcionários adicionais, totalizando 5 funcionários.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Cada fase do jogo representa uma evolu\'e7\'e3o no tamanho da empresa, o que impactar\'e1 nos recursos de contrata\'e7\'e3o de funcion\'e1rios e pesquisa. Inicialmente a empresa ter\'e1 apenas um funcion\'e1rio, o pr\'f3prio usu\'e1rio, na segunda fase \'e9 poss\'edvel contratar at\'e9 2 funcion\'e1rios e na \'faltima fase at\'e9 4.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Cada fase do jogo representa uma evolu\'e7\'e3o no tamanho da empresa, o que impactar\'e1 nos recursos de contrata\'e7\'e3o de funcion\'e1rios e pesquisa. Inicialmente a empresa ter\'e1 apenas um funcion\'e1rio, o pr\'f3prio usu\'e1rio, na segunda fase \'e9 poss\'edvel contratar at\'e9 2 funcion\'e1rios adicionais e na \'faltima fase at\'e9 4 funcion\'e1rios adicionais, totalizando 5 funcion\'e1rios.\par
 }
 </RichDescription>
     <Sequence>4</Sequence>
@@ -122,7 +122,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:14:38.4995839-03:00</DateAdded>
-    <DateModified>2018-04-23T20:19:50.0023009-03:00</DateModified>
+    <DateModified>2018-04-27T11:10:28.0851554-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -130,10 +130,10 @@
     <UserID>REQ-6</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 6</Name>
-    <Description>O jogo de oferecer ao usuário a possibilidade de aceitar o desenvolvimento de um novo projeto que será feito por meio de uma opção no menu do jogo. Esses projetos deverão aparecer em um grupo de 5, que será atualizado de forma aleatória em cada 2 meses do tempo do jogo.</Description>
+    <Description>O jogo deve oferecer ao usuário a possibilidade de aceitar o desenvolvimento de um novo projeto que será feito por meio de uma opção no menu do jogo. Esses projetos deverão aparecer em um grupo de 5, que será atualizado de forma aleatória em cada 2 meses do tempo do jogo</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 O jogo de oferecer ao usu\'e1rio a possibilidade de aceitar o desenvolvimento de um novo projeto que ser\'e1 feito por meio de uma op\'e7\'e3o no menu do jogo. Esses projetos dever\'e3o aparecer em um grupo de 5, que ser\'e1 atualizado de forma aleat\'f3ria em cada 2 meses do tempo do jogo.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 O jogo deve oferecer ao usu\'e1rio a possibilidade de aceitar o desenvolvimento de um novo projeto que ser\'e1 feito por meio de uma op\'e7\'e3o no menu do jogo. Esses projetos dever\'e3o aparecer em um grupo de 5, que ser\'e1 atualizado de forma aleat\'f3ria em cada 2 meses do tempo do jogo\par
 }
 </RichDescription>
     <Sequence>5</Sequence>
@@ -144,7 +144,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:14:45.2943808-03:00</DateAdded>
-    <DateModified>2018-04-23T20:20:03.92525-03:00</DateModified>
+    <DateModified>2018-04-27T11:10:41.027895-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -152,10 +152,10 @@
     <UserID>REQ-7</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 7</Name>
-    <Description>Cada projeto tem um valor de pagamento pela conclusão, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experiência média de uso de software do usuário.</Description>
+    <Description>Cada projeto tem um valor de pagamento pela conclusão, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experiência média de uso de software dos usuários.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Cada projeto tem um valor de pagamento pela conclus\'e3o, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experi\'eancia m\'e9dia de uso de software do usu\'e1rio.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Cada projeto tem um valor de pagamento pela conclus\'e3o, a multa pelo atraso, o tipo da empresa, o tamanho da empresa e a experi\'eancia m\'e9dia de uso de software dos usu\'e1rios.\par
 }
 </RichDescription>
     <Sequence>6</Sequence>
@@ -166,7 +166,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:14:51.8326504-03:00</DateAdded>
-    <DateModified>2018-04-23T20:20:18.971181-03:00</DateModified>
+    <DateModified>2018-04-27T11:11:03.576021-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -188,7 +188,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:15:06.293358-03:00</DateAdded>
-    <DateModified>2018-04-23T20:20:52.3744909-03:00</DateModified>
+    <DateModified>2018-04-27T11:11:10.9299001-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -210,7 +210,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:15:09.6111491-03:00</DateAdded>
-    <DateModified>2018-04-23T20:21:01.973929-03:00</DateModified>
+    <DateModified>2018-04-27T11:11:17.1659492-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -218,10 +218,10 @@
     <UserID>REQ-10</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 10</Name>
-    <Description>Os pontos de prioridade são distribuídos pelo usuário para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Domínio da Aplicação, Documentação. Etapa 2: Legibilidade do Código, Qualidade da Solução. Etapa 3:</Description>
+    <Description>Os pontos de prioridade são distribuídos pelo usuário para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Domínio da Aplicação, Documentação. Etapa 2: Legibilidade do Código, Qualidade da Solução, Desenvolvimento de Interface. Etapa 3: Realização de Testes, Avaliação do Cliente, Implementação.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Os pontos de prioridade s\'e3o distribu\'eddos pelo usu\'e1rio para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Dom\'ednio da Aplica\'e7\'e3o, Documenta\'e7\'e3o. Etapa 2: Legibilidade do C\'f3digo, Qualidade da Solu\'e7\'e3o. Etapa 3:\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Os pontos de prioridade s\'e3o distribu\'eddos pelo usu\'e1rio para cada etapa. Etapa 1: Coleta de Dados com o Cliente, Estudo do Dom\'ednio da Aplica\'e7\'e3o, Documenta\'e7\'e3o. Etapa 2: Legibilidade do C\'f3digo, Qualidade da Solu\'e7\'e3o, Desenvolvimento de Interface. Etapa 3: Realiza\'e7\'e3o de Testes, Avalia\'e7\'e3o do Cliente, Implementa\'e7\'e3o.\par
 }
 </RichDescription>
     <Sequence>9</Sequence>
@@ -232,7 +232,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:15:14.2993517-03:00</DateAdded>
-    <DateModified>2018-04-23T20:21:14.5833612-03:00</DateModified>
+    <DateModified>2018-04-27T11:11:30.9318614-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -254,7 +254,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:15:17.907875-03:00</DateAdded>
-    <DateModified>2018-04-23T20:21:26.8012911-03:00</DateModified>
+    <DateModified>2018-04-27T11:11:49.3762796-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -262,10 +262,10 @@
     <UserID>REQ-12</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 12</Name>
-    <Description>Durante o desenvolvimento do projeto os funcionários gerarão ponto de pesquisa, que futuramente serão usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software.</Description>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão ponto de pesquisa para a empresa, que futuramente serão usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software. Essas metodologias possuirão nome, custo em pontos de pesquisa, custo em dinheiro e tempo de pesquisa.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o ponto de pesquisa, que futuramente ser\'e3o usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o ponto de pesquisa para a empresa, que futuramente ser\'e3o usados no jogo para pesquisar sobre determinada metodologia de desenvolvimento de software. Essas metodologias possuir\'e3o nome, custo em pontos de pesquisa, custo em dinheiro e tempo de pesquisa.\par
 }
 </RichDescription>
     <Sequence>11</Sequence>
@@ -276,7 +276,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:15:25.7223411-03:00</DateAdded>
-    <DateModified>2018-04-23T20:21:37.7426001-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:00.6345668-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -284,10 +284,10 @@
     <UserID>REQ-13</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 13</Name>
-    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de tecnologia, o que fará com que a empresa ganhe experiência em determinada área de conhecimento, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais pontos de tecnologia codificam funcionalidades mais rápido, o que gera um menor gasto de recursos.</Description>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de tecnologia para o projeto, o que fará com que a empresa ganhe experiência em determinada área de conhecimento, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais habilidade de tecnologia codificam funcionalidades mais rápido, o que gera um menor gasto de recursos.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de tecnologia, o que far\'e1 com que a empresa ganhe experi\'eancia em determinada \'e1rea de conhecimento, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais pontos de tecnologia codificam funcionalidades mais r\'e1pido, o que gera um menor gasto de recursos.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de tecnologia para o projeto, o que far\'e1 com que a empresa ganhe experi\'eancia em determinada \'e1rea de conhecimento, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais habilidade de tecnologia codificam funcionalidades mais r\'e1pido, o que gera um menor gasto de recursos.\par
 }
 </RichDescription>
     <Sequence>12</Sequence>
@@ -298,7 +298,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:22.4295361-03:00</DateAdded>
-    <DateModified>2018-04-23T20:23:19.495579-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:04.8858803-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -306,10 +306,10 @@
     <UserID>REQ-14</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 14</Name>
-    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de design, o que fará com que a empresa ganhe experiência na área de interação humano computador, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais pontos de design desenvolvem melhores interfaces, o que impacta na satisfação do cliente.</Description>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de design para o projeto, o que fará com que a empresa ganhe experiência na área de interação humano computador, e esses pontos serão distribuídos ao encerramento do projeto. Funcionários com mais habilidade de design desenvolvem melhores interfaces, o que impacta na satisfação do cliente.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de design, o que far\'e1 com que a empresa ganhe experi\'eancia na \'e1rea de intera\'e7\'e3o humano computador, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais pontos de design desenvolvem melhores interfaces, o que impacta na satisfa\'e7\'e3o do cliente.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de design para o projeto, o que far\'e1 com que a empresa ganhe experi\'eancia na \'e1rea de intera\'e7\'e3o humano computador, e esses pontos ser\'e3o distribu\'eddos ao encerramento do projeto. Funcion\'e1rios com mais habilidade de design desenvolvem melhores interfaces, o que impacta na satisfa\'e7\'e3o do cliente.\par
 }
 </RichDescription>
     <Sequence>13</Sequence>
@@ -320,7 +320,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:26.346039-03:00</DateAdded>
-    <DateModified>2018-04-23T20:23:31.0629619-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:21.1232137-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -328,10 +328,10 @@
     <UserID>REQ-15</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 15</Name>
-    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de erro, o que fará com que a satisfação do cliente caia na entrega do projeto.</Description>
+    <Description>Durante o desenvolvimento do projeto os funcionários gerarão pontos de erro para o projeto, o que fará com que a satisfação do cliente caia na entrega do projeto.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de erro, o que far\'e1 com que a satisfa\'e7\'e3o do cliente caia na entrega do projeto.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 Durante o desenvolvimento do projeto os funcion\'e1rios gerar\'e3o pontos de erro para o projeto, o que far\'e1 com que a satisfa\'e7\'e3o do cliente caia na entrega do projeto.\par
 }
 </RichDescription>
     <Sequence>14</Sequence>
@@ -342,7 +342,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:30.4345107-03:00</DateAdded>
-    <DateModified>2018-04-23T20:23:41.8404701-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:27.4648606-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -364,7 +364,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:33.9857302-03:00</DateAdded>
-    <DateModified>2018-04-23T20:24:32.0796846-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:34.4809044-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -372,10 +372,10 @@
     <UserID>REQ-17</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 17</Name>
-    <Description>A empresa terá uma verba inicial para manutenção. A cada mês do jogo será descontado desta verba o custo de manutenção do local onde a empresa está instalada e dos salários dos funcionários. Para cada uma das 3 fases o valor da manutenção do local irá ser diferente, sendo maior a cada próxima fase. Se a empresa ficar no vermelho o jogo se encerará com a derrota do usuário.</Description>
+    <Description>A empresa terá uma verba inicial para manutenção. A cada mês do jogo será descontado desta verba o custo de manutenção do local onde a empresa está instalada e dos salários dos funcionários. Para cada uma das 3 fases o valor da manutenção do local irá ser diferente, sendo maior a cada próxima fase. Se toda a verba da empresa acabar o jogo se encerará com a derrota do usuário.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 A empresa ter\'e1 uma verba inicial para manuten\'e7\'e3o. A cada m\'eas do jogo ser\'e1 descontado desta verba o custo de manuten\'e7\'e3o do local onde a empresa est\'e1 instalada e dos sal\'e1rios dos funcion\'e1rios. Para cada uma das 3 fases o valor da manuten\'e7\'e3o do local ir\'e1 ser diferente, sendo maior a cada pr\'f3xima fase. Se a empresa ficar no vermelho o jogo se encerar\'e1 com a derrota do usu\'e1rio.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa ter\'e1 uma verba inicial para manuten\'e7\'e3o. A cada m\'eas do jogo ser\'e1 descontado desta verba o custo de manuten\'e7\'e3o do local onde a empresa est\'e1 instalada e dos sal\'e1rios dos funcion\'e1rios. Para cada uma das 3 fases o valor da manuten\'e7\'e3o do local ir\'e1 ser diferente, sendo maior a cada pr\'f3xima fase. Se toda a verba da empresa acabar o jogo se encerar\'e1 com a derrota do usu\'e1rio.\par
 }
 </RichDescription>
     <Sequence>16</Sequence>
@@ -386,7 +386,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:37.0845269-03:00</DateAdded>
-    <DateModified>2018-04-23T20:25:08.7253879-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:39.0512611-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -394,10 +394,10 @@
     <UserID>REQ-18</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 18</Name>
-    <Description>A empresa poderá contratar novos funcionários, se houver vaga, para isso seria exibida uma tela para escolha da contratação, onde é mostrada o nível de design, tecnologia e pesquisa. Quanto maior for esses níveis, mais pontos eles gerarão. Além de exibir o salário daquele candidato. O salário dos candidatos será calculado a partir do nível médio daquela pessoa.</Description>
+    <Description>A empresa poderá contratar novos funcionários se houver vaga. Para isso será exibida uma tela para escolha da contratação, onde é mostrada o nível de design, tecnologia e pesquisa. Quanto maior for esses níveis, mais pontos eles gerarão. Além de exibir o salário daquele candidato. O salário dos candidatos será calculado a partir do nível médio daquela pessoa.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 A empresa poder\'e1 contratar novos funcion\'e1rios, se houver vaga, para isso seria exibida uma tela para escolha da contrata\'e7\'e3o, onde \'e9 mostrada o n\'edvel de design, tecnologia e pesquisa. Quanto maior for esses n\'edveis, mais pontos eles gerar\'e3o. Al\'e9m de exibir o sal\'e1rio daquele candidato. O sal\'e1rio dos candidatos ser\'e1 calculado a partir do n\'edvel m\'e9dio daquela pessoa.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa poder\'e1 contratar novos funcion\'e1rios se houver vaga. Para isso ser\'e1 exibida uma tela para escolha da contrata\'e7\'e3o, onde \'e9 mostrada o n\'edvel de design, tecnologia e pesquisa. Quanto maior for esses n\'edveis, mais pontos eles gerar\'e3o. Al\'e9m de exibir o sal\'e1rio daquele candidato. O sal\'e1rio dos candidatos ser\'e1 calculado a partir do n\'edvel m\'e9dio daquela pessoa.\par
 }
 </RichDescription>
     <Sequence>17</Sequence>
@@ -408,7 +408,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:40.6481887-03:00</DateAdded>
-    <DateModified>2018-04-23T20:25:18.9858102-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:52.4630587-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -430,7 +430,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:42.7329209-03:00</DateAdded>
-    <DateModified>2018-04-23T20:25:31.7504229-03:00</DateModified>
+    <DateModified>2018-04-27T11:13:56.1980467-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -452,7 +452,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:47.1276979-03:00</DateAdded>
-    <DateModified>2018-04-23T20:25:42.9096612-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:08.8122668-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -474,7 +474,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:50.7637872-03:00</DateAdded>
-    <DateModified>2018-04-23T20:25:55.1757934-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:15.0886571-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -496,7 +496,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:54.8453623-03:00</DateAdded>
-    <DateModified>2018-04-23T20:26:04.307928-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:21.1246442-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -518,7 +518,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:57.3478098-03:00</DateAdded>
-    <DateModified>2018-04-23T20:26:17.1263664-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:26.5921239-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -540,7 +540,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:59.6456439-03:00</DateAdded>
-    <DateModified>2018-04-23T20:26:26.6485033-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:34.4055918-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -562,7 +562,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:02.5818784-03:00</DateAdded>
-    <DateModified>2018-04-23T20:26:39.4213433-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:38.0203102-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -584,7 +584,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:12.222599-03:00</DateAdded>
-    <DateModified>2018-04-23T20:26:52.003119-03:00</DateModified>
+    <DateModified>2018-04-27T11:14:58.1358224-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -606,7 +606,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:30.7794874-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:04.612806-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:03.2461825-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -628,7 +628,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:33.3702194-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:12.259466-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:12.0766256-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -646,7 +646,7 @@
     <Type>Non-functional</Type>
     <Priority>1</Priority>
     <DateAdded>2018-04-23T20:17:36.1579862-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:21.4215513-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:17.4407336-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -668,7 +668,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:39.0238249-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:29.0993831-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:24.4355238-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -690,7 +690,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:17:42.694284-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:35.4838789-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:31.971971-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -712,7 +712,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:18:10.9576601-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:43.3748175-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:39.2538672-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -730,7 +730,7 @@
     <Type>Non-functional</Type>
     <Priority>1</Priority>
     <DateAdded>2018-04-23T20:18:21.346544-03:00</DateAdded>
-    <DateModified>2018-04-23T20:27:52.2377507-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:47.3993758-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -752,7 +752,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:18:24.5927236-03:00</DateAdded>
-    <DateModified>2018-04-23T20:28:04.3903432-03:00</DateModified>
+    <DateModified>2018-04-27T11:15:52.950287-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -770,7 +770,7 @@
     <Type>Non-functional</Type>
     <Priority>1</Priority>
     <DateAdded>2018-04-23T20:18:27.4677389-03:00</DateAdded>
-    <DateModified>2018-04-23T20:28:09.5613573-03:00</DateModified>
+    <DateModified>2018-04-27T11:16:01.3762304-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <UserID>

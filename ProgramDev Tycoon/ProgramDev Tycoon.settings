@@ -36,7 +36,7 @@
       <boolean>false</boolean>
     </StoryViewSortOrder>
     <RequirementViewSortColumns>
-      <string>_flag</string>
+      <string>UserID</string>
       <string />
       <string />
     </RequirementViewSortColumns>
@@ -94,7 +94,6 @@
   <OpenFilters />
   <ExpandedNodes>
     <string>ProgramDev Tycoon</string>
-    <string>ProgramDev Tycoon\Requisito Funcional 2</string>
   </ExpandedNodes>
   <SelectedNode>ProgramDev Tycoon\Requisito Funcional 1</SelectedNode>
   <Flags />
