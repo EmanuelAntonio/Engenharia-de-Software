@@ -1,6 +1,8 @@
 Classes
 =======
 
+![Diagrama de Classes](diagrama_de_classes.png?raw=true "Diagrama de classes")
+
 Perfil
 ------
 
@@ -32,6 +34,7 @@ Funcionario
 
 - -habilidadeTecnologia: **int**
 - -habilidadeDesign: **int**
+- -habilidadePesquisa: **int**
 - -salario: **float**
 
 #### Métodos:
@@ -59,7 +62,7 @@ Projeto
 - -prioridadeInterface: **float**
 - -prioridadeTestes: **float**
 - -prioridadeAvaliacaoCliente: **float**
-- -prioridadeImplementacao: **float**
+- -prioridadeImplantacao: **float**
 - -pontosErro: **int**
 - -pontosTecnologia: **int**
 - -pontosDesign: **int**

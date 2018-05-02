@@ -372,10 +372,10 @@
     <UserID>REQ-17</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 17</Name>
-    <Description>A empresa terá uma verba inicial para manutenção. A cada mês do jogo será descontado desta verba o custo de manutenção do local onde a empresa está instalada e dos salários dos funcionários. Para cada uma das 3 fases o valor da manutenção do local irá ser diferente, sendo maior a cada próxima fase. Se toda a verba da empresa acabar o jogo se encerará com a derrota do usuário.</Description>
+    <Description>A empresa terá uma verba inicial para manutenção. A cada mês do jogo será descontado desta verba o custo de manutenção do local onde a empresa está instalada e dos salários dos funcionários. Para cada uma das 3 fases o valor da manutenção do local irá ser diferente, sendo maior a cada próxima fase. Se toda a verba da empresa acabar o jogo se encerra com a derrota do usuário.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 A empresa ter\'e1 uma verba inicial para manuten\'e7\'e3o. A cada m\'eas do jogo ser\'e1 descontado desta verba o custo de manuten\'e7\'e3o do local onde a empresa est\'e1 instalada e dos sal\'e1rios dos funcion\'e1rios. Para cada uma das 3 fases o valor da manuten\'e7\'e3o do local ir\'e1 ser diferente, sendo maior a cada pr\'f3xima fase. Se toda a verba da empresa acabar o jogo se encerar\'e1 com a derrota do usu\'e1rio.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa ter\'e1 uma verba inicial para manuten\'e7\'e3o. A cada m\'eas do jogo ser\'e1 descontado desta verba o custo de manuten\'e7\'e3o do local onde a empresa est\'e1 instalada e dos sal\'e1rios dos funcion\'e1rios. Para cada uma das 3 fases o valor da manuten\'e7\'e3o do local ir\'e1 ser diferente, sendo maior a cada pr\'f3xima fase. Se toda a verba da empresa acabar o jogo se encerra com a derrota do usu\'e1rio.\par
 }
 </RichDescription>
     <Sequence>16</Sequence>
@@ -386,7 +386,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:37.0845269-03:00</DateAdded>
-    <DateModified>2018-04-27T11:13:39.0512611-03:00</DateModified>
+    <DateModified>2018-05-02T00:16:41.9038397-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -394,10 +394,10 @@
     <UserID>REQ-18</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 18</Name>
-    <Description>A empresa poderá contratar novos funcionários se houver vaga. Para isso será exibida uma tela para escolha da contratação, onde é mostrada o nível de design, tecnologia e pesquisa. Quanto maior for esses níveis, mais pontos eles gerarão. Além de exibir o salário daquele candidato. O salário dos candidatos será calculado a partir do nível médio daquela pessoa.</Description>
+    <Description>A empresa poderá contratar novos funcionários se houver vaga. Para isso será exibida uma tela para escolha da contratação, onde é mostrada o habilidade em design, tecnologia e pesquisa. Quanto maior for esses níveis, mais pontos eles gerarão. Além de exibir o salário daquele candidato. O salário dos candidatos será calculado a partir da habilidade média daquela pessoa.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 A empresa poder\'e1 contratar novos funcion\'e1rios se houver vaga. Para isso ser\'e1 exibida uma tela para escolha da contrata\'e7\'e3o, onde \'e9 mostrada o n\'edvel de design, tecnologia e pesquisa. Quanto maior for esses n\'edveis, mais pontos eles gerar\'e3o. Al\'e9m de exibir o sal\'e1rio daquele candidato. O sal\'e1rio dos candidatos ser\'e1 calculado a partir do n\'edvel m\'e9dio daquela pessoa.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 A empresa poder\'e1 contratar novos funcion\'e1rios se houver vaga. Para isso ser\'e1 exibida uma tela para escolha da contrata\'e7\'e3o, onde \'e9 mostrada o habilidade em design, tecnologia e pesquisa. Quanto maior for esses n\'edveis, mais pontos eles gerar\'e3o. Al\'e9m de exibir o sal\'e1rio daquele candidato. O sal\'e1rio dos candidatos ser\'e1 calculado a partir da habilidade m\'e9dia daquela pessoa.\par
 }
 </RichDescription>
     <Sequence>17</Sequence>
@@ -408,7 +408,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:40.6481887-03:00</DateAdded>
-    <DateModified>2018-04-27T11:13:52.4630587-03:00</DateModified>
+    <DateModified>2018-05-02T00:15:17.6149788-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
@@ -416,10 +416,10 @@
     <UserID>REQ-19</UserID>
     <ParentID>P-35a5e6fd-4b0c-4c9d-be4e-52300561c900</ParentID>
     <Name>Requisito Funcional 19</Name>
-    <Description>O salário do funcionário será reajustado a cada ano de acordo com o nível médio atual.</Description>
+    <Description>O salário do funcionário será reajustado a cada ano de acordo com a habilidade média atual.</Description>
     <RichDescription>{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}}
 {\colortbl ;\red0\green0\blue0;}
-\viewkind4\uc1\pard\cf1\f0\fs20 O sal\'e1rio do funcion\'e1rio ser\'e1 reajustado a cada ano de acordo com o n\'edvel m\'e9dio atual.\par
+\viewkind4\uc1\pard\cf1\f0\fs20 O sal\'e1rio do funcion\'e1rio ser\'e1 reajustado a cada ano de acordo com a habilidade m\'e9dia atual.\par
 }
 </RichDescription>
     <Sequence>18</Sequence>
@@ -430,7 +430,7 @@
     <AssignedTo />
     <Release />
     <DateAdded>2018-04-23T20:16:42.7329209-03:00</DateAdded>
-    <DateModified>2018-04-27T11:13:56.1980467-03:00</DateModified>
+    <DateModified>2018-05-02T00:15:26.1636515-03:00</DateModified>
     <jsonTestStepBag>{"TestScenarioSteps":[]}</jsonTestStepBag>
   </Requirement>
   <Requirement>
