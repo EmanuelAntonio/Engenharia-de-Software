@@ -1,11 +1,11 @@
 Ponto de Função
 ===============
 
-A métrica de Pontos de Função foi criada por Allan Albrecht em 1979, ela consiste em definir uma quantidade de Pontos de Função para cada tipo de funcionalidade.
+A métrica de Pontos de Função foi criada por Allan Albrecht em 1979, ela consiste em definir uma quantidade de pontos de função para cada tipo de funcionalidade.
 
 O IFPUG *(International Function Point Users Group)*, é responsável pela atualização das regras de Contagem de Pontos de Função, descritas no CPM *(Counting Practices Manual)*. Para se contar os pontos de função é necessário seguir alguns passos:
 
-- Definir o tipo de contagem;
+- Definir o tipo de contagem
     - Contagem de projeto de desenvolvimento;
     - Contagem de projeto de melhoria (manutenção);
     - Contagem de aplicação.
@@ -13,8 +13,8 @@ O IFPUG *(International Function Point Users Group)*, é responsável pela atual
 - Contagem dos pontos de função não ajustado
     - Contagem das funções de dados;
     - Contagem das funções de transação.
-- Cálculo do fator de reajuste
-- Calcular o número de pontos de função ajustados
+- Cálculo do fator de ajuste;
+- Calcular o número de pontos de função ajustados.
 
 Ao término da contagem, essa métrica nos dá uma noção do tamanho funcional do software, que será usado para o cálculo de tempo de desenvolvimento e custo associado.
 
@@ -22,12 +22,12 @@ Ao término da contagem, essa métrica nos dá uma noção do tamanho funcional 
 Tipos de função
 ---------------
 
-### Pontos de função de dados
+### Funções de dados
 
 - **Arquivos Lógicos Internos (ALI):** Grupo lógico de dados e persistentes mantidos dentro da fronteira da aplicação e alterado por meio de processos elementares;
-- **Arquivos de Interface Externa(AIE):** Grupo lógico de dados e persistentes mantidos dentro da fronteira de outra aplicação, mas requerido ou referenciado pela aplicação que está sendo contada.
+- **Arquivos de Interface Externa (AIE):** Grupo lógico de dados e persistentes mantidos dentro da fronteira de outra aplicação, mas requerido ou referenciado pela aplicação que está sendo contada.
 
-### Pontos de função de Transação
+### Funções de transação
 
 - **Entradas Externas (EE):** Processo de controle que realiza o processamento de dados do sistema e direciona o mesmo para atender os requisitos da aplicação;
 - **Saídas Externas (SE):** Processo elementar destinado a apresentação de informação ao usuário ou a outra aplicação externa que utiliza de cálculos para processar essas informações;
@@ -65,23 +65,23 @@ A complexidade das EEs, SEs e CEs é determinada a partir de contagem dos ALR *(
 
 |          | 1~4 DERs | 5~15 DERs | 16+ DERs |
 |---------:|:--------:|:---------:|:--------:|
-| 0~1 RLRs |   Baixa  |   Baixa   |   Média  |
-|   2 RLRs |   Baixa  |   Média   |   Alta   |
-|  3+ RLRs |   Média  |    Alta   |   Alta   |
+| 0~1 ALRs |   Baixa  |   Baixa   |   Média  |
+|   2 ALRs |   Baixa  |   Média   |   Alta   |
+|  3+ ALRs |   Média  |    Alta   |   Alta   |
 
 ### SE e CE
 
 |          | 1~5 DERs | 6~19 DERs | 20+ DERs |
 |---------:|:--------:|:---------:|:--------:|
-| 0~1 RLRs |   Baixa  |   Baixa   |   Média  |
-| 2~3 RLRs |   Baixa  |   Média   |   Alta   |
-|  4+ RLRs |   Média  |    Alta   |   Alta   |
+| 0~1 ALRs |   Baixa  |   Baixa   |   Média  |
+| 2~3 ALRs |   Baixa  |   Média   |   Alta   |
+|  4+ ALRs |   Média  |    Alta   |   Alta   |
 
 
-Fator de reajuste
+Fator de ajuste
 -----------------
 
-Para o calculo do fator de reasjuste é atribuido um valor de 0 a 5 para cada um do itens abaixo:
+Para o cálculo do fator de asjuste é atribuido um valor de 0 a 5 para cada um do itens abaixo:
 
 - Comunicação de dados
 - Processamento distribuído
@@ -98,7 +98,7 @@ Para o calculo do fator de reasjuste é atribuido um valor de 0 a 5 para cada um
 - Múltiplos locais
 - Facilidade de mudanças (Flexibilidade)
 
-Com base na soma de todos os valores é calculado o valor do fator de reajuste que pode variar entre -35% a +35%. Esse fator é então multiplicado pelos pontos de função para ajustá-los.
+Com base na soma de todos os valores é calculado o valor do fator de ajuste que pode variar entre -35% a +35%. Esse fator é então multiplicado pelos pontos de função para ajustá-los.
 
 
 Referências

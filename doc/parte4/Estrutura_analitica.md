@@ -1,8 +1,8 @@
 Estrutura Analítica
 ===================
 
-Paradigma utilizado
--------------------
+Paradigma
+---------
 
 O paradigma de desenvolvimento de software que será empregado para o desenvolvimento do jogo para apoio ao ensino de Engenharia de Software será o modelo espiral.
 
@@ -15,17 +15,17 @@ Etapas
 ------
 
 - **Especificação de requisitos:** Criação e edição do documento de requisitos do projeto, será revisitado a cada ciclo de desenvolvimento.
-- **Criação dos modelos 3D:** Será fundamental no primeiro ciclo de desenvolvimento, onde os modelistas criaram o cenário 3D que será empregado no jogo. Será revisitado apenas quando for adicionado requisitos que incluem novas fases ou alteram os aspectos visuais de fases existente.
+- **Criação dos modelos 3D:** Será fundamental no primeiro ciclo de desenvolvimento, onde os modelistas criarão o cenário 3D que será empregado no jogo. Será revisitado apenas quando for adicionado requisitos que incluem novas fases ou alteram os aspectos visuais de fases existente.
 - **Programação do jogo:** Etapa onde será desenvolvido os requisitos gerados na primeira fase bem como as alterações requisitadas na fase de testes.
-- **Realização de testes:** Etapa final de um ciclo de desenvolvimento, onde será testado o protótipo criado nas etapas anteriores e será sugerido correções. Em caso de correções de erros será encaminhado novamente para a etapa de programação.
+- **Realização de testes:** Etapa final de um ciclo de desenvolvimento, onde será testado o protótipo criado nas etapas anteriores e será sugerido correções. Em caso de correções de erros será encaminhado novamente para a etapa de programação no próximo ciclo.
 
 
 Recursos
 --------
 
-- **Recursos humanos:** Analista de requisitos, Gerente de projeto, Desenvolvedor, Modelista 3d
+- **Recursos humanos:** Analista de requisitos, Gerente de projeto, Desenvolvedor, Modelista 3D
 - **Recursos de hardware:** 3 Computadores para desenvolvimento com acesso a internet
-- **Recursos software:** Editor de texto, StarUML, CaseComplete, ProjectLibre, Git, Google Drive, Unity
+- **Recursos software:** Editor de texto, StarUML, CaseComplete, ProjectLibre, Git, GitHub, Google Drive, Unity
 
 
 Documentos
@@ -35,6 +35,12 @@ Documentos
 - Diagrama de classes
 - Estrutura analítica
 - Cronograma
+
+
+Cronograma
+----------
+
+![Cronograma](cronograma.png?raw=true "Cronograma")
 
 
 Métrica de software
@@ -145,7 +151,7 @@ Jogo destinado a professores e alunos com o objetivo de auxiliar no ensino de en
 **Total:** 65
 
 
-#### Cálculo do fator de reajuste:
+#### Cálculo do fator de ajuste:
 
 - **Comunicação de dados:** 2
 - **Processamento distribuído:** 0
@@ -163,14 +169,8 @@ Jogo destinado a professores e alunos com o objetivo de auxiliar no ensino de en
 - **Facilidade de mudanças (Flexibilidade):** 2
 
 **Total:** 31  
-**Fator de reajuste:** (31 * 0.01) + 0.65 = 0.96
+**Fator de ajuste:** (31 * 0.01) + 0.65 = 0.96
 
 #### Resultado final:
 
 **Pontos de função ajustado:** 65 * 0.96 = 62.4
-
-
-Cronograma
-----------
-
-![Cronograma](cronograma.png?raw=true "Cronograma")
