@@ -1,36 +1,56 @@
+Estrutura Analítica
+===================
+
 Paradigma utilizado
 -------------------
 
-Espiral
+O paradigma de desenvolvimento de software que será empregado para o desenvolvimento do jogo para apoio ao ensino de Engenharia de Software será o modelo espiral.
+
+Um dos motivos que levaram o grupo a adotar esse modelo é a natureza de desenvolvimento de um jogo, já que esse desenvolvimento é um processo incremental e volátil, onde podemos tanto inserir quanto remover requisitos durante o seu desenvolvimento. Outro fator importante para a escolha do modelo espiral é o fato de que este trabalho se refere a um projeto idealizado e desenvolvido pelas mesmas pessoas, onde nós mesmos durante o desenvolvimento conseguimos vislumbrar diferentes recursos necessários que faltam no documento de requisitos.
+
+Contando com esses fatores, se utilizarmos alguma metodologia mais rígida, o trabalho final seria prejudicado.
+
 
 Etapas
 ------
 
-- Especificação de requisitos
-- Criação dos modelos 3D
-- Programação do jogo
-- Realização de testes
+- **Especificação de requisitos:** Criação e edição do documento de requisitos do projeto, será revisitado a cada ciclo de desenvolvimento.
+- **Criação dos modelos 3D:** Será fundamental no primeiro ciclo de desenvolvimento, onde os modelistas criaram o cenário 3D que será empregado no jogo. Será revisitado apenas quando for adicionado requisitos que incluem novas fases ou alteram os aspectos visuais de fases existente.
+- **Programação do jogo:** Etapa onde será desenvolvido os requisitos gerados na primeira fase bem como as alterações requisitadas na fase de testes.
+- **Realização de testes:** Etapa final de um ciclo de desenvolvimento, onde será testado o protótipo criado nas etapas anteriores e será sugerido correções. Em caso de correções de erros será encaminhado novamente para a etapa de programação.
+
 
 Recursos
 --------
 
-**Recursos humanos:** Analista de requisitos, Gerente de projeto, Desenvolvedor, Modelista 3d
+- **Recursos humanos:** Analista de requisitos, Gerente de projeto, Desenvolvedor, Modelista 3d
+- **Recursos de hardware:** 3 Computadores para desenvolvimento com acesso a internet
+- **Recursos software:** Editor de texto, StarUML, CaseComplete, ProjectLibre, Git, Google Drive, Unity
 
-**Recursos de hardware:** 3 Computadores para desenvolvimento com acesso a internet
-
-**Recursos software:** Editor de texto, StarUML, CaseComplete, ProjectLibre, Git, Google Drive, Unity
 
 Documentos
 ----------
 
 - Especificação de requisitos
 - Diagrama de classes
+- Estrutura analítica
 - Cronograma
+
 
 Métrica de software
 -------------------
 
-### Ponto de função
+A métrica de software que o grupo decidiu adotar para realização do projeto é a de pontos de função. Por não depender da metodologia utilizada e por fazer uma previsão baseada nas funcionalidade que terão que ser implementadas, essa métrica faz uma boa estimativa inicial, já que entrega o tamanho funcional do software baseado na quantificação dos requisitos funcionais do usuário.
+
+#### Definição do tipo de contagem:
+
+Projeto de desenvolvimento.
+
+#### Definição do escopo da aplicação:
+
+Jogo destinado a professores e alunos com o objetivo de auxiliar no ensino de engenharia de software.
+
+#### Cálculo de ponto de função:
 
 - **ALI:** Perfil
     - **DER:** Nick, nome da empresa, dia, mes, ano, etapa, maximo de funcionarios, pontos de pesquisa, verba
@@ -124,7 +144,8 @@ Métrica de software
 
 **Total:** 65
 
-### Fator de reajuste
+
+#### Cálculo do fator de reajuste:
 
 - **Comunicação de dados:** 2
 - **Processamento distribuído:** 0
@@ -141,9 +162,15 @@ Métrica de software
 - **Múltiplos locais:** 1
 - **Facilidade de mudanças (Flexibilidade):** 2
 
-**Total:** 31
+**Total:** 31  
 **Fator de reajuste:** (31 * 0.01) + 0.65 = 0.96
 
-### Pontos de função reajustados
+#### Resultado final:
 
 **Pontos de função ajustado:** 65 * 0.96 = 62.4
+
+
+Cronograma
+----------
+
+![Cronograma](cronograma.png?raw=true "Cronograma")
