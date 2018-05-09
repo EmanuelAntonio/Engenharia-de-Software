@@ -199,7 +199,117 @@ ModelImporter:
     4300066: parede
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aluminio
+    second: {fileID: 2100000, guid: 2138d0e9e278d534e8b612bd296b5241, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: borda
+    second: {fileID: 2100000, guid: 77bfbdc77eaa37342bc76bb4cac040cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: borda_001
+    second: {fileID: 2100000, guid: d3368244fb4ed6247ac19d1f990f90a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_
+    second: {fileID: 2100000, guid: 67acbeb6006786b4c96b744ab49077ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_amarelo
+    second: {fileID: 2100000, guid: 3faa57b9b18a58648aad25db1542bca7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_azul
+    second: {fileID: 2100000, guid: 07b6ae3a290514e46a1831ad4d95f830, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_laranja
+    second: {fileID: 2100000, guid: 3c436fff4ab6f4346b2729ddd5b56fbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_verde
+    second: {fileID: 2100000, guid: 2230bf950e4ff9a4cb053c3b16b664d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chao
+    second: {fileID: 2100000, guid: ba68f41152b75b64d9301f22a8f3b763, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: folhas
+    second: {fileID: 2100000, guid: 9729b1f2f5fb5c8419f70b00d43e6c00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gabinete
+    second: {fileID: 2100000, guid: 560d2ee2310cc664dbfeb2d224dd6a70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lixeira
+    second: {fileID: 2100000, guid: cc1494aad02b7fd42bac4c0aa81f8f75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madeira
+    second: {fileID: 2100000, guid: 69fdfc72ff8bd4b418133ee9bdb6fd39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parede
+    second: {fileID: 2100000, guid: c3b53f7962b09a347b2477ffc047afbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: personagem
+    second: {fileID: 2100000, guid: 093bd2804d033a148a3e818e5269a465, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: power
+    second: {fileID: 2100000, guid: 304ed8a03c1d47d4ebda66cb49a5c1bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: power_led
+    second: {fileID: 2100000, guid: 53593dd8e218ea64ebd9876c8356d1ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reset
+    second: {fileID: 2100000, guid: 62fe4626ecb4db640973b9ad7e08aadc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reset_led
+    second: {fileID: 2100000, guid: 7b9967f232e22284cb966443a2f69c27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teclado
+    second: {fileID: 2100000, guid: b8658f5ef1e262f4bacbef49782e9d09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tela
+    second: {fileID: 2100000, guid: 696f28ef329ed634eb37d5e38de6cc87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vidro
+    second: {fileID: 2100000, guid: 7ce59ce5b020f25439251099b801e860, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
