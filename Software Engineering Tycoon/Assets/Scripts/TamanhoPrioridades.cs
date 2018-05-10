@@ -33,7 +33,5 @@ public class TamanhoPrioridades : MonoBehaviour
         BarraPrioridade1.sizeDelta = new Vector2((Offset + (SliderPrioridade1.value) * Scale) * larguraPorPeso, BarraPrioridade1.sizeDelta.y);
         BarraPrioridade2.sizeDelta = new Vector2((Offset + (SliderPrioridade2.value) * Scale) * larguraPorPeso, BarraPrioridade2.sizeDelta.y);
         BarraPrioridade3.sizeDelta = new Vector2((Offset + (SliderPrioridade3.value) * Scale) * larguraPorPeso, BarraPrioridade3.sizeDelta.y);
-
-        Debug.Log("Largura por Peso: " + larguraPorPeso + " Peso total: " + pesoTotal);
     }
 }
