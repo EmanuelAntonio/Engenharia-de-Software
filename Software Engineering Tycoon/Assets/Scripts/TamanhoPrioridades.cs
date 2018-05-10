@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TamanhoPrioridades : MonoBehaviour {
-
+public class TamanhoPrioridades : MonoBehaviour
+{
     public RectTransform TransformProprio;
 
     public RectTransform BarraPrioridade1;
@@ -17,16 +17,6 @@ public class TamanhoPrioridades : MonoBehaviour {
 
     public float Scale = 1.0f;
     public float Offset = 0.1f;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     // Atualiza o tamanho das barras de prioridade
     public void AtualizaTamanho()
