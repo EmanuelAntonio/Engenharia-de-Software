@@ -6,6 +6,9 @@
 - [Parte 3](trabalho/Parte3.md)
 - [Parte 4](trabalho/Parte4.md)
 - [Parte 5](trabalho/Parte5.md)
+- [Parte 6](trabalho/Parte6.md)
+- [Parte 7](trabalho/Parte7.md)
+- [Parte 8](trabalho/Parte8.md)
 
 ## Documentação
 
