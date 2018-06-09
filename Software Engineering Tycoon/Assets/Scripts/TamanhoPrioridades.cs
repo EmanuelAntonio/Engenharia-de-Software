@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class TamanhoPrioridades : MonoBehaviour
 {
-    public LayoutElement Prioridade1;
-    public LayoutElement Prioridade2;
-    public LayoutElement Prioridade3;
+    public LayoutElement prioridade1;
+    public LayoutElement prioridade2;
+    public LayoutElement prioridade3;
 
-    public Slider SliderPrioridade1;
-    public Slider SliderPrioridade2;
-    public Slider SliderPrioridade3;
+    public Slider sliderPrioridade1;
+    public Slider sliderPrioridade2;
+    public Slider sliderPrioridade3;
 
-    public float Peso;
+    public float peso;
 
     // Atualiza o tamanho das barras de prioridade
     public void AtualizaTamanho()
     {
-        Prioridade1.flexibleWidth = 1 + SliderPrioridade1.value * Peso;
-        Prioridade2.flexibleWidth = 1 + SliderPrioridade2.value * Peso;
-        Prioridade3.flexibleWidth = 1 + SliderPrioridade3.value * Peso;
+        prioridade1.flexibleWidth = 1 + sliderPrioridade1.value * peso;
+        prioridade2.flexibleWidth = 1 + sliderPrioridade2.value * peso;
+        prioridade3.flexibleWidth = 1 + sliderPrioridade3.value * peso;
     }
 }

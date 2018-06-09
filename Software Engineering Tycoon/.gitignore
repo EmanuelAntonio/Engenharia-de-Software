@@ -45,3 +45,5 @@ Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
 
 *.exe
+save_game.dat
+save_game.dat.meta
