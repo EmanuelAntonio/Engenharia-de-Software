@@ -25,16 +25,16 @@ public class MenuPrincipal : MonoBehaviour
 
         if (!dadosPerfil.novoPerfil)
         {
-            GameObject nomeJogador = perfil.Find("Dados/Jogador").gameObject;
+            GameObject nomeJogador = dados.Find("Jogador").gameObject;
             nomeJogador.GetComponent<TextMeshProUGUI>().text = dadosPerfil.nomeJogador;
 
-            GameObject nomeEmpresa = perfil.Find("Dados/Empresa").gameObject;
+            GameObject nomeEmpresa = dados.Find("Empresa").gameObject;
             nomeEmpresa.GetComponent<TextMeshProUGUI>().text = dadosPerfil.nomeEmpresa;
 
-            GameObject data = perfil.Find("Dados/Data").gameObject;
+            GameObject data = dados.Find("Data").gameObject;
             data.GetComponent<TextMeshProUGUI>().text = dadosPerfil.dia.ToString("D2") + "/" + dadosPerfil.mes.ToString("D2") + "/" + dadosPerfil.ano.ToString("D4");
 
-            GameObject etapa = perfil.Find("Dados/Etapa").gameObject;
+            GameObject etapa = dados.Find("Etapa").gameObject;
             switch (dadosPerfil.etapa)
             {
                 case 0:
@@ -50,7 +50,7 @@ public class MenuPrincipal : MonoBehaviour
                     break;
             }
 
-            GameObject verba = perfil.Find("Dados/Verba").gameObject;
+            GameObject verba = dados.Find("Verba").gameObject;
             verba.GetComponent<TextMeshProUGUI>().text = "R$ " + dadosPerfil.verba.ToString("F2");
 
             dados.gameObject.SetActive(true);

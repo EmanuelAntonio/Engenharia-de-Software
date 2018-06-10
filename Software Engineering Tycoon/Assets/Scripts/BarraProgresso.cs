@@ -9,14 +9,13 @@ public class BarraProgresso : MonoBehaviour
 	private Slider slider;
 	public float valor;
 	public float tempo;
-	public GameObject proximaTela;
+	public GerenciadorJogoUI gerenciadorJogoUI;
 
 	void Start()
 	{
 		slider = GetComponent<Slider>();
 		valor = slider.value;
 		tempo = 1.0f;
-		proximaTela = null;
 	}
 
 	// Gambiarra
@@ -31,18 +30,12 @@ public class BarraProgresso : MonoBehaviour
 		this.tempo = tempo;
 	}
 
-	// Gambiarra
-	public void DefineProximaTela(GameObject proximaTela)
-	{
-		this.proximaTela = proximaTela;
-	}
-
 	public void EncheProgresso()
 	{
-		StartCoroutine(EncheProgressoCoroutine(valor, tempo, proximaTela));
+		StartCoroutine(EncheProgressoCoroutine(valor, tempo));
 	}
 
-	IEnumerator EncheProgressoCoroutine(float valor, float tempo, GameObject proximaTela)
+	IEnumerator EncheProgressoCoroutine(float valor, float tempo)
 	{
 		float valorInicial = slider.value;
 		float deltaValor = valor - valorInicial;
@@ -50,13 +43,8 @@ public class BarraProgresso : MonoBehaviour
 		while (tempoPassado < tempo)
 		{
 			tempoPassado += Time.deltaTime;
-			slider.value = valorInicial + deltaValor * (tempoPassado / tempo);
+			gerenciadorJogoUI.DefinirProgresso(valorInicial + deltaValor * (tempoPassado / tempo));
 			yield return null;
-		}
-
-		if (proximaTela)
-		{
-			proximaTela.SetActive(true);
 		}
 	}
 }
