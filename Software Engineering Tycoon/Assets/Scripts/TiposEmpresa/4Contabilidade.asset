@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455ad9883337e1e4b852f338e73e9c58, type: 3}
+  m_Name: 4Contabilidade
+  m_EditorClassIdentifier: 
+  tipoEmpresa: Contabilidade
+  nomeEmpresa: Contabilidade
+  descricaoProjeto: "O cliente precisa de um software para gerenciar o escrit\xF3rio
+    de contabilidade"
+  dificuldadeMinima: 0.4
+  dificuldadeMaxima: 0.9
+  pagamentoMinimo: 15000
+  pagamentoMaximo: 18000
+  multaMinima: 200
+  multaMaxima: 600
+  tamanhoMinimo: 20
+  tamanhoMaximo: 50
+  experienciaUsuarioMinima: 0.7
+  experienciaUsuarioMaxima: 0.9
+  prioridadeColetaDadosBase: 1
+  prioridadeEstudoDominioBase: 1
+  prioridadeDocumentacaoBase: 1
+  prioridadeLegibilidadeBase: 1
+  prioridadeQualidadeSolucaoBase: 1
+  prioridadeQualidadeInterfaceBase: 1
+  prioridadeTestesBase: 1
+  prioridadeAvaliacaoClienteBase: 1
+  prioridadeImplantacaoBase: 1

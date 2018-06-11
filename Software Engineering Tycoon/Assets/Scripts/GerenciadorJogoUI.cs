@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GerenciadorJogoUI : MonoBehaviour
 {
     public Animator animator;
     public Slider sliderProgresso;
+    public Abas abasProjetos;
+    public GameObject abaProjetoPrefab;
+    public GameObject detalhesProjetoPrefab;
 
     private int acaoConfirmar;
     private int acaoFechar;
@@ -97,6 +101,36 @@ public class GerenciadorJogoUI : MonoBehaviour
         else
         {
             animator.SetInteger(estagioProjeto, estagioAtual + 1);
+        }
+    }
+
+    public void AtualizarListaProjetos(List<Projeto> projetos)
+    {
+        abasProjetos.LimparAbas();
+
+        foreach (Projeto projeto in projetos)
+        {
+            GameObject abaProjeto = Instantiate(abaProjetoPrefab);
+            GameObject detalhesProjeto = Instantiate(detalhesProjetoPrefab);
+
+            GameObject abaNome = abaProjeto.transform.Find("Nome").gameObject;
+            abaNome.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
+
+            Transform detalhesTransform = detalhesProjeto.transform;
+
+            GameObject detalhesTitulo = detalhesTransform.Find("Titulo").gameObject;
+            detalhesTitulo.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
+
+            GameObject detalhesDescricao = detalhesTransform.Find("Descricao").gameObject;
+            detalhesDescricao.GetComponent<TextMeshProUGUI>().text = projeto.descricao;
+
+            GameObject detalhesPagamento = detalhesTransform.Find("MultaPagamento/Pagamento").gameObject;
+            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Pagamento: R$ " + projeto.valorPagamento;
+
+            GameObject detalhesMulta = detalhesTransform.Find("MultaPagamento/Multa").gameObject;
+            detalhesMulta.GetComponent<TextMeshProUGUI>().text = "Multa: R$ " + projeto.multaAtraso + " / mês";
+
+            abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
         }
     }
 }
