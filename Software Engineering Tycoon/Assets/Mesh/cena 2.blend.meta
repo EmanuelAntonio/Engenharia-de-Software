@@ -477,7 +477,207 @@ ModelImporter:
     4300170: parede
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_1Bract
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_1Bud
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_1Pdcel
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_1Pdncle
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Bud
+    second: {fileID: 2100000, guid: a1b6357d4a871a44cb041dcc99567eab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Flmnt
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Pdcel
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Pdncle
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Petal1
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_2Sepal
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_FruitU
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_Intrnd
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_Mrstm
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1Newplan_Petiole
+    second: {fileID: 2100000, guid: e224739375816c0458d532e1f1e2c6fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: bacbd5951ede4f944befd1a0c846a27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aluminio
+    second: {fileID: 2100000, guid: 6abe549b123760448b5799d8a0e1755f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: borda
+    second: {fileID: 2100000, guid: 3a7f6df11f59001489eaea762f6143c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: borda_001
+    second: {fileID: 2100000, guid: 62723893c57914c4993f23c0632614a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_
+    second: {fileID: 2100000, guid: 03fe372f1e7e7a74f86310cb2b1a6c32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_amarelo
+    second: {fileID: 2100000, guid: 5bf6c4dbb153e8a408ecc1fbc2cd2208, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_azul
+    second: {fileID: 2100000, guid: d791662ed9122074294284bc951f3f8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_laranja
+    second: {fileID: 2100000, guid: 08bf324e579338f4da0d6a9e8c9017b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: capa_verde
+    second: {fileID: 2100000, guid: be6952dd37024ba4387baddc6d2f1ce1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chao
+    second: {fileID: 2100000, guid: 7206a949097607f4b942f4d53e51a6d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: folha
+    second: {fileID: 2100000, guid: 7319d1bfe1cd7ff44a6424b5591bd4d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: folhas
+    second: {fileID: 2100000, guid: 9729b1f2f5fb5c8419f70b00d43e6c00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gabinete
+    second: {fileID: 2100000, guid: 560d2ee2310cc664dbfeb2d224dd6a70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lixeira
+    second: {fileID: 2100000, guid: e0d852b11e23bac40b6b92e12abd6cfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: madeira
+    second: {fileID: 2100000, guid: 3353d9b54bdcc8b42bf45d50120104f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parede
+    second: {fileID: 2100000, guid: 430910187d366dc4ba89da0af571f9b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: power
+    second: {fileID: 2100000, guid: 62cc0d41b65faa44cb5899ded7254731, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: power_led
+    second: {fileID: 2100000, guid: d31646051787f334f9e05ada39f8e536, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: raiz
+    second: {fileID: 2100000, guid: 09cbd7df968e3a642a602a891d26937c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reset
+    second: {fileID: 2100000, guid: e4e7224fad03ce24d98e0262ff7819c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reset_led
+    second: {fileID: 2100000, guid: 31d4a65e9b30bd740a3cf4267c4f3b14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tapete
+    second: {fileID: 2100000, guid: 5916cf6d459efb44791230ba4b6d9c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teclado
+    second: {fileID: 2100000, guid: bfb5784c18418674f845f343499845fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tela
+    second: {fileID: 2100000, guid: 1bca1373985f5b1459f4e383d44219de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: terra
+    second: {fileID: 2100000, guid: 117a0daee86eb624c816525099d31034, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vidro
+    second: {fileID: 2100000, guid: 7ce59ce5b020f25439251099b801e860, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
