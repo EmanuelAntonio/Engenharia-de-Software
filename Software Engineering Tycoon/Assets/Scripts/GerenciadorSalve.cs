@@ -65,6 +65,7 @@ public class GerenciadorSalve : MonoBehaviour
         dadosPerfil.maximoFuncionario = perfil.maximoFuncionario;
         dadosPerfil.pontosPesquisa = perfil.pontosPesquisa;
         dadosPerfil.verba = perfil.verba;
+        dadosPerfil.novoPerfil = perfil.novoPerfil;
 
         Salvar();
     }
@@ -82,6 +83,7 @@ public class GerenciadorSalve : MonoBehaviour
         perfil.maximoFuncionario = dadosPerfil.maximoFuncionario;
         perfil.pontosPesquisa = dadosPerfil.pontosPesquisa;
         perfil.verba = dadosPerfil.verba;
+        perfil.novoPerfil = dadosPerfil.novoPerfil;
     }
 
     public void Salvar()

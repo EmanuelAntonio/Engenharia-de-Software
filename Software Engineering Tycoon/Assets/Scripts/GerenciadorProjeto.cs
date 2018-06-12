@@ -21,10 +21,17 @@ public class GerenciadorProjeto : MonoBehaviour
     public List<Projeto> projetosDisponiveis;
 
     private GerenciadorJogoUI gerenciadorJogoUI;
+    private Perfil perfilCarregado;
 
     void Start()
     {
         gerenciadorJogoUI = GetComponent<GerenciadorJogoUI>();
+        perfilCarregado = GetComponent<Perfil>();
+
+        if (perfilCarregado.novoPerfil)
+        {
+            gerenciadorJogoUI.ExibirCriarEmpresa();
+        }
 
         temProjeto = false;
 
@@ -35,7 +42,10 @@ public class GerenciadorProjeto : MonoBehaviour
         {
             projetosDisponiveis.Add(GerarProjeto(dificuldadeAtual));
         }
-        gerenciadorJogoUI.AtualizarListaProjetos(projetosDisponiveis);
+        // TODO(andre:2018-06-12): Talvez isso pudesse ser um mensagem para não
+        // precisar de passar pelo gerenciadorJogoUI nem ter uma referencia direta
+        // ao painel de aceitacao do projeto
+        gerenciadorJogoUI.AtualizarListaProjetos();
     }
 
     public Projeto GerarProjeto(float dificuldade)
@@ -83,20 +93,20 @@ public class GerenciadorProjeto : MonoBehaviour
         return projeto;
     }
 
-    public void AceitarProjetoSelecionado()
-    {
-        int projetoSelecionado = gerenciadorJogoUI.ObterProjetoSelecionado();
-
-        if (projetoSelecionado >= 0)
-        {
-            temProjeto = true;
-            projetoAtual = projetosDisponiveis[projetoSelecionado];
-
-            gerenciadorJogoUI.RemoverProjeto(projetoSelecionado);
-            projetosDisponiveis.RemoveAt(projetoSelecionado);
-
-            gerenciadorJogoUI.ComecarProjeto(projetoAtual);
-            gerenciadorJogoUI.Confirmar();
-        }
-    }
+    // public void AceitarProjetoSelecionado()
+    // {
+    //     int projetoSelecionado = gerenciadorJogoUI.ObterProjetoSelecionado();
+    //
+    //     if (projetoSelecionado >= 0)
+    //     {
+    //         temProjeto = true;
+    //         projetoAtual = projetosDisponiveis[projetoSelecionado];
+    //
+    //         gerenciadorJogoUI.RemoverProjeto(projetoSelecionado);
+    //         projetosDisponiveis.RemoveAt(projetoSelecionado);
+    //
+    //         gerenciadorJogoUI.ComecarProjeto(projetoAtual);
+    //         gerenciadorJogoUI.Confirmar();
+    //     }
+    // }
 }

@@ -9,9 +9,7 @@ public class GerenciadorJogoUI : MonoBehaviour
     public Animator animator;
     public Slider sliderProgresso;
     public Abas abasProjetos;
-    public GameObject abaProjetoPrefab;
-    public GameObject detalhesProjetoPrefab;
-    public Button aceitarProjetoBotao;
+    public AceitarProjetoInterface aceitarProjetoInterface;
 
     private int acaoConfirmar;
     private int acaoFechar;
@@ -100,50 +98,8 @@ public class GerenciadorJogoUI : MonoBehaviour
         }
     }
 
-    public void AtualizarListaProjetos(List<Projeto> projetos)
+    public void AtualizarListaProjetos()
     {
-        abasProjetos.LimparAbas();
-
-        foreach (Projeto projeto in projetos)
-        {
-            GameObject abaProjeto = Instantiate(abaProjetoPrefab);
-            GameObject detalhesProjeto = Instantiate(detalhesProjetoPrefab);
-
-            GameObject abaNome = abaProjeto.transform.Find("Nome").gameObject;
-            abaNome.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
-
-            Transform detalhesTransform = detalhesProjeto.transform;
-
-            GameObject detalhesNomeEmpresa = detalhesTransform.Find("Nome").gameObject;
-            detalhesNomeEmpresa.GetComponent<TextMeshProUGUI>().text = projeto.nomeEmpresa;
-
-            GameObject detalhesTipoEmpresa = detalhesTransform.Find("Tipo").gameObject;
-            detalhesTipoEmpresa.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
-
-            GameObject detalhesDescricao = detalhesTransform.Find("Descricao").gameObject;
-            detalhesDescricao.GetComponent<TextMeshProUGUI>().text = projeto.descricao;
-
-            GameObject detalhesPagamento = detalhesTransform.Find("MultaPagamento/Pagamento").gameObject;
-            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Pagamento: R$ " + projeto.valorPagamento;
-
-            GameObject detalhesMulta = detalhesTransform.Find("MultaPagamento/Multa").gameObject;
-            detalhesMulta.GetComponent<TextMeshProUGUI>().text = "Multa: R$ " + projeto.multaAtraso + " / mês";
-
-            abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
-        }
-
-        aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
-    }
-
-    public void RemoverProjeto(int id)
-    {
-        abasProjetos.RemoverAba(id);
-
-        aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
-    }
-
-    public int ObterProjetoSelecionado()
-    {
-        return abasProjetos.ObterAbaSelecionada();
+        aceitarProjetoInterface.atualizarListaProjetos = true;
     }
 }

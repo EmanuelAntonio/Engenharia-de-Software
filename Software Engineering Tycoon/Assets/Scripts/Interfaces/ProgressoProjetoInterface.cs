@@ -29,7 +29,7 @@ public class ProgressoProjetoInterface : MonoBehaviour
     // https://forum.unity.com/threads/awake-start-and-onenable-walked-into-a-bar.276712/
     void OnStartOrEnable()
     {
-        if (gerenciadorProjeto.projetoAtual != null)
+        if (gerenciadorProjeto.temProjeto)
         {
             nomeEmpresa.text = gerenciadorProjeto.projetoAtual.nomeEmpresa;
             tipoEmpresa.text = gerenciadorProjeto.projetoAtual.tipoEmpresa;

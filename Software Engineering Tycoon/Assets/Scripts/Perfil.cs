@@ -13,6 +13,7 @@ public class Perfil : MonoBehaviour
     public int maximoFuncionario;
     public int pontosPesquisa;
     public float verba;
+    public bool novoPerfil;
 
     void Awake()
     {
