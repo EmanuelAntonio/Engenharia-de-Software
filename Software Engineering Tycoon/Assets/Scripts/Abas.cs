@@ -29,7 +29,8 @@ public class Abas : MonoBehaviour
 
     public void DefineAbaAtiva(int id)
     {
-        DefineAbaAtiva(listaDetalhes.GetChild(id).gameObject);
+        if (id < listaDetalhes.childCount)
+            DefineAbaAtiva(listaDetalhes.GetChild(id).gameObject);
     }
 
     public void LimparAbas()
@@ -54,5 +55,31 @@ public class Abas : MonoBehaviour
             DefineAbaAtiva(detalhes);
 
         aba.GetComponent<Button>().onClick.AddListener(delegate { DefineAbaAtiva(detalhes); });
+    }
+
+    public void RemoverAba(int id)
+    {
+        GameObject abaRemover = listaAbas.GetChild(id).gameObject;
+        GameObject detalhesRemover = listaDetalhes.GetChild(id).gameObject;
+
+        abaRemover.transform.SetParent(null);
+        detalhesRemover.transform.SetParent(null);
+
+        if (GameObject.ReferenceEquals(detalhesRemover, abaAtiva))
+        {
+            abaAtiva = null;
+            DefineAbaAtiva(0);
+        }
+
+        GameObject.Destroy(abaRemover);
+        GameObject.Destroy(detalhesRemover);
+    }
+
+    public int ObterAbaSelecionada()
+    {
+        if (abaAtiva != null)
+            return abaAtiva.transform.GetSiblingIndex();
+
+        return -1;
     }
 }

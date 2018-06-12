@@ -6,6 +6,7 @@ public class GerenciadorProjeto : MonoBehaviour
 {
     public List<DescricaoTipoEmpresa> descricaoTiposEmpresas;
 
+    public bool temProjeto;
     public Projeto projetoAtual;
 
     public int pontosErro;
@@ -16,6 +17,7 @@ public class GerenciadorProjeto : MonoBehaviour
 
     [Range(0, 1)]
     public float dificuldadeAtual;
+    public float quantidadeMaximaProjetos;
     public List<Projeto> projetosDisponiveis;
 
     private GerenciadorJogoUI gerenciadorJogoUI;
@@ -24,10 +26,12 @@ public class GerenciadorProjeto : MonoBehaviour
     {
         gerenciadorJogoUI = GetComponent<GerenciadorJogoUI>();
 
+        temProjeto = false;
+
         // TODO(andre:2018-06-11): Quando o sistema de tempo estivar funcionando
         // executar essa logica a cada dois meses no jogo
         projetosDisponiveis.Clear();
-        for (int i = 0; i < 5; ++i)
+        for (int i = 0; i < quantidadeMaximaProjetos; ++i)
         {
             projetosDisponiveis.Add(GerarProjeto(dificuldadeAtual));
         }
@@ -77,5 +81,22 @@ public class GerenciadorProjeto : MonoBehaviour
         Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario, prioridades);
 
         return projeto;
+    }
+
+    public void AceitarProjetoSelecionado()
+    {
+        int projetoSelecionado = gerenciadorJogoUI.ObterProjetoSelecionado();
+
+        if (projetoSelecionado >= 0)
+        {
+            temProjeto = true;
+            projetoAtual = projetosDisponiveis[projetoSelecionado];
+
+            gerenciadorJogoUI.RemoverProjeto(projetoSelecionado);
+            projetosDisponiveis.RemoveAt(projetoSelecionado);
+
+            gerenciadorJogoUI.ComecarProjeto(projetoAtual);
+            gerenciadorJogoUI.Confirmar();
+        }
     }
 }

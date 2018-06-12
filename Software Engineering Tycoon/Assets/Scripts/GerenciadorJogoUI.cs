@@ -11,13 +11,14 @@ public class GerenciadorJogoUI : MonoBehaviour
     public Abas abasProjetos;
     public GameObject abaProjetoPrefab;
     public GameObject detalhesProjetoPrefab;
+    public Button aceitarProjetoBotao;
 
     private int acaoConfirmar;
     private int acaoFechar;
     private int alternarMenuContexto;
     private int exibirRelatorio;
     private int exibirPesquisa;
-    private int exibirNovoProjeto;
+    private int exibirAceitarProjeto;
     private int exibirCriarEmpresa;
     private int progressoProjeto;
     private int estagioProjeto;
@@ -30,19 +31,14 @@ public class GerenciadorJogoUI : MonoBehaviour
         alternarMenuContexto = Animator.StringToHash("AlternarMenuContexto");
         exibirRelatorio = Animator.StringToHash("ExibirRelatorio");
         exibirPesquisa = Animator.StringToHash("ExibirPesquisa");
-        exibirNovoProjeto = Animator.StringToHash("ExibirNovoProjeto");
+        exibirAceitarProjeto = Animator.StringToHash("ExibirAceitarProjeto");
         exibirCriarEmpresa = Animator.StringToHash("ExibirCriarEmpresa");
         progressoProjeto = Animator.StringToHash("ProgressoProjeto");
         estagioProjeto = Animator.StringToHash("EstagioProjeto");
         temProjeto = Animator.StringToHash("TemProjeto");
     }
 
-    void Update()
-    {
-
-    }
-
-    public void Confimar()
+    public void Confirmar()
     {
         animator.SetTrigger(acaoConfirmar);
     }
@@ -67,9 +63,9 @@ public class GerenciadorJogoUI : MonoBehaviour
         animator.SetTrigger(exibirPesquisa);
     }
 
-    public void ExibirNovoProjeto()
+    public void ExibirAceitarProjeto()
     {
-        animator.SetTrigger(exibirNovoProjeto);
+        animator.SetTrigger(exibirAceitarProjeto);
     }
 
     public void ExibirCriarEmpresa()
@@ -83,7 +79,7 @@ public class GerenciadorJogoUI : MonoBehaviour
         animator.SetFloat(progressoProjeto, progresso);
     }
 
-    public void ComecarProjeto()
+    public void ComecarProjeto(Projeto projeto)
     {
         DefinirProgresso(0);
         animator.SetInteger(estagioProjeto, 0);
@@ -118,8 +114,11 @@ public class GerenciadorJogoUI : MonoBehaviour
 
             Transform detalhesTransform = detalhesProjeto.transform;
 
-            GameObject detalhesTitulo = detalhesTransform.Find("Titulo").gameObject;
-            detalhesTitulo.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
+            GameObject detalhesNomeEmpresa = detalhesTransform.Find("Nome").gameObject;
+            detalhesNomeEmpresa.GetComponent<TextMeshProUGUI>().text = projeto.nomeEmpresa;
+
+            GameObject detalhesTipoEmpresa = detalhesTransform.Find("Tipo").gameObject;
+            detalhesTipoEmpresa.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
 
             GameObject detalhesDescricao = detalhesTransform.Find("Descricao").gameObject;
             detalhesDescricao.GetComponent<TextMeshProUGUI>().text = projeto.descricao;
@@ -132,5 +131,19 @@ public class GerenciadorJogoUI : MonoBehaviour
 
             abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
         }
+
+        aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
+    }
+
+    public void RemoverProjeto(int id)
+    {
+        abasProjetos.RemoverAba(id);
+
+        aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
+    }
+
+    public int ObterProjetoSelecionado()
+    {
+        return abasProjetos.ObterAbaSelecionada();
     }
 }
