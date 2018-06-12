@@ -86,6 +86,13 @@ public class GerenciadorSalve : MonoBehaviour
         perfil.novoPerfil = dadosPerfil.novoPerfil;
     }
 
+    public void ApagarPerfil(int id)
+    {
+        dados.perfil[id] = new DadosPerfil();
+
+        Salvar();
+    }
+
     public void Salvar()
     {
         string jsonString = JsonUtility.ToJson(dados);

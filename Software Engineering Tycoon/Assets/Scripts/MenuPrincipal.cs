@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+// TODO(andre:2018-06-12): Criar classe para a interface de carregamento de perfil
 public class MenuPrincipal : MonoBehaviour
 {
     public GameObject perfilPainel;
@@ -56,13 +57,24 @@ public class MenuPrincipal : MonoBehaviour
             dados.gameObject.SetActive(true);
             criarPerfil.gameObject.SetActive(false);
         }
+        else
+        {
+            dados.gameObject.SetActive(false);
+            criarPerfil.gameObject.SetActive(true);
+        }
     }
 
-    public void CarregarPerfil(int indice)
+    public void CarregarPerfil(int id)
     {
-        Debug.Log("Abrindo perfil " + indice);
-        GerenciadorSalve.instancia.SelecionarPerfil(indice);
+        Debug.Log("Abrindo perfil " + id);
+        GerenciadorSalve.instancia.SelecionarPerfil(id);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ApagarPerfil(int id)
+    {
+        GerenciadorSalve.instancia.ApagarPerfil(id);
+        PreencherDadosPerfil(perfilPainel.transform.GetChild(id), id);
     }
 
     public void SairJogo()

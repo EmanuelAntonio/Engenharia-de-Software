@@ -846,6 +846,7 @@ MonoBehaviour:
   maximoFuncionario: 0
   pontosPesquisa: 0
   verba: 0
+  novoPerfil: 0
 --- !u!4 &50525464
 Transform:
   m_ObjectHideFlags: 0
@@ -873,11 +874,7 @@ MonoBehaviour:
   animator: {fileID: 1181706277}
   sliderProgresso: {fileID: 1571831201}
   abasProjetos: {fileID: 1792867835}
-  abaProjetoPrefab: {fileID: 1313934353514372, guid: c02649730efe01447bd305ba4a75900a,
-    type: 2}
-  detalhesProjetoPrefab: {fileID: 1285524176585352, guid: e03f770b53e16034abe9f9dda7bf1e8b,
-    type: 2}
-  aceitarProjetoBotao: {fileID: 1774370840}
+  aceitarProjetoInterface: {fileID: 1155420368}
 --- !u!114 &50525466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,6 +1535,7 @@ GameObject:
   - component: {fileID: 154918849}
   - component: {fileID: 154918848}
   - component: {fileID: 154918847}
+  - component: {fileID: 154918850}
   m_Layer: 5
   m_Name: CriarEmpresa
   m_TagString: Untagged
@@ -1626,6 +1624,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154918845}
+--- !u!114 &154918850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154918845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991417bf225a8b64f892fa1702223b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfilCarregado: {fileID: 50525463}
 --- !u!1 &163338388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4641,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Detalhes da Empresa
+  m_text: 'Criar Empresa
 
 '
   m_isRightToLeft: 0
@@ -4700,10 +4710,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 448979167}
-    characterCount: 20
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 3
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -10675,6 +10685,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 154918850}
+        m_MethodName: AtualizarPerfil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1028425827
@@ -11742,6 +11763,7 @@ GameObject:
   - component: {fileID: 1155420367}
   - component: {fileID: 1155420366}
   - component: {fileID: 1155420365}
+  - component: {fileID: 1155420368}
   m_Layer: 5
   m_Name: AceitarProjeto
   m_TagString: Untagged
@@ -11832,6 +11854,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1155420363}
+--- !u!114 &1155420368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155420363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc5d52ee8cef1c45935085dba249168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gerenciadorProjeto: {fileID: 50525466}
+  gerenciadorJogoUI: {fileID: 50525465}
+  abaProjetoPrefab: {fileID: 1313934353514372, guid: c02649730efe01447bd305ba4a75900a,
+    type: 2}
+  detalhesProjetoPrefab: {fileID: 1285524176585352, guid: e03f770b53e16034abe9f9dda7bf1e8b,
+    type: 2}
+  atualizarListaProjetos: 0
 --- !u!224 &1167786568 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224055815122553190, guid: c02649730efe01447bd305ba4a75900a,
@@ -18213,7 +18253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 50525466}
+      - m_Target: {fileID: 1155420368}
         m_MethodName: AceitarProjetoSelecionado
         m_Mode: 1
         m_Arguments:

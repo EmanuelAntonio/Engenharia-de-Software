@@ -19,4 +19,9 @@ public class Perfil : MonoBehaviour
     {
         GerenciadorSalve.instancia.CarregarPerfil(this);
     }
+
+    public void Salvar()
+    {
+        GerenciadorSalve.instancia.SalvarPerfil(this);
+    }
 }
