@@ -30,7 +30,7 @@ MonoBehaviour:
   prioridadeDocumentacaoBase: 1
   prioridadeLegibilidadeBase: 1
   prioridadeQualidadeSolucaoBase: 1
-  prioridadeQualidadeInterfaceBase: 1
+  prioridadeDesenvolvimentoInterfaceBase: 1
   prioridadeTestesBase: 1
   prioridadeAvaliacaoClienteBase: 1
   prioridadeImplantacaoBase: 1

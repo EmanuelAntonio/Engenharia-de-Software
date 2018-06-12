@@ -81,15 +81,15 @@ public class GerenciadorProjeto : MonoBehaviour
 
         Prioridades prioridades = new Prioridades();
         // TODO(andre:2018-06-10): Gerar variacoes nos valores bases com base nos demais parametros
-        prioridades.coletaDados        = tipoSelecionado.prioridadeColetaDadosBase;
-        prioridades.estudoDominio      = tipoSelecionado.prioridadeEstudoDominioBase;
-        prioridades.documentacao       = tipoSelecionado.prioridadeDocumentacaoBase;
-        prioridades.legibilidade       = tipoSelecionado.prioridadeLegibilidadeBase;
-        prioridades.qualidadeSolucao   = tipoSelecionado.prioridadeQualidadeSolucaoBase;
-        prioridades.qualidadeInterface = tipoSelecionado.prioridadeQualidadeInterfaceBase;
-        prioridades.testes             = tipoSelecionado.prioridadeTestesBase;
-        prioridades.avaliacaoCliente   = tipoSelecionado.prioridadeAvaliacaoClienteBase;
-        prioridades.implantacao        = tipoSelecionado.prioridadeImplantacaoBase;
+        prioridades.coletaDados              = tipoSelecionado.prioridadeColetaDadosBase;
+        prioridades.estudoDominio            = tipoSelecionado.prioridadeEstudoDominioBase;
+        prioridades.documentacao             = tipoSelecionado.prioridadeDocumentacaoBase;
+        prioridades.legibilidade             = tipoSelecionado.prioridadeLegibilidadeBase;
+        prioridades.qualidadeSolucao         = tipoSelecionado.prioridadeQualidadeSolucaoBase;
+        prioridades.desenvolvimentoInterface = tipoSelecionado.prioridadeDesenvolvimentoInterfaceBase;
+        prioridades.testes                   = tipoSelecionado.prioridadeTestesBase;
+        prioridades.avaliacaoCliente         = tipoSelecionado.prioridadeAvaliacaoClienteBase;
+        prioridades.implantacao              = tipoSelecionado.prioridadeImplantacaoBase;
 
         Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario, prioridades);
 

@@ -11,7 +11,7 @@ public class Prioridades
 
     public float legibilidade;
     public float qualidadeSolucao;
-    public float qualidadeInterface;
+    public float desenvolvimentoInterface;
 
     public float testes;
     public float avaliacaoCliente;

@@ -65,7 +65,7 @@ public class DescricaoTipoEmpresa : ScriptableObject
     [Range(0.0f, 1.0f)]
     public float prioridadeQualidadeSolucaoBase;
     [Range(0.0f, 1.0f)]
-    public float prioridadeQualidadeInterfaceBase;
+    public float prioridadeDesenvolvimentoInterfaceBase;
 
     [Space(8)]
 
