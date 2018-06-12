@@ -15,7 +15,7 @@ public class Perfil : MonoBehaviour
     public float verba;
     public bool novoPerfil;
 
-    void Awake()
+    void Start()
     {
         GerenciadorSalve.instancia.CarregarPerfil(this);
     }

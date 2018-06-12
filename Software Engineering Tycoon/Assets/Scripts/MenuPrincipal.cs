@@ -68,7 +68,7 @@ public class MenuPrincipal : MonoBehaviour
     {
         Debug.Log("Abrindo perfil " + id);
         GerenciadorSalve.instancia.SelecionarPerfil(id);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(GerenciadorSalve.instancia.ObterEtapa() + 1);
     }
 
     public void ApagarPerfil(int id)

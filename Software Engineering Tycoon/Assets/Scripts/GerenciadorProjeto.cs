@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+// TODO(andre:2018-06-12): Fazer com que os objetos dependam menos de referencias
+// as classes de gerenciador e mais de dependencias dos proprios prefabs
 public class GerenciadorProjeto : MonoBehaviour
 {
     public List<DescricaoTipoEmpresa> descricaoTiposEmpresas;
@@ -93,20 +96,11 @@ public class GerenciadorProjeto : MonoBehaviour
         return projeto;
     }
 
-    // public void AceitarProjetoSelecionado()
-    // {
-    //     int projetoSelecionado = gerenciadorJogoUI.ObterProjetoSelecionado();
-    //
-    //     if (projetoSelecionado >= 0)
-    //     {
-    //         temProjeto = true;
-    //         projetoAtual = projetosDisponiveis[projetoSelecionado];
-    //
-    //         gerenciadorJogoUI.RemoverProjeto(projetoSelecionado);
-    //         projetosDisponiveis.RemoveAt(projetoSelecionado);
-    //
-    //         gerenciadorJogoUI.ComecarProjeto(projetoAtual);
-    //         gerenciadorJogoUI.Confirmar();
-    //     }
-    // }
+    public void HackAvancarEtapa()
+    {
+        perfilCarregado.etapa = 1;
+        GerenciadorSalve.instancia.SalvarPerfil(perfilCarregado);
+
+        SceneManager.LoadScene(GerenciadorSalve.instancia.ObterEtapa() + 1);
+    }
 }

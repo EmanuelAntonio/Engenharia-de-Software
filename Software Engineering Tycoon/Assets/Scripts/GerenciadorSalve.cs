@@ -52,6 +52,11 @@ public class GerenciadorSalve : MonoBehaviour
         perfilSelecionado = id;
     }
 
+    public int ObterEtapa()
+    {
+        return dados.perfil[perfilSelecionado].etapa;
+    }
+
     public void SalvarPerfil(Perfil perfil)
     {
         DadosPerfil dadosPerfil = dados.perfil[perfilSelecionado];
