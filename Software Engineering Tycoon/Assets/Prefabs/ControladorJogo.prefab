@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114891738910721764}
   m_Layer: 0
   m_Name: ControladorJogo
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +78,7 @@ MonoBehaviour:
   pontosPesquisa: 0
   verba: 0
   novoPerfil: 0
+  etapaTutorial: 0
 --- !u!114 &114891738910721764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,23 +114,27 @@ MonoBehaviour:
       documentacao: 0
       legibilidade: 0
       qualidadeSolucao: 0
-      qualidadeInterface: 0
+      desenvolvimentoInterface: 0
       testes: 0
       avaliacaoCliente: 0
       implantacao: 0
+    avaliacao: 0
   pontosErro: 0
   pontosTecnologia: 0
   pontosDesign: 0
-  escolhaPrioridades:
+  prioridadesEscolhidas:
     coletaDados: 0
     estudoDominio: 0
     documentacao: 0
     legibilidade: 0
     qualidadeSolucao: 0
-    qualidadeInterface: 0
+    desenvolvimentoInterface: 0
     testes: 0
     avaliacaoCliente: 0
     implantacao: 0
   dificuldadeAtual: 0.5
   quantidadeMaximaProjetos: 5
   projetosDisponiveis: []
+  duracaoDia: 0.3
+  dispesasMensais: 500
+  aceitarProjetoInterface: {fileID: 0}

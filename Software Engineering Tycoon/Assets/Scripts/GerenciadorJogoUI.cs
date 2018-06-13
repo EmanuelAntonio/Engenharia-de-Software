@@ -17,10 +17,11 @@ public class GerenciadorJogoUI : MonoBehaviour
     private int exibirRelatorio;
     private int exibirPesquisa;
     private int exibirAceitarProjeto;
-    private int exibirCriarEmpresa;
+    // private int exibirCriarEmpresa;
     private int progressoProjeto;
     private int estagioProjeto;
     private int temProjeto;
+    // private int etapaTutorial;
 
     void Start()
     {
@@ -30,10 +31,11 @@ public class GerenciadorJogoUI : MonoBehaviour
         exibirRelatorio = Animator.StringToHash("ExibirRelatorio");
         exibirPesquisa = Animator.StringToHash("ExibirPesquisa");
         exibirAceitarProjeto = Animator.StringToHash("ExibirAceitarProjeto");
-        exibirCriarEmpresa = Animator.StringToHash("ExibirCriarEmpresa");
+        // exibirCriarEmpresa = Animator.StringToHash("ExibirCriarEmpresa");
         progressoProjeto = Animator.StringToHash("ProgressoProjeto");
         estagioProjeto = Animator.StringToHash("EstagioProjeto");
         temProjeto = Animator.StringToHash("TemProjeto");
+        // etapaTutorial = Animator.StringToHash("EtapaTutorial");
     }
 
     public void Confirmar()
@@ -68,7 +70,8 @@ public class GerenciadorJogoUI : MonoBehaviour
 
     public void ExibirCriarEmpresa()
     {
-        animator.SetTrigger(exibirCriarEmpresa);
+        // animator.SetTrigger(exibirCriarEmpresa);
+        animator.SetTrigger("ExibirCriarEmpresa");
     }
 
     public void DefinirProgresso(float progresso)
@@ -84,7 +87,7 @@ public class GerenciadorJogoUI : MonoBehaviour
         animator.SetBool(temProjeto, true);
     }
 
-    public void AvançarEstagio()
+    public void AvancarEstagio()
     {
         int estagioAtual = animator.GetInteger(estagioProjeto);
 
@@ -96,6 +99,12 @@ public class GerenciadorJogoUI : MonoBehaviour
         {
             animator.SetInteger(estagioProjeto, estagioAtual + 1);
         }
+    }
+
+    public void AvancarEtapaTutorial(int etapa)
+    {
+        // animator.SetInteger(etapaTutorial, etapa);
+        animator.SetInteger("EtapaTutorial", etapa);
     }
 
     public void AtualizarListaProjetos()

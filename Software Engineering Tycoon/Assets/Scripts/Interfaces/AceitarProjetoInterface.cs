@@ -6,8 +6,10 @@ using TMPro;
 
 public class AceitarProjetoInterface : MonoBehaviour
 {
-    public GerenciadorProjeto gerenciadorProjeto;
-    public GerenciadorJogoUI gerenciadorJogoUI;
+    private GameObject controladorJogo;
+
+    private GerenciadorProjeto gerenciadorProjeto;
+    private GerenciadorJogoUI gerenciadorJogoUI;
 
     public GameObject abaProjetoPrefab;
     public GameObject detalhesProjetoPrefab;
@@ -20,6 +22,16 @@ public class AceitarProjetoInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
+        controladorJogo = GameObject.FindWithTag("GameController");
+        if (controladorJogo == null)
+        {
+            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
+        }
+
+        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
+        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
+
+
         abasProjetos = transform.Find("AreaProjetos/ListaProjetos").GetComponent<Abas>();
         aceitarProjetoBotao = transform.Find("AceitarBotao").GetComponent<Button>();
 
@@ -102,5 +114,10 @@ public class AceitarProjetoInterface : MonoBehaviour
     public void AtualizarBotaoAceitarProjeto()
     {
         aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
+    }
+
+    public void Fechar()
+    {
+        gerenciadorJogoUI.Fechar();
     }
 }

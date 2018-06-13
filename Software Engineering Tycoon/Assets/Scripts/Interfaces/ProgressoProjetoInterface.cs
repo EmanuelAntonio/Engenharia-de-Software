@@ -5,7 +5,10 @@ using TMPro;
 
 public class ProgressoProjetoInterface : MonoBehaviour
 {
-    public GerenciadorProjeto gerenciadorProjeto;
+    private GameObject controladorJogo;
+
+    private GerenciadorProjeto gerenciadorProjeto;
+    private GerenciadorJogoUI gerenciadorJogoUI;
 
     private TextMeshProUGUI nomeEmpresa;
     private TextMeshProUGUI tipoEmpresa;
@@ -13,6 +16,15 @@ public class ProgressoProjetoInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
+        controladorJogo = GameObject.FindWithTag("GameController");
+        if (controladorJogo == null)
+        {
+            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
+        }
+
+        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
+        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
+
         nomeEmpresa = transform.Find("Progresso/Nome").GetComponent<TextMeshProUGUI>();
         tipoEmpresa = transform.Find("Progresso/Tipo").GetComponent<TextMeshProUGUI>();
 
@@ -39,5 +51,20 @@ public class ProgressoProjetoInterface : MonoBehaviour
             nomeEmpresa.text = "<nome_empresa>";
             tipoEmpresa.text = "<tipo_empresa>";
         }
+    }
+
+    public void Confirmar()
+    {
+        gerenciadorJogoUI.Confirmar();
+    }
+
+    public void AvancarEstagio()
+    {
+        gerenciadorJogoUI.AvancarEstagio();
+    }
+
+    public void ConcluirProjeto()
+    {
+        gerenciadorProjeto.ConcluirProjeto();
     }
 }

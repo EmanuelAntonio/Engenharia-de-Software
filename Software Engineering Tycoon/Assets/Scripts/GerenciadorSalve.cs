@@ -71,6 +71,7 @@ public class GerenciadorSalve : MonoBehaviour
         dadosPerfil.pontosPesquisa = perfil.pontosPesquisa;
         dadosPerfil.verba = perfil.verba;
         dadosPerfil.novoPerfil = perfil.novoPerfil;
+        dadosPerfil.etapaTutorial = perfil.etapaTutorial;
 
         Salvar();
     }
@@ -89,6 +90,7 @@ public class GerenciadorSalve : MonoBehaviour
         perfil.pontosPesquisa = dadosPerfil.pontosPesquisa;
         perfil.verba = dadosPerfil.verba;
         perfil.novoPerfil = dadosPerfil.novoPerfil;
+        perfil.etapaTutorial = dadosPerfil.etapaTutorial;
     }
 
     public void ApagarPerfil(int id)
@@ -133,12 +135,13 @@ public class DadosPerfil
 {
     public string nomeEmpresa = "";
     public string nomeJogador = "";
-    public int dia = 0;
-    public int mes = 0;
-    public int ano = 0;
+    public int dia = 1;
+    public int mes = 1;
+    public int ano = 1970;
     public int etapa = 0;
     public int maximoFuncionario = 0;
     public int pontosPesquisa = 0;
-    public float verba = 0;
+    public float verba = 15000;
     public bool novoPerfil = true;
+    public int etapaTutorial = 0;
 }

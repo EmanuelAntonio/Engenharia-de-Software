@@ -25,12 +25,12 @@ MonoBehaviour:
   tamanhoMaximo: 25
   experienciaUsuarioMinima: 0.1
   experienciaUsuarioMaxima: 0.2
-  prioridadeColetaDadosBase: 1
-  prioridadeEstudoDominioBase: 1
-  prioridadeDocumentacaoBase: 1
-  prioridadeLegibilidadeBase: 1
-  prioridadeQualidadeSolucaoBase: 1
-  prioridadeDesenvolvimentoInterfaceBase: 1
-  prioridadeTestesBase: 1
+  prioridadeColetaDadosBase: 0.494
+  prioridadeEstudoDominioBase: 0.308
+  prioridadeDocumentacaoBase: 0.489
+  prioridadeLegibilidadeBase: 0.316
+  prioridadeQualidadeSolucaoBase: 0.687
+  prioridadeDesenvolvimentoInterfaceBase: 0.827
+  prioridadeTestesBase: 0.473
   prioridadeAvaliacaoClienteBase: 1
-  prioridadeImplantacaoBase: 1
+  prioridadeImplantacaoBase: 0.473

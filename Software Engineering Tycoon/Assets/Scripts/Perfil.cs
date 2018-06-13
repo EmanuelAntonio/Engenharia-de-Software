@@ -14,8 +14,9 @@ public class Perfil : MonoBehaviour
     public int pontosPesquisa;
     public float verba;
     public bool novoPerfil;
+    public int etapaTutorial;
 
-    void Start()
+    public void Carregar()
     {
         GerenciadorSalve.instancia.CarregarPerfil(this);
     }

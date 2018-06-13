@@ -16,7 +16,7 @@ public class GerenciadorProjeto : MonoBehaviour
     public int pontosTecnologia;
     public int pontosDesign;
 
-    public Prioridades escolhaPrioridades;
+    public Prioridades prioridadesEscolhidas;
 
     [Range(0, 1)]
     public float dificuldadeAtual;
@@ -26,15 +26,31 @@ public class GerenciadorProjeto : MonoBehaviour
     private GerenciadorJogoUI gerenciadorJogoUI;
     private Perfil perfilCarregado;
 
+    // TODO(andre:2018-06-13): Essas variaveis definitivamente estao no lugar errado.
+    // Mover para alguma classe separada responsavel por atualizar o perfil ou para
+    // alguma classe responsavel por atualizar o tempo.
+    public float duracaoDia;
+    public float dispesasMensais;
+    private float tempoDesdeUltimoDia = 0;
+
+    // MUITA GAMBIARRA
+    public GameObject aceitarProjetoInterface;
+
     void Start()
     {
         gerenciadorJogoUI = GetComponent<GerenciadorJogoUI>();
         perfilCarregado = GetComponent<Perfil>();
 
+        perfilCarregado.Carregar();
         if (perfilCarregado.novoPerfil)
         {
+            // TODO(andre:2018-06-13): Considerar implementar valor booleano para
+            // a criacao da empresa
             gerenciadorJogoUI.ExibirCriarEmpresa();
         }
+        // TODO(andre:2018-06-13): Pre inicializar todas as variaveis do animator
+        // com os valores carregados no perfil
+        gerenciadorJogoUI.AvancarEtapaTutorial(perfilCarregado.etapaTutorial);
 
         temProjeto = false;
 
@@ -49,6 +65,46 @@ public class GerenciadorProjeto : MonoBehaviour
         // precisar de passar pelo gerenciadorJogoUI nem ter uma referencia direta
         // ao painel de aceitacao do projeto
         gerenciadorJogoUI.AtualizarListaProjetos();
+    }
+
+    void Update()
+    {
+        tempoDesdeUltimoDia += Time.deltaTime;
+        // TODO(andre:2018-06-13): Considerar tamanhos de meses diferentes alem de ano bisexto
+        while (tempoDesdeUltimoDia > duracaoDia)
+        {
+            perfilCarregado.dia += 1;
+
+            if (perfilCarregado.dia > 30)
+            {
+                perfilCarregado.dia -= 30;
+                perfilCarregado.mes += 1;
+
+                // TODO(andre:2018-06-13): O projeto exibido não é atualizado até o usuario
+                // fechar a janela, mas o projeto que é escolhido é alterado. Isso faz com que o
+                // usuario selecione um projeto errado
+                if (!aceitarProjetoInterface.activeSelf)
+                {
+                    projetosDisponiveis.Clear();
+                    for (int i = 0; i < quantidadeMaximaProjetos; ++i)
+                    {
+                        projetosDisponiveis.Add(GerarProjeto(dificuldadeAtual));
+                    }
+                    gerenciadorJogoUI.AtualizarListaProjetos();
+                }
+
+                perfilCarregado.verba -= dispesasMensais;
+                perfilCarregado.Salvar();
+
+                if (perfilCarregado.mes > 12)
+                {
+                    perfilCarregado.mes -= 12;
+                    perfilCarregado.ano += 1;
+                }
+            }
+
+            tempoDesdeUltimoDia -= duracaoDia;
+        }
     }
 
     public Projeto GerarProjeto(float dificuldade)
@@ -96,11 +152,20 @@ public class GerenciadorProjeto : MonoBehaviour
         return projeto;
     }
 
-    public void HackAvancarEtapa()
+    public void AvancarEtapa()
     {
         perfilCarregado.etapa = 1;
         GerenciadorSalve.instancia.SalvarPerfil(perfilCarregado);
 
         SceneManager.LoadScene(GerenciadorSalve.instancia.ObterEtapa() + 1);
+    }
+
+    public void ConcluirProjeto()
+    {
+        projetoAtual.CalcularAvaliacao(prioridadesEscolhidas);
+        perfilCarregado.verba += projetoAtual.valorPagamento * projetoAtual.GetAvaliacao();
+        temProjeto = false;
+
+        perfilCarregado.Salvar();
     }
 }

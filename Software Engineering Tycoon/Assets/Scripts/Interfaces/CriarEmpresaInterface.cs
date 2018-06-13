@@ -5,9 +5,10 @@ using TMPro;
 
 public class CriarEmpresaInterface : MonoBehaviour
 {
-    // TODO(andre:2018:06-12): Encontrar uma forma mais organizada de atualizar a
-    // referencia do perfil atual. Talvez usar Singleton para os gerenciadores.
-    public Perfil perfilCarregado;
+    private GameObject controladorJogo;
+
+    private GerenciadorJogoUI gerenciadorJogoUI;
+    private Perfil perfilCarregado;
 
     private TMP_InputField nomeEmpresa;
     private TMP_InputField nomeJogador;
@@ -15,6 +16,15 @@ public class CriarEmpresaInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
+        controladorJogo = GameObject.FindWithTag("GameController");
+        if (controladorJogo == null)
+        {
+            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
+        }
+
+        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
+        perfilCarregado = controladorJogo.GetComponent<Perfil>();
+
         nomeEmpresa = transform.Find("Detalhes/NomeEmpresa/Input").GetComponent<TMP_InputField>();
         nomeJogador = transform.Find("Detalhes/NomeJogador/Input").GetComponent<TMP_InputField>();
 
@@ -40,5 +50,10 @@ public class CriarEmpresaInterface : MonoBehaviour
         perfilCarregado.novoPerfil = false;
 
         perfilCarregado.Salvar();
+    }
+
+    public void Confirmar()
+    {
+        gerenciadorJogoUI.Confirmar();
     }
 }
