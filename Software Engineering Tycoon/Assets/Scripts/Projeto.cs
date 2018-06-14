@@ -17,6 +17,31 @@ public class Prioridades
     public float avaliacaoCliente;
     public float implantacao;
 
+    // Usado nos testes unitarios
+    public void Contruct(float coletaDados, float estudoDominio, float documentacao,
+                         float legibilidade, float qualidadeSolucao, float desenvolvimentoInterface,
+                         float testes, float avaliacaoCliente, float implantacao)
+    {
+        this.coletaDados = coletaDados;
+        this.estudoDominio = estudoDominio;
+        this.documentacao = documentacao;
+
+        this.legibilidade = legibilidade;
+        this.qualidadeSolucao = qualidadeSolucao;
+        this.desenvolvimentoInterface = desenvolvimentoInterface;
+
+        this.testes = testes;
+        this.avaliacaoCliente = avaliacaoCliente;
+        this.implantacao = implantacao;
+    }
+
+    public float Soma()
+    {
+        return coletaDados + estudoDominio + documentacao + 
+               legibilidade + qualidadeSolucao + desenvolvimentoInterface + 
+               testes + avaliacaoCliente + implantacao;
+    }
+
     public Prioridades Normalizada()
     {
         float somaEtapaPlanejamento = this.coletaDados + this.estudoDominio + this.documentacao;
