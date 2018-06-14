@@ -18,9 +18,8 @@ namespace TestesUnitarios
 
             Prioridades prioridadesNormalizada = prioridades.Normalizada();
 
-            float somaPrioridades = prioridadesNormalizada.Soma();
-
-            Assert.AreEqual(somaPrioridades, 1.0);
+            float somaPrioridades = prioridadesNormalizada.SomaPrioridades();
+            Assert.AreEqual(somaPrioridades, 3.0f);
             yield return null;
         }
     }

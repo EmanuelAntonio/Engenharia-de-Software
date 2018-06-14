@@ -35,7 +35,7 @@ public class Prioridades
         this.implantacao = implantacao;
     }
 
-    public float Soma()
+    public float SomaPrioridades()
     {
         return coletaDados + estudoDominio + documentacao + 
                legibilidade + qualidadeSolucao + desenvolvimentoInterface + 
