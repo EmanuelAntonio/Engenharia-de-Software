@@ -147,7 +147,7 @@ public class GerenciadorProjeto : MonoBehaviour
         prioridades.avaliacaoCliente         = tipoSelecionado.prioridadeAvaliacaoClienteBase;
         prioridades.implantacao              = tipoSelecionado.prioridadeImplantacaoBase;
 
-        Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario, prioridades);
+        Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario, prioridades, tipoSelecionado);
 
         return projeto;
     }

@@ -79,13 +79,15 @@ public class Projeto
 
     public Prioridades prioridades;
 
+    public DescricaoTipoEmpresa descricaoTipoEmpresa;
+
     private int pontosErro = 0;
     private int pontosTecnologia = 0;
     private int pontosDesign = 0;
 
     public float avaliacao = 0;
 
-    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario, Prioridades prioridades)
+    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario, Prioridades prioridades, DescricaoTipoEmpresa descricaoTipoEmpresa = null)
     {
         this.tipoEmpresa = tipoEmpresa;
         this.nomeEmpresa = nomeEmpresa;
@@ -97,6 +99,8 @@ public class Projeto
         this.experienciaUsuario = experienciaUsuario;
 
         this.prioridades = prioridades;
+
+        this.descricaoTipoEmpresa = descricaoTipoEmpresa;
     }
 
     public int GetPontosErro()
