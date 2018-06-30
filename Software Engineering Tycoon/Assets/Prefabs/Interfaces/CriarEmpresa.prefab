@@ -643,8 +643,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114251319936055142}
-        m_MethodName: Confirmar
+      - m_Target: {fileID: 11400000, guid: 5d40922264e6eea4d84989e125465dce, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -656,6 +656,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114251319936055142}
         m_MethodName: AtualizarPerfil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 5868b440ff4278f4d8ad359fe1a58652, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -754,6 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991417bf225a8b64f892fa1702223b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
 --- !u!114 &114254984371935396
 MonoBehaviour:
   m_ObjectHideFlags: 1

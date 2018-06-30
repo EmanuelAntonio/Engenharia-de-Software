@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using TMPro;
 
-// TODO(andre:2018-06-12): Criar classe para a interface de carregamento de perfil
-public class MenuPrincipal : MonoBehaviour
+public class SelecaoPerfil : MonoBehaviour
 {
     public GameObject perfilPainel;
+
+    public ListaPerfis listaPerfis;
+    public PerfilSelecionado perfilSelecionado;
+    // TODO(andre:2018-06-24): Tentar remover a logica de apagar o perfil dessa clase
+    // e mover ela para o gerenciador de salve. O problema é passar o id do perfil
+    // que tem que ser apagado usando eventos.
+    public DadosPerfil perfilBase;
 
     void Start()
     {
@@ -19,7 +26,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void PreencherDadosPerfil(Transform perfil, int id)
     {
-        DadosPerfil dadosPerfil = GerenciadorSalve.instancia.dados.perfil[id];
+        // DadosPerfil dadosPerfil = GerenciadorSalve.instancia.dados.perfil[id];
+        DadosPerfil dadosPerfil = listaPerfis.perfis[id];
 
         Transform dados = perfil.Find("Dados");
         Transform criarPerfil = perfil.Find("CriarPerfil");
@@ -67,19 +75,16 @@ public class MenuPrincipal : MonoBehaviour
     public void CarregarPerfil(int id)
     {
         Debug.Log("Abrindo perfil " + id);
-        GerenciadorSalve.instancia.SelecionarPerfil(id);
-        SceneManager.LoadScene(GerenciadorSalve.instancia.ObterEtapa() + 1);
+
+        perfilSelecionado.perfil = listaPerfis.perfis[id];
+        SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
     }
 
     public void ApagarPerfil(int id)
     {
-        GerenciadorSalve.instancia.ApagarPerfil(id);
-        PreencherDadosPerfil(perfilPainel.transform.GetChild(id), id);
-    }
+        listaPerfis.perfis[id].DefineValores(perfilBase);
+        // Salvar();
 
-    public void SairJogo()
-    {
-        Debug.Log("Sair");
-        Application.Quit();
+        PreencherDadosPerfil(perfilPainel.transform.GetChild(id), id);
     }
 }

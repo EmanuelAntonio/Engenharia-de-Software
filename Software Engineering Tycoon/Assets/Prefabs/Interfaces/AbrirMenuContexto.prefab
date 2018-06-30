@@ -68,8 +68,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: AlternarMenuContexto
+      - m_Target: {fileID: 11400000, guid: a86302e5f0c4ba74c880e16cf3997c18, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

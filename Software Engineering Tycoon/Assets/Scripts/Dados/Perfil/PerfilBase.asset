@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a584845ac3ab5349970aed2fb559a2e, type: 3}
+  m_Name: PerfilBase
+  m_EditorClassIdentifier: 
+  nomeEmpresa: 
+  nomeJogador: 
+  dia: 1
+  mes: 1
+  ano: 1970
+  etapa: 0
+  maximoFuncionario: 0
+  pontosPesquisa: 0
+  verba: 15000
+  novoPerfil: 1
+  etapaTutorial: 0

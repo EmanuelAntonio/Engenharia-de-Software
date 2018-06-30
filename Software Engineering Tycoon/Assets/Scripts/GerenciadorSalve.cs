@@ -5,24 +5,14 @@ using System.IO;
 
 public class GerenciadorSalve : MonoBehaviour
 {
-    public static GerenciadorSalve instancia = null;
-
-    public DadosSalvar dados;
-    public int perfilSelecionado;
-
-    public int quantPerfil;
+    public ListaPerfis listaPerfis;
+    // public PerfilSelecionado perfilSelecionado;
+    public DadosPerfil perfilBase;
 
     private string caminhoArquivo;
 
     void Awake()
     {
-        if (instancia == null)
-            instancia = this;
-        else if (instancia != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
-
         // TODO(andre:2018-06-09): Salvando na pasta de assets por conveniencia.
         // Alterar para persistentDataPath quando o sistema de salve estiver
         // funcionando corretamente
@@ -36,73 +26,32 @@ public class GerenciadorSalve : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F5))
         {
-            Debug.Log("Jogo salvo!");
             Salvar();
+            Debug.Log("Jogo salvo!");
         }
 
         if (Input.GetKeyDown(KeyCode.F6))
         {
-            Debug.Log("Jogo carregado!");
             Carregar();
+            Debug.Log("Jogo carregado!");
         }
     }
 
-    public void SelecionarPerfil(int id)
-    {
-        perfilSelecionado = id;
-    }
-
-    public int ObterEtapa()
-    {
-        return dados.perfil[perfilSelecionado].etapa;
-    }
-
-    public void SalvarPerfil(Perfil perfil)
-    {
-        DadosPerfil dadosPerfil = dados.perfil[perfilSelecionado];
-
-        dadosPerfil.nomeEmpresa = perfil.nomeEmpresa;
-        dadosPerfil.nomeJogador = perfil.nomeJogador;
-        dadosPerfil.dia = perfil.dia;
-        dadosPerfil.mes = perfil.mes;
-        dadosPerfil.ano = perfil.ano;
-        dadosPerfil.etapa = perfil.etapa;
-        dadosPerfil.maximoFuncionario = perfil.maximoFuncionario;
-        dadosPerfil.pontosPesquisa = perfil.pontosPesquisa;
-        dadosPerfil.verba = perfil.verba;
-        dadosPerfil.novoPerfil = perfil.novoPerfil;
-        dadosPerfil.etapaTutorial = perfil.etapaTutorial;
-
-        Salvar();
-    }
-
-    public void CarregarPerfil(Perfil perfil)
-    {
-        DadosPerfil dadosPerfil = dados.perfil[perfilSelecionado];
-
-        perfil.nomeEmpresa = dadosPerfil.nomeEmpresa;
-        perfil.nomeJogador = dadosPerfil.nomeJogador;
-        perfil.dia = dadosPerfil.dia;
-        perfil.mes = dadosPerfil.mes;
-        perfil.ano = dadosPerfil.ano;
-        perfil.etapa = dadosPerfil.etapa;
-        perfil.maximoFuncionario = dadosPerfil.maximoFuncionario;
-        perfil.pontosPesquisa = dadosPerfil.pontosPesquisa;
-        perfil.verba = dadosPerfil.verba;
-        perfil.novoPerfil = dadosPerfil.novoPerfil;
-        perfil.etapaTutorial = dadosPerfil.etapaTutorial;
-    }
+    // public void SelecionarPerfil(int id)
+    // {
+    //     perfilSelecionado.perfil = listaPerfis.perfis[id];
+    // }
 
     public void ApagarPerfil(int id)
     {
-        dados.perfil[id] = new DadosPerfil();
+        listaPerfis.perfis[id].DefineValores(perfilBase);
 
         Salvar();
     }
 
     public void Salvar()
     {
-        string jsonString = JsonUtility.ToJson(dados);
+        string jsonString = JsonUtility.ToJson(listaPerfis.Serializavel());
         File.WriteAllText(caminhoArquivo, jsonString);
     }
 
@@ -111,37 +60,14 @@ public class GerenciadorSalve : MonoBehaviour
         if (File.Exists(caminhoArquivo))
         {
             string jsonString = File.ReadAllText(caminhoArquivo);
-            JsonUtility.FromJsonOverwrite(jsonString, dados);
+            listaPerfis.DefineSerializavel(JsonUtility.FromJson<ListaPerfisSerializavel>(jsonString));
         }
         else
         {
-            dados.perfil = new DadosPerfil[quantPerfil];
-            for (int i = 0; i < quantPerfil; ++i)
+            foreach (DadosPerfil perfil in listaPerfis.perfis)
             {
-                dados.perfil[i] = new DadosPerfil();
+                perfil.DefineValores(perfilBase);
             }
         }
     }
-}
-
-[System.Serializable]
-public class DadosSalvar
-{
-    public DadosPerfil[] perfil;
-}
-
-[System.Serializable]
-public class DadosPerfil
-{
-    public string nomeEmpresa = "";
-    public string nomeJogador = "";
-    public int dia = 1;
-    public int mes = 1;
-    public int ano = 1970;
-    public int etapa = 0;
-    public int maximoFuncionario = 0;
-    public int pontosPesquisa = 0;
-    public float verba = 15000;
-    public bool novoPerfil = true;
-    public int etapaTutorial = 0;
 }

@@ -826,7 +826,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114651041589345336}
-        m_MethodName: EncheProgresso
+        m_MethodName: AtualizarPrioridades
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -836,8 +836,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114651041589345336}
-        m_MethodName: Confirmar
+      - m_Target: {fileID: 11400000, guid: 5d40922264e6eea4d84989e125465dce, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -847,8 +847,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114651041589345336}
-        m_MethodName: AvancarEstagio
+      - m_Target: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5c5d24c7f369c418fe50c5cefe6ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderProgresso: {fileID: 0}
+  projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
   idConjuntoSliders: 2
 --- !u!114 &114676036093169944
 MonoBehaviour:

@@ -10,13 +10,13 @@ public class Abas : MonoBehaviour
 
     public GameObject abaAtiva;
 
-    void Start()
-    {
-        foreach (Transform filho in listaDetalhes)
-            filho.gameObject.SetActive(false);
-
-        DefineAbaAtiva(0);
-    }
+    // void Start()
+    // {
+    //     foreach (Transform filho in listaDetalhes)
+    //         filho.gameObject.SetActive(false);
+    //
+    //     DefineAbaAtiva(0);
+    // }
 
     public void DefineAbaAtiva(GameObject novaAba)
     {

@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class CriarEmpresaInterface : MonoBehaviour
 {
-    private GameObject controladorJogo;
-
-    private GerenciadorJogoUI gerenciadorJogoUI;
-    private Perfil perfilCarregado;
+    public PerfilSelecionado perfilSelecionado;
 
     private TMP_InputField nomeEmpresa;
     private TMP_InputField nomeJogador;
@@ -16,15 +14,6 @@ public class CriarEmpresaInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
-        controladorJogo = GameObject.FindWithTag("GameController");
-        if (controladorJogo == null)
-        {
-            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
-        }
-
-        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
-        perfilCarregado = controladorJogo.GetComponent<Perfil>();
-
         nomeEmpresa = transform.Find("Detalhes/NomeEmpresa/Input").GetComponent<TMP_InputField>();
         nomeJogador = transform.Find("Detalhes/NomeJogador/Input").GetComponent<TMP_InputField>();
 
@@ -45,15 +34,8 @@ public class CriarEmpresaInterface : MonoBehaviour
 
     public void AtualizarPerfil()
     {
-        perfilCarregado.nomeEmpresa = nomeEmpresa.text;
-        perfilCarregado.nomeJogador = nomeJogador.text;
-        perfilCarregado.novoPerfil = false;
-
-        perfilCarregado.Salvar();
-    }
-
-    public void Confirmar()
-    {
-        gerenciadorJogoUI.Confirmar();
+        perfilSelecionado.perfil.nomeEmpresa = nomeEmpresa.text;
+        perfilSelecionado.perfil.nomeJogador = nomeJogador.text;
+        perfilSelecionado.perfil.novoPerfil = false;
     }
 }

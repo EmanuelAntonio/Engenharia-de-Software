@@ -8,7 +8,7 @@ namespace TestesUnitarios
 {
     public class TestesProjeto
     {
-
+/*
         // A UnityTest behaves like a coroutine in PlayMode
         // and allows you to yield null to skip a frame in EditMode
         [UnityTest]
@@ -39,7 +39,7 @@ namespace TestesUnitarios
 
             yield return null;
         }
-
+*/
         /*[UnityTest]
         public IEnumerator TesteDeficuldadeProjeto()
         {

@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0496045b5bfa63344870696dbda66c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
   imagemAvaliacao0: {fileID: 21300000, guid: 0a4ff16f58e697748a17b59b35766ad7, type: 3}
   imagemAvaliacao1: {fileID: 21300000, guid: 9729e54f87f046b47a96ff613bff4bae, type: 3}
   imagemAvaliacao2: {fileID: 21300000, guid: 9cf44dc2ef42d67458cd221961677f05, type: 3}
@@ -590,8 +591,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114081031302681440}
-        m_MethodName: Confirmar
+      - m_Target: {fileID: 11400000, guid: 5d40922264e6eea4d84989e125465dce, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1143,7 +1144,7 @@ RectTransform:
   m_GameObject: {fileID: 1635740796850472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_Children:
   - {fileID: 224358273189361452}
   - {fileID: 224334963876752302}

@@ -3,6 +3,68 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+public class Projeto
+{
+    public string tipoEmpresa;
+    public string nomeEmpresa;
+    public string descricao;
+
+    public float valorPagamento;
+    public float multaAtraso;
+    public int tamanhoEmpresa;
+    public float experienciaUsuario;
+
+    public Prioridades prioridades;
+
+    public DescricaoTipoEmpresa descricaoTipoEmpresa;
+
+    public int pontosErro;
+    public int pontosTecnologia;
+    public int pontosDesign;
+
+    public float avaliacao;
+
+    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario, Prioridades prioridades, DescricaoTipoEmpresa descricaoTipoEmpresa = null)
+    {
+        this.tipoEmpresa = tipoEmpresa;
+        this.nomeEmpresa = nomeEmpresa;
+        this.descricao = descricao;
+
+        this.valorPagamento = valorPagamento;
+        this.multaAtraso = multaAtraso;
+        this.tamanhoEmpresa = tamanhoEmpresa;
+        this.experienciaUsuario = experienciaUsuario;
+
+        this.prioridades = prioridades;
+
+        this.descricaoTipoEmpresa = descricaoTipoEmpresa;
+    }
+
+    public void CalcularAvaliacao(Prioridades prioridadesEscolhidas)
+    {
+        // TODO(andre:2018-06-13): Precomputar as prioridades normalizadas do projeto
+        Prioridades prioridadesNormalizadas = prioridades.Normalizada();
+        Prioridades prioridadesEscolhidasNormalizadas = prioridadesEscolhidas.Normalizada();
+
+        float coletaDados              = Mathf.Abs(prioridadesNormalizadas.coletaDados              - prioridadesEscolhidasNormalizadas.coletaDados);
+        float estudoDominio            = Mathf.Abs(prioridadesNormalizadas.estudoDominio            - prioridadesEscolhidasNormalizadas.estudoDominio);
+        float documentacao             = Mathf.Abs(prioridadesNormalizadas.documentacao             - prioridadesEscolhidasNormalizadas.documentacao);
+        float legibilidade             = Mathf.Abs(prioridadesNormalizadas.legibilidade             - prioridadesEscolhidasNormalizadas.legibilidade);
+        float qualidadeSolucao         = Mathf.Abs(prioridadesNormalizadas.qualidadeSolucao         - prioridadesEscolhidasNormalizadas.qualidadeSolucao);
+        float desenvolvimentoInterface = Mathf.Abs(prioridadesNormalizadas.desenvolvimentoInterface - prioridadesEscolhidasNormalizadas.desenvolvimentoInterface);
+        float testes                   = Mathf.Abs(prioridadesNormalizadas.testes                   - prioridadesEscolhidasNormalizadas.testes);
+        float avaliacaoCliente         = Mathf.Abs(prioridadesNormalizadas.avaliacaoCliente         - prioridadesEscolhidasNormalizadas.avaliacaoCliente);
+        float implantacao              = Mathf.Abs(prioridadesNormalizadas.implantacao              - prioridadesEscolhidasNormalizadas.implantacao);
+
+        float diferencaMedia = (coletaDados + estudoDominio + documentacao +
+                                legibilidade + qualidadeSolucao + desenvolvimentoInterface +
+                                testes + avaliacaoCliente + implantacao) / 9;
+
+        this.avaliacao = Mathf.Max(1 - diferencaMedia * 3, 0);
+    }
+}
+
+[System.Serializable]
 public class Prioridades
 {
     public float coletaDados;
@@ -37,8 +99,8 @@ public class Prioridades
 
     public float SomaPrioridades()
     {
-        return coletaDados + estudoDominio + documentacao + 
-               legibilidade + qualidadeSolucao + desenvolvimentoInterface + 
+        return coletaDados + estudoDominio + documentacao +
+               legibilidade + qualidadeSolucao + desenvolvimentoInterface +
                testes + avaliacaoCliente + implantacao;
     }
 
@@ -62,102 +124,5 @@ public class Prioridades
         prioridadesNormalizadas.implantacao      = this.implantacao /  somaEtapaAvaliacao;
 
         return prioridadesNormalizadas;
-    }
-}
-
-[System.Serializable]
-public class Projeto
-{
-    public string tipoEmpresa;
-    public string nomeEmpresa;
-    public string descricao;
-
-    public float valorPagamento;
-    public float multaAtraso;
-    public int tamanhoEmpresa;
-    public float experienciaUsuario;
-
-    public Prioridades prioridades;
-
-    public DescricaoTipoEmpresa descricaoTipoEmpresa;
-
-    private int pontosErro = 0;
-    private int pontosTecnologia = 0;
-    private int pontosDesign = 0;
-
-    public float avaliacao = 0;
-
-    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario, Prioridades prioridades, DescricaoTipoEmpresa descricaoTipoEmpresa = null)
-    {
-        this.tipoEmpresa = tipoEmpresa;
-        this.nomeEmpresa = nomeEmpresa;
-        this.descricao = descricao;
-
-        this.valorPagamento = valorPagamento;
-        this.multaAtraso = multaAtraso;
-        this.tamanhoEmpresa = tamanhoEmpresa;
-        this.experienciaUsuario = experienciaUsuario;
-
-        this.prioridades = prioridades;
-
-        this.descricaoTipoEmpresa = descricaoTipoEmpresa;
-    }
-
-    public int GetPontosErro()
-    {
-        return this.pontosErro;
-    }
-
-    public void SetPontosErro( int pontosErro)
-    {
-        this.pontosErro = pontosErro;
-    }
-
-    public int GetPontosTecnologia()
-    {
-        return this.pontosTecnologia;
-    }
-
-    public void SetPontosTecnologia(int pontosTecnologia)
-    {
-        this.pontosTecnologia = pontosTecnologia;
-    }
-
-    public int GetPontosDesign()
-    {
-        return this.pontosDesign;
-    }
-
-    public void SetPontosDesign(int pontosDesign)
-    {
-        this.pontosDesign = pontosDesign;
-    }
-
-    public float GetAvaliacao()
-    {
-        return this.avaliacao;
-    }
-
-    public void CalcularAvaliacao(Prioridades prioridadesEscolhidas)
-    {
-        // TODO(andre:2018-06-13): Precomputar as prioridades normalizadas do projeto
-        Prioridades prioridadesNormalizadas = prioridades.Normalizada();
-        Prioridades prioridadesEscolhidasNormalizadas = prioridadesEscolhidas.Normalizada();
-
-        float coletaDados              = Mathf.Abs(prioridadesNormalizadas.coletaDados              - prioridadesEscolhidasNormalizadas.coletaDados);
-        float estudoDominio            = Mathf.Abs(prioridadesNormalizadas.estudoDominio            - prioridadesEscolhidasNormalizadas.estudoDominio);
-        float documentacao             = Mathf.Abs(prioridadesNormalizadas.documentacao             - prioridadesEscolhidasNormalizadas.documentacao);
-        float legibilidade             = Mathf.Abs(prioridadesNormalizadas.legibilidade             - prioridadesEscolhidasNormalizadas.legibilidade);
-        float qualidadeSolucao         = Mathf.Abs(prioridadesNormalizadas.qualidadeSolucao         - prioridadesEscolhidasNormalizadas.qualidadeSolucao);
-        float desenvolvimentoInterface = Mathf.Abs(prioridadesNormalizadas.desenvolvimentoInterface - prioridadesEscolhidasNormalizadas.desenvolvimentoInterface);
-        float testes                   = Mathf.Abs(prioridadesNormalizadas.testes                   - prioridadesEscolhidasNormalizadas.testes);
-        float avaliacaoCliente         = Mathf.Abs(prioridadesNormalizadas.avaliacaoCliente         - prioridadesEscolhidasNormalizadas.avaliacaoCliente);
-        float implantacao              = Mathf.Abs(prioridadesNormalizadas.implantacao              - prioridadesEscolhidasNormalizadas.implantacao);
-
-        float diferencaMedia = (coletaDados + estudoDominio + documentacao +
-                                legibilidade + qualidadeSolucao + desenvolvimentoInterface +
-                                testes + avaliacaoCliente + implantacao) / 9;
-
-        this.avaliacao = Mathf.Max(1 - diferencaMedia * 3, 0);
     }
 }

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 222632034034832666}
   - component: {fileID: 114777516411997632}
   - component: {fileID: 114828604205001678}
+  - component: {fileID: 114987253087189500}
   m_Layer: 5
   m_Name: ProgessoProjeto
   m_TagString: Untagged
@@ -512,9 +513,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224804180837326714}
   - component: {fileID: 114048387712850074}
-  - component: {fileID: 114377785213654688}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BarraProgresso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1122,8 +1122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114828604205001678}
-        m_MethodName: Confirmar
+      - m_Target: {fileID: 11400000, guid: 5d40922264e6eea4d84989e125465dce, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1133,8 +1133,8 @@ MonoBehaviour:
           m_StringArgument: AcaoConfirmar
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114828604205001678}
-        m_MethodName: AvancarEstagio
+      - m_Target: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1144,8 +1144,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 114828604205001678}
-        m_MethodName: ConcluirProjeto
+      - m_Target: {fileID: 11400000, guid: c39586de890eba1468ee8f1b9d6e4dc6, type: 2}
+        m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1270,20 +1270,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114377785213654688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1881682383691054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451feed13ea5b46489207bc6ddba4e40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 0
-  tempo: 0
-  gerenciadorJogoUI: {fileID: 0}
 --- !u!114 &114389265942971068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1882,6 +1868,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72d75a91b769494da154e00eea67367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
+  atualizarProgresso:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 93f5aa23e4bc7234e99702b4d6302279, type: 2}
+        m_MethodName: Disparar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114834446416872514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2405,6 +2408,34 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &114987253087189500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099256413812528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114828604205001678}
+        m_MethodName: AtualizarProgresso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114989328934732016
 MonoBehaviour:
   m_ObjectHideFlags: 1

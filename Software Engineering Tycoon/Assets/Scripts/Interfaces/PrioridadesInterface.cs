@@ -6,12 +6,7 @@ using TMPro;
 
 public class PrioridadesInterface : MonoBehaviour
 {
-    public BarraProgresso sliderProgresso;
-
-    private GameObject controladorJogo;
-
-    private GerenciadorProjeto gerenciadorProjeto;
-    private GerenciadorJogoUI gerenciadorJogoUI;
+    public ProjetoAtual projetoAtual;
 
     private TextMeshProUGUI nomeEmpresa;
     private TextMeshProUGUI tipoEmpresa;
@@ -26,15 +21,6 @@ public class PrioridadesInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
-        controladorJogo = GameObject.FindWithTag("GameController");
-        if (controladorJogo == null)
-        {
-            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
-        }
-
-        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
-        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
-
         nomeEmpresa = transform.Find("Nome").GetComponent<TextMeshProUGUI>();
         tipoEmpresa = transform.Find("Tipo").GetComponent<TextMeshProUGUI>();
 
@@ -56,10 +42,10 @@ public class PrioridadesInterface : MonoBehaviour
     // https://forum.unity.com/threads/awake-start-and-onenable-walked-into-a-bar.276712/
     void OnStartOrEnable()
     {
-        if (gerenciadorProjeto.temProjeto)
+        if (projetoAtual.temProjeto)
         {
-            nomeEmpresa.text = gerenciadorProjeto.projetoAtual.nomeEmpresa;
-            tipoEmpresa.text = gerenciadorProjeto.projetoAtual.tipoEmpresa;
+            nomeEmpresa.text = projetoAtual.projeto.nomeEmpresa;
+            tipoEmpresa.text = projetoAtual.projeto.tipoEmpresa;
         }
         else
         {
@@ -68,54 +54,41 @@ public class PrioridadesInterface : MonoBehaviour
         }
     }
 
-    public void Confirmar()
+    public void AtualizarPrioridades()
     {
-        gerenciadorJogoUI.Confirmar();
-
         // GAMBIARRA
         float peso = 4;
         switch (idConjuntoSliders)
         {
             case 0:
-                gerenciadorProjeto.prioridadesEscolhidas.coletaDados = 1 + slider1.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.estudoDominio = 1 + slider2.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.documentacao = 1 + slider3.value * peso;
+                projetoAtual.prioridadesEscolhidas.coletaDados = 1 + slider1.value * peso;
+                projetoAtual.prioridadesEscolhidas.estudoDominio = 1 + slider2.value * peso;
+                projetoAtual.prioridadesEscolhidas.documentacao = 1 + slider3.value * peso;
                 break;
 
             case 1:
-                gerenciadorProjeto.prioridadesEscolhidas.legibilidade = 1 + slider1.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.qualidadeSolucao = 1 + slider2.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.desenvolvimentoInterface = 1 + slider3.value * peso;
+                projetoAtual.prioridadesEscolhidas.legibilidade = 1 + slider1.value * peso;
+                projetoAtual.prioridadesEscolhidas.qualidadeSolucao = 1 + slider2.value * peso;
+                projetoAtual.prioridadesEscolhidas.desenvolvimentoInterface = 1 + slider3.value * peso;
                 break;
 
             case 2:
-                gerenciadorProjeto.prioridadesEscolhidas.testes = 1 + slider1.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.avaliacaoCliente = 1 + slider2.value * peso;
-                gerenciadorProjeto.prioridadesEscolhidas.implantacao = 1 + slider3.value * peso;
+                projetoAtual.prioridadesEscolhidas.testes = 1 + slider1.value * peso;
+                projetoAtual.prioridadesEscolhidas.avaliacaoCliente = 1 + slider2.value * peso;
+                projetoAtual.prioridadesEscolhidas.implantacao = 1 + slider3.value * peso;
                 break;
         }
-    }
-
-    public void AvancarEstagio()
-    {
-        gerenciadorJogoUI.AvancarEstagio();
     }
 
     // Gambiarra
     public void DefineValor(float valor)
     {
-        sliderProgresso.DefineValor(valor);
+        projetoAtual.valor = valor;
     }
 
     // Gambiarra
     public void DefineTempo(float tempo)
     {
-        sliderProgresso.DefineTempo(tempo);
-    }
-
-    // Gambiarra
-    public void EncheProgresso()
-    {
-        sliderProgresso.EncheProgresso();
+        projetoAtual.tempo = tempo;
     }
 }

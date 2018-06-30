@@ -2,36 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 
 public class AceitarProjetoInterface : MonoBehaviour
 {
-    private GameObject controladorJogo;
-
-    private GerenciadorProjeto gerenciadorProjeto;
-    private GerenciadorJogoUI gerenciadorJogoUI;
-
     public GameObject abaProjetoPrefab;
     public GameObject detalhesProjetoPrefab;
-
-    public bool atualizarListaProjetos;
 
     private Abas abasProjetos;
     private Button aceitarProjetoBotao;
 
+    public ProjetoAtual projetoAtual;
+    public ListaProjetos projetosDisponiveis;
+
     private bool _started = false;
     void Start()
     {
-        controladorJogo = GameObject.FindWithTag("GameController");
-        if (controladorJogo == null)
-        {
-            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
-        }
-
-        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
-        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
-
-
         abasProjetos = transform.Find("AreaProjetos/ListaProjetos").GetComponent<Abas>();
         aceitarProjetoBotao = transform.Find("AceitarBotao").GetComponent<Button>();
 
@@ -48,11 +35,9 @@ public class AceitarProjetoInterface : MonoBehaviour
     // https://forum.unity.com/threads/awake-start-and-onenable-walked-into-a-bar.276712/
     void OnStartOrEnable()
     {
-        if (atualizarListaProjetos)
-        {
-            AtualizarListaProjetos();
-            atualizarListaProjetos = false;
-        }
+        // TODO(andre>2018-06-25): Quando for criada a mensagem dizendo que a lista
+        // foi atualizada, atualizar a lista de projeto apenas quando receber a mensagem.
+        AtualizarListaProjetos();
 
         AtualizarBotaoAceitarProjeto();
     }
@@ -61,7 +46,7 @@ public class AceitarProjetoInterface : MonoBehaviour
     {
         abasProjetos.LimparAbas();
 
-        foreach (Projeto projeto in gerenciadorProjeto.projetosDisponiveis)
+        foreach (Projeto projeto in projetosDisponiveis.projetos)
         {
             GameObject abaProjeto = Instantiate(abaProjetoPrefab);
             GameObject detalhesProjeto = Instantiate(detalhesProjetoPrefab);
@@ -98,14 +83,14 @@ public class AceitarProjetoInterface : MonoBehaviour
 
         if (projetoSelecionado >= 0)
         {
-            gerenciadorProjeto.temProjeto = true;
-            gerenciadorProjeto.projetoAtual = gerenciadorProjeto.projetosDisponiveis[projetoSelecionado];
+            projetoAtual.temProjeto = true;
+            projetoAtual.projeto = projetosDisponiveis.projetos[projetoSelecionado];
+            projetoAtual.progresso = 0;
+            projetoAtual.valor = 0;
+            projetoAtual.tempo = 1;
 
             abasProjetos.RemoverAba(projetoSelecionado);
-            gerenciadorProjeto.projetosDisponiveis.RemoveAt(projetoSelecionado);
-
-            gerenciadorJogoUI.ComecarProjeto(gerenciadorProjeto.projetoAtual);
-            gerenciadorJogoUI.Confirmar();
+            projetosDisponiveis.projetos.RemoveAt(projetoSelecionado);
 
             AtualizarBotaoAceitarProjeto();
         }
@@ -114,10 +99,5 @@ public class AceitarProjetoInterface : MonoBehaviour
     public void AtualizarBotaoAceitarProjeto()
     {
         aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
-    }
-
-    public void Fechar()
-    {
-        gerenciadorJogoUI.Fechar();
     }
 }

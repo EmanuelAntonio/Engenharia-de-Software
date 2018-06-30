@@ -6,10 +6,10 @@ using TMPro;
 
 public class GerenciadorJogoUI : MonoBehaviour
 {
+    public PerfilSelecionado perfilSelecionado;
+    public ProjetoAtual projetoAtual;
+
     public Animator animator;
-    public Slider sliderProgresso;
-    public Abas abasProjetos;
-    public AceitarProjetoInterface aceitarProjetoInterface;
 
     private int acaoConfirmar;
     private int acaoFechar;
@@ -74,15 +74,14 @@ public class GerenciadorJogoUI : MonoBehaviour
         animator.SetTrigger("ExibirCriarEmpresa");
     }
 
-    public void DefinirProgresso(float progresso)
+    public void AtualizarProgresso()
     {
-        sliderProgresso.value = progresso;
-        animator.SetFloat(progressoProjeto, progresso);
+        animator.SetFloat(progressoProjeto, projetoAtual.progresso);
     }
 
-    public void ComecarProjeto(Projeto projeto)
+    public void ComecarProjeto()
     {
-        DefinirProgresso(0);
+        AtualizarProgresso();
         animator.SetInteger(estagioProjeto, 0);
         animator.SetBool(temProjeto, true);
     }
@@ -101,14 +100,9 @@ public class GerenciadorJogoUI : MonoBehaviour
         }
     }
 
-    public void AvancarEtapaTutorial(int etapa)
+    public void AtualizarEtapaTutorial()
     {
-        // animator.SetInteger(etapaTutorial, etapa);
-        animator.SetInteger("EtapaTutorial", etapa);
-    }
-
-    public void AtualizarListaProjetos()
-    {
-        aceitarProjetoInterface.atualizarListaProjetos = true;
+        // animator.SetInteger(etapaTutorial, perfilSelecionado.perfil.etapaTutorial);
+        animator.SetInteger("EtapaTutorial", perfilSelecionado.perfil.etapaTutorial);
     }
 }

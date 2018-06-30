@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4785787345447606}
   - component: {fileID: 114504680556887642}
+  - component: {fileID: 114153256568272506}
   m_Layer: 0
-  m_Name: ControladorSalve
+  m_Name: GerenciadorSalve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +41,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114153256568272506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574680218147826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: 5868b440ff4278f4d8ad359fe1a58652, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114504680556887642}
+        m_MethodName: Salvar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114504680556887642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,7 +80,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61450503bb6582143925be1c7b8dbb11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dados:
-    perfil: []
-  perfilSelecionado: 0
-  quantPerfil: 3
+  listaPerfis: {fileID: 11400000, guid: f93b9319959a5cf48ad9c6bae09a01bb, type: 2}
+  perfilBase: {fileID: 11400000, guid: 215e586392bd2544e8f1080cc58ac6a1, type: 2}

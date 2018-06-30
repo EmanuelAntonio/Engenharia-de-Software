@@ -1,32 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 using TMPro;
 
 public class ProgressoProjetoInterface : MonoBehaviour
 {
-    private GameObject controladorJogo;
-
-    private GerenciadorProjeto gerenciadorProjeto;
-    private GerenciadorJogoUI gerenciadorJogoUI;
+    public ProjetoAtual projetoAtual;
 
     private TextMeshProUGUI nomeEmpresa;
     private TextMeshProUGUI tipoEmpresa;
+    private Slider barraProgresso;
+
+    public UnityEvent atualizarProgresso;
 
     private bool _started = false;
     void Start()
     {
-        controladorJogo = GameObject.FindWithTag("GameController");
-        if (controladorJogo == null)
-        {
-            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
-        }
-
-        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
-        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
-
         nomeEmpresa = transform.Find("Progresso/Nome").GetComponent<TextMeshProUGUI>();
         tipoEmpresa = transform.Find("Progresso/Tipo").GetComponent<TextMeshProUGUI>();
+        barraProgresso = transform.Find("Progresso/BarraProgresso").GetComponent<Slider>();
 
         _started = true;
         this.OnStartOrEnable();
@@ -41,10 +35,10 @@ public class ProgressoProjetoInterface : MonoBehaviour
     // https://forum.unity.com/threads/awake-start-and-onenable-walked-into-a-bar.276712/
     void OnStartOrEnable()
     {
-        if (gerenciadorProjeto.temProjeto)
+        if (projetoAtual.temProjeto)
         {
-            nomeEmpresa.text = gerenciadorProjeto.projetoAtual.nomeEmpresa;
-            tipoEmpresa.text = gerenciadorProjeto.projetoAtual.tipoEmpresa;
+            nomeEmpresa.text = projetoAtual.projeto.nomeEmpresa;
+            tipoEmpresa.text = projetoAtual.projeto.tipoEmpresa;
         }
         else
         {
@@ -53,18 +47,26 @@ public class ProgressoProjetoInterface : MonoBehaviour
         }
     }
 
-    public void Confirmar()
+    public void AtualizarProgresso()
     {
-        gerenciadorJogoUI.Confirmar();
+        StartCoroutine(EncheProgressoCoroutine());
     }
 
-    public void AvancarEstagio()
+    IEnumerator EncheProgressoCoroutine()
     {
-        gerenciadorJogoUI.AvancarEstagio();
-    }
+        float valorInicial = projetoAtual.progresso;
+        float deltaValor = projetoAtual.valor - valorInicial;
+        float tempo = projetoAtual.tempo;
+        float tempoPassado = 0;
+        while (tempoPassado < tempo)
+        {
+            tempoPassado += Time.deltaTime;
 
-    public void ConcluirProjeto()
-    {
-        gerenciadorProjeto.ConcluirProjeto();
+            projetoAtual.progresso = valorInicial + deltaValor * (tempoPassado / tempo);
+            barraProgresso.value = projetoAtual.progresso;
+            atualizarProgresso.Invoke();
+
+            yield return null;
+        }
     }
 }

@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class MenuContextoInterface : MonoBehaviour
 {
-    private GameObject controladorJogo;
+    // private GerenciadorProjeto gerenciadorProjeto;
+    public PerfilSelecionado perfilSelecionado;
 
-    private GerenciadorProjeto gerenciadorProjeto;
-    private GerenciadorJogoUI gerenciadorJogoUI;
-    private Perfil perfilCarregado;
+    public ProjetoAtual projetoAtual;
+
+    public UnityEvent eventoSalvarJogo;
 
     private GameObject menu;
     private Button novoProjeto;
@@ -20,16 +23,6 @@ public class MenuContextoInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
-        controladorJogo = GameObject.FindWithTag("GameController");
-        if (controladorJogo == null)
-        {
-            Debug.LogError("É necessario existir um objeto ativo com a tag GameController na cena.");
-        }
-
-        gerenciadorProjeto = controladorJogo.GetComponent<GerenciadorProjeto>();
-        gerenciadorJogoUI = controladorJogo.GetComponent<GerenciadorJogoUI>();
-        perfilCarregado = controladorJogo.GetComponent<Perfil>();
-
         novoProjeto = transform.Find("NovoProjeto").GetComponent<Button>();
         pesquisas = transform.Find("Pesquisas").GetComponent<Button>();
         relatorios = transform.Find("Relatorios").GetComponent<Button>();
@@ -49,19 +42,17 @@ public class MenuContextoInterface : MonoBehaviour
     void OnStartOrEnable()
     {
         // TODO(andre:2018-06-13): Mover essa logica para algum lugar que faça mais sentido
-        novoProjeto.gameObject.SetActive(!gerenciadorProjeto.temProjeto);
+        novoProjeto.gameObject.SetActive(!projetoAtual.temProjeto);
         pesquisas.gameObject.SetActive(true);
         relatorios.gameObject.SetActive(true);
-        avancarEtapa.gameObject.SetActive((!gerenciadorProjeto.temProjeto && perfilCarregado.etapa == 0 && perfilCarregado.ano >= 1971 && perfilCarregado.verba > 30000));
-    }
-
-    public void ExibirAceitarProjeto()
-    {
-        gerenciadorJogoUI.ExibirAceitarProjeto();
+        avancarEtapa.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
     }
 
     public void AvancarEtapa()
     {
-        gerenciadorProjeto.AvancarEtapa();
+        perfilSelecionado.perfil.etapa = 1;
+        eventoSalvarJogo.Invoke();
+
+        SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
     }
 }
