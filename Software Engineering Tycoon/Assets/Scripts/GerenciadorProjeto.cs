@@ -9,21 +9,13 @@ public class GerenciadorProjeto : MonoBehaviour
     public ProjetoAtual projetoAtual;
     public MetodologiaAtual metodologiaAtual;
     public ListaFuncionarios listaFuncionarios;
+    public PerfilSelecionado perfilSelecionado;
 
-    // TODO(andre:2018-06-13): Essas variaveis definitivamente estao no lugar errado.
-    // Mover para alguma classe separada responsavel por atualizar o perfil ou para
-    // alguma classe responsavel por atualizar o tempo.
-    public float duracaoDia;
-    public float dispesasMensais;
-    private float tempoDesdeUltimoDia = 0;
-    private bool relogioParado = false;
-
-    public bool avancarEtapaMetodologiaSemDuracao = false;
+    private bool avancarEtapaMetodologiaSemDuracao = false;
 
     // MUITA GAMBIARRA
     public GameObject aceitarProjetoInterface;
 
-    public PerfilSelecionado perfilSelecionado;
     public UnityEvent eventoSalvarJogo;
     public UnityEvent eventoGerarListaProjetos;
     public UnityEvent eventoCriarEmpresa;
@@ -47,45 +39,6 @@ public class GerenciadorProjeto : MonoBehaviour
 
         projetoAtual.temProjeto = false;
         eventoGerarListaProjetos.Invoke();
-    }
-
-    void Update()
-    {
-        // Se o tempo nao tiver parado (em algum menu), incrementa o tempo
-        if (!relogioParado)
-        {
-            tempoDesdeUltimoDia += Time.deltaTime;
-        }
-        // TODO(andre:2018-06-13): Considerar tamanhos de meses diferentes alem de ano bisexto
-        while (tempoDesdeUltimoDia > duracaoDia)
-        {
-            perfilSelecionado.perfil.dia += 1;
-
-            if (perfilSelecionado.perfil.dia > 30)
-            {
-                perfilSelecionado.perfil.dia -= 30;
-                perfilSelecionado.perfil.mes += 1;
-
-                // TODO(andre:2018-06-13): O projeto exibido não é atualizado até o usuario
-                // fechar a janela, mas o projeto que é escolhido é alterado. Isso faz com que o
-                // usuario selecione um projeto errado
-                if (!aceitarProjetoInterface.activeSelf)
-                {
-                    eventoGerarListaProjetos.Invoke();
-                }
-
-                if (perfilSelecionado.perfil.mes > 12)
-                {
-                    perfilSelecionado.perfil.mes -= 12;
-                    perfilSelecionado.perfil.ano += 1;
-                }
-
-                perfilSelecionado.perfil.verba -= dispesasMensais;
-                eventoSalvarJogo.Invoke();
-            }
-
-            tempoDesdeUltimoDia -= duracaoDia;
-        }
     }
 
     public void ComecarProjeto()
@@ -184,15 +137,5 @@ public class GerenciadorProjeto : MonoBehaviour
 
         eventoConcluirProjeto.Invoke();
         eventoSalvarJogo.Invoke();
-    }
-
-    public void PararRelogio()
-    {
-        relogioParado = true;
-    }
-
-    public void IniciarRelogio()
-    {
-        relogioParado = false;
     }
 }

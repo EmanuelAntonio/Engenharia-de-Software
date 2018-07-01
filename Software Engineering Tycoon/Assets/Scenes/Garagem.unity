@@ -520,6 +520,20 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224942906331037816, guid: 90def118f7e0e3347914bf343820247a,
     type: 2}
   m_PrefabInternal: {fileID: 1798616771}
+--- !u!1001 &887352562
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4975781662690910, guid: 11e82fa22eac12b4faed19ae605be340, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 11e82fa22eac12b4faed19ae605be340, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &968572012
 Prefab:
   m_ObjectHideFlags: 0
