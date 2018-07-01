@@ -25,12 +25,27 @@ MonoBehaviour:
   tamanhoMaximo: 50
   experienciaUsuarioMinima: 0.4
   experienciaUsuarioMaxima: 0.5
-  prioridadeColetaDadosBase: 1
-  prioridadeEstudoDominioBase: 0.217
-  prioridadeDocumentacaoBase: 0.695
-  prioridadeLegibilidadeBase: 0.11
-  prioridadeQualidadeSolucaoBase: 1
-  prioridadeDesenvolvimentoInterfaceBase: 1
-  prioridadeTestesBase: 0.226
-  prioridadeAvaliacaoClienteBase: 0.625
-  prioridadeImplantacaoBase: 1
+  pontosDesignEsperadoMinimo: 20
+  pontosDesignEsperadoMaximo: 60
+  pontosTecnologiaEsperadoMinimo: 20
+  pontosTecnologiaEsperadoMaximo: 60
+  prioridadesDesignBase:
+    coletaDados: 0.1
+    estudoDominio: 0.5
+    documentacao: 0.1
+    legibilidade: 0.1
+    qualidadeSolucao: 0.1
+    desenvolvimentoInterface: 0.8
+    testes: 0.1
+    avaliacaoCliente: 0.5
+    implantacao: 0.1
+  prioridadesTecnologiaBase:
+    coletaDados: 1
+    estudoDominio: 0.217
+    documentacao: 0.695
+    legibilidade: 0.11
+    qualidadeSolucao: 1
+    desenvolvimentoInterface: 0.05
+    testes: 0.226
+    avaliacaoCliente: 0.625
+    implantacao: 1

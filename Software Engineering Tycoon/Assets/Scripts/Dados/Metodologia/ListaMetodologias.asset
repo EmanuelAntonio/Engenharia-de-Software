@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105610b6de87c864aa0cba0cc994115d, type: 3}
+  m_Name: ListaMetodologias
+  m_EditorClassIdentifier: 
+  metodologias:
+  - projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
+    etapas:
+    - tipo: 0
+      duracao: 3
+      frequenciaAtualizacao: 0.5
+      progresso: 0
+      ultimaAtualizacao: 0
+      pontosDesignAcumulados: 0
+      pontosTecnologiaAcumulados: 0
+      pontosErroAcumulados: 0
+    - tipo: 1
+      duracao: 3
+      frequenciaAtualizacao: 0.5
+      progresso: 0
+      ultimaAtualizacao: 0
+      pontosDesignAcumulados: 0
+      pontosTecnologiaAcumulados: 0
+      pontosErroAcumulados: 0
+    - tipo: 2
+      duracao: 3
+      frequenciaAtualizacao: 0.5
+      progresso: 0
+      ultimaAtualizacao: 0
+      pontosDesignAcumulados: 0
+      pontosTecnologiaAcumulados: 0
+      pontosErroAcumulados: 0
+    etapaAtual: 0

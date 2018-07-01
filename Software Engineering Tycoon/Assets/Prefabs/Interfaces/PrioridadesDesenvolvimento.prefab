@@ -814,28 +814,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114421254233580256}
-        m_MethodName: DefineValor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.67
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114421254233580256}
-        m_MethodName: DefineTempo
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 3
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114421254233580256}
         m_MethodName: AtualizarPrioridades
         m_Mode: 1
         m_Arguments:
@@ -857,7 +835,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+      - m_Target: {fileID: 11400000, guid: 29a219c171dbdfd4eaa37298b3d9bce3, type: 2}
         m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:

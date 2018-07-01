@@ -65,6 +65,12 @@ public class AceitarProjetoInterface : MonoBehaviour
             GameObject detalhesDescricao = detalhesTransform.Find("Descricao").gameObject;
             detalhesDescricao.GetComponent<TextMeshProUGUI>().text = projeto.descricao;
 
+            GameObject requisitosDesign = detalhesTransform.Find("Requisitos/Design/Texto").gameObject;
+            requisitosDesign.GetComponent<TextMeshProUGUI>().text = projeto.pontosDesignEsperado.ToString();
+
+            GameObject requisitosTecnologia = detalhesTransform.Find("Requisitos/Tecnologia/Texto").gameObject;
+            requisitosTecnologia.GetComponent<TextMeshProUGUI>().text = projeto.pontosTecnologiaEsperado.ToString();
+
             GameObject detalhesPagamento = detalhesTransform.Find("MultaPagamento/Pagamento").gameObject;
             detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Pagamento: R$ " + projeto.valorPagamento;
 
@@ -85,9 +91,6 @@ public class AceitarProjetoInterface : MonoBehaviour
         {
             projetoAtual.temProjeto = true;
             projetoAtual.projeto = projetosDisponiveis.projetos[projetoSelecionado];
-            projetoAtual.progresso = 0;
-            projetoAtual.valor = 0;
-            projetoAtual.tempo = 1;
 
             abasProjetos.RemoverAba(projetoSelecionado);
             projetosDisponiveis.projetos.RemoveAt(projetoSelecionado);

@@ -11,11 +11,6 @@ public class ProjetoAtual : ScriptableObject
     public Prioridades prioridadesEscolhidas;
     public float progresso;
 
-    // GAMBIARRA
-    public float valor;
-    // GAMBIARRA
-    public float tempo;
-
     // TODO(andre:2018-06-24): Considerar criar properties para acessar os valores
     // definidos em projeto
 }

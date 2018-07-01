@@ -12,10 +12,12 @@ public class PainelDestaque : MonoBehaviour {
     void OnEnable()
     {
         eventoPararRelogio.Invoke();
+        Time.timeScale = 0;
     }
 
     void OnDisable()
     {
         eventoIniciarRelogio.Invoke();
+        Time.timeScale = 1;
     }
 }

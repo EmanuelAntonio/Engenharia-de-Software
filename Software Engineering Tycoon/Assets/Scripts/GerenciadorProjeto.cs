@@ -4,14 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-// TODO(andre:2018-06-12): Fazer com que os objetos dependam menos de referencias
-// as classes de gerenciador e mais de dependencias dos proprios prefabs
 public class GerenciadorProjeto : MonoBehaviour
 {
     public ProjetoAtual projetoAtual;
-
-    // public Prioridades prioridadesEscolhidas;
-    // public PrioridadesAtual prioridadesAtual;
+    public MetodologiaAtual metodologiaAtual;
+    public ListaFuncionarios listaFuncionarios;
 
     // TODO(andre:2018-06-13): Essas variaveis definitivamente estao no lugar errado.
     // Mover para alguma classe separada responsavel por atualizar o perfil ou para
@@ -21,6 +18,7 @@ public class GerenciadorProjeto : MonoBehaviour
     private float tempoDesdeUltimoDia = 0;
     private bool relogioParado = false;
 
+    public bool avancarEtapaMetodologiaSemDuracao = false;
 
     // MUITA GAMBIARRA
     public GameObject aceitarProjetoInterface;
@@ -30,6 +28,9 @@ public class GerenciadorProjeto : MonoBehaviour
     public UnityEvent eventoGerarListaProjetos;
     public UnityEvent eventoCriarEmpresa;
     public UnityEvent eventoAtualizarEtapaTutorial;
+    public UnityEvent eventoAvancarEtapaMetodologia;
+    public UnityEvent eventoAtualizarProgresso;
+    public UnityEvent eventoConcluirProjeto;
 
     void Start()
     {
@@ -87,20 +88,101 @@ public class GerenciadorProjeto : MonoBehaviour
         }
     }
 
-    public void AvancarEtapa()
+    public void ComecarProjeto()
     {
-        perfilSelecionado.perfil.etapa = 1;
-        eventoSalvarJogo.Invoke();
+        projetoAtual.progresso = 0;
 
-        SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
+        metodologiaAtual.metodologia.indiceEtapaAtual = 0;
+        foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+        {
+            funcionario.ComecarProjeto();
+        }
+
+        eventoAtualizarProgresso.Invoke();
+        eventoAvancarEtapaMetodologia.Invoke();
+    }
+
+    public void ComecarEtapaMetodologia()
+    {
+        StartCoroutine(AtualizarMetodologia());
+    }
+
+    public void AvancarEtapaMetodologia()
+    {
+        avancarEtapaMetodologiaSemDuracao = true;
+    }
+
+    IEnumerator AtualizarMetodologia()
+    {
+        float progressoEtapa = 0;
+        Metodologia metodologia = metodologiaAtual.metodologia;
+        EtapaMetodologia etapaAtual = metodologia.ObterEtapaAtual();
+
+        if (etapaAtual.temDuracao)
+        {
+            while (progressoEtapa < etapaAtual.duracao)
+            {
+                progressoEtapa += Time.deltaTime;
+                foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+                {
+                    funcionario.DesenvolverProjeto(projetoAtual, etapaAtual);
+                }
+
+                // GAMBIARRA: A ideia é que como a ultima etapa não tem tempo para concluir essa conta deveria funcionar de modo diferente
+                // projetoAtual.progresso = (metodologia.indiceEtapaAtual + (progressoEtapa / etapaAtual.duracao)) / (float)metodologia.etapas.Count;
+                projetoAtual.progresso = (metodologia.indiceEtapaAtual + (progressoEtapa / etapaAtual.duracao)) / ((float)metodologia.etapas.Count - 1);
+                eventoAtualizarProgresso.Invoke();
+
+                yield return null;
+            }
+        }
+        else
+        {
+            avancarEtapaMetodologiaSemDuracao = false;
+            while (!avancarEtapaMetodologiaSemDuracao)
+            {
+                foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+                {
+                    funcionario.DesenvolverProjeto(projetoAtual, etapaAtual);
+                }
+
+                // GAMBIARRA: A ideia é que por não ter tempo para concluir essa etapa deveria funcionar de modo diferente
+                // projetoAtual.progresso = (float)(metodologia.indiceEtapaAtual + 1) / (float)metodologia.etapas.Count;
+                projetoAtual.progresso = 1;
+                eventoAtualizarProgresso.Invoke();
+
+                yield return null;
+            }
+        }
+
+        metodologia.indiceEtapaAtual += 1;
+
+        if (metodologia.indiceEtapaAtual >= metodologia.etapas.Count)
+        {
+            metodologia.indiceEtapaAtual = 0;
+            ConcluirProjeto();
+        }
+        else
+        {
+            eventoAvancarEtapaMetodologia.Invoke();
+
+            // MUITA GAMBIARRA
+            // A etapa de conclusão não tem uma interface para comecar ela
+            if (metodologia.ObterTipoEtapa() == TipoEtapaMetodologia.Concluir)
+            {
+                ComecarEtapaMetodologia();
+            }
+        }
     }
 
     public void ConcluirProjeto()
     {
-        projetoAtual.projeto.CalcularAvaliacao(projetoAtual.prioridadesEscolhidas);
+        // projetoAtual.projeto.CalcularAvaliacao(projetoAtual.prioridadesEscolhidas);
+        projetoAtual.projeto.CalcularAvaliacao();
         perfilSelecionado.perfil.verba += projetoAtual.projeto.valorPagamento * projetoAtual.projeto.avaliacao;
         projetoAtual.temProjeto = false;
 
+        eventoConcluirProjeto.Invoke();
         eventoSalvarJogo.Invoke();
     }
 

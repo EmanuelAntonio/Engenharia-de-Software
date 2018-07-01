@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
@@ -9,15 +8,23 @@ public class ProgressoProjetoInterface : MonoBehaviour
 {
     public ProjetoAtual projetoAtual;
 
+    private TextMeshProUGUI pontosDesign;
+    private TextMeshProUGUI pontosTecnologia;
+    private TextMeshProUGUI pontosErro;
+    private TextMeshProUGUI pontosPesquisa;
+
     private TextMeshProUGUI nomeEmpresa;
     private TextMeshProUGUI tipoEmpresa;
     private Slider barraProgresso;
 
-    public UnityEvent atualizarProgresso;
-
     private bool _started = false;
     void Start()
     {
+        pontosDesign = transform.Find("Design/DesignPontos/Texto").GetComponent<TextMeshProUGUI>();
+        pontosTecnologia = transform.Find("Tecnologia/TecnologiaPontos/Texto").GetComponent<TextMeshProUGUI>();
+        pontosErro = transform.Find("Erro/ErroPontos/Texto").GetComponent<TextMeshProUGUI>();
+        pontosPesquisa = transform.Find("Pesquisa/PesquisaPontos/Texto").GetComponent<TextMeshProUGUI>();
+
         nomeEmpresa = transform.Find("Progresso/Nome").GetComponent<TextMeshProUGUI>();
         tipoEmpresa = transform.Find("Progresso/Tipo").GetComponent<TextMeshProUGUI>();
         barraProgresso = transform.Find("Progresso/BarraProgresso").GetComponent<Slider>();
@@ -45,28 +52,19 @@ public class ProgressoProjetoInterface : MonoBehaviour
             nomeEmpresa.text = "<nome_empresa>";
             tipoEmpresa.text = "<tipo_empresa>";
         }
+
+        AtualizarProgresso();
     }
 
     public void AtualizarProgresso()
     {
-        StartCoroutine(EncheProgressoCoroutine());
-    }
+        pontosDesign.text     = projetoAtual.projeto.pontosDesign.ToString();
+        pontosTecnologia.text = projetoAtual.projeto.pontosTecnologia.ToString();
+        pontosErro.text       = projetoAtual.projeto.pontosErro.ToString();
+        pontosPesquisa.text   = 0.ToString();
 
-    IEnumerator EncheProgressoCoroutine()
-    {
-        float valorInicial = projetoAtual.progresso;
-        float deltaValor = projetoAtual.valor - valorInicial;
-        float tempo = projetoAtual.tempo;
-        float tempoPassado = 0;
-        while (tempoPassado < tempo)
-        {
-            tempoPassado += Time.deltaTime;
+        barraProgresso.value = projetoAtual.progresso;
 
-            projetoAtual.progresso = valorInicial + deltaValor * (tempoPassado / tempo);
-            barraProgresso.value = projetoAtual.progresso;
-            atualizarProgresso.Invoke();
-
-            yield return null;
-        }
+        Debug.Log("NOVO");
     }
 }

@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114298165706319478}
   - component: {fileID: 114334531187410838}
   - component: {fileID: 114222765899800712}
+  - component: {fileID: 114594782916134592}
   m_Layer: 0
   m_Name: GerenciadorUI
   m_TagString: Untagged
@@ -92,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
   projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
+  metodologiaAtual: {fileID: 11400000, guid: 190d0fbe6e65ce14c8a022bbf7bafb6a, type: 2}
   animator: {fileID: 0}
 --- !u!114 &114222765899800712
 MonoBehaviour:
@@ -104,12 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evento: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+  evento: {fileID: 11400000, guid: 0a0b494136391f04db6f5ca78e1c9cdf, type: 2}
   resposta:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114213486780748628}
-        m_MethodName: AvancarEstagio
+        m_MethodName: AvancarEtapaMetodologia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -222,6 +224,34 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114213486780748628}
         m_MethodName: AtualizarEtapaTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114594782916134592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138636091627760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: c39586de890eba1468ee8f1b9d6e4dc6, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114213486780748628}
+        m_MethodName: ConcluirProjeto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

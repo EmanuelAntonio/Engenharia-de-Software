@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 222585394734343614}
   - component: {fileID: 114192147502458862}
   m_Layer: 5
-  m_Name: Erros
+  m_Name: Erro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 222238391252766824}
   - component: {fileID: 114989328934732016}
   m_Layer: 5
-  m_Name: ErrosPontos
+  m_Name: ErroPontos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 222722006747083194}
   - component: {fileID: 114237261346841694}
   m_Layer: 5
-  m_Name: ErrosNome
+  m_Name: ErroNome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1122,29 +1122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 5d40922264e6eea4d84989e125465dce, type: 2}
-        m_MethodName: Disparar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AcaoConfirmar
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
-        m_MethodName: Disparar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: c39586de890eba1468ee8f1b9d6e4dc6, type: 2}
+      - m_Target: {fileID: 11400000, guid: 0a0b494136391f04db6f5ca78e1c9cdf, type: 2}
         m_MethodName: Disparar
         m_Mode: 1
         m_Arguments:
@@ -1869,22 +1847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
-  atualizarProgresso:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 93f5aa23e4bc7234e99702b4d6302279, type: 2}
-        m_MethodName: Disparar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114834446416872514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2419,7 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evento: {fileID: 11400000, guid: bbe37dd73a77e4d47afb271418dc7e08, type: 2}
+  evento: {fileID: 11400000, guid: 93f5aa23e4bc7234e99702b4d6302279, type: 2}
   resposta:
     m_PersistentCalls:
       m_Calls:

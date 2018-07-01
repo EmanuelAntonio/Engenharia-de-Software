@@ -13,67 +13,79 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ProgressoProjeto
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EstagioProjeto
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: AvancarEtapaMetodologia
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: ConcluirProjeto
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   - m_Name: AlternarMenuContexto
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ExibirRelatorio
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ExibirPesquisa
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ExibirAceitarProjeto
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ExibirCriarEmpresa
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: AcaoFechar
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: AcaoConfirmar
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EtapaTutorial
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -216,12 +228,12 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: AvancarEtapaMetodologia
+    m_EventTreshold: 0.999999
   - m_ConditionMode: 6
     m_ConditionEvent: EstagioProjeto
-    m_EventTreshold: 3
-  - m_ConditionMode: 3
-    m_ConditionEvent: ProgressoProjeto
-    m_EventTreshold: 0.999999
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102115653473916136}
   m_Solo: 0
@@ -367,14 +379,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: AcaoConfirmar
+    m_ConditionEvent: ConcluirProjeto
     m_EventTreshold: 0
-  - m_ConditionMode: 6
-    m_ConditionEvent: EstagioProjeto
-    m_EventTreshold: 3
-  - m_ConditionMode: 3
-    m_ConditionEvent: ProgressoProjeto
-    m_EventTreshold: 0.999999
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102006164370101756}
   m_Solo: 0
@@ -594,9 +600,12 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: AvancarEtapaMetodologia
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: EstagioProjeto
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102922933703025058}
   m_Solo: 0
@@ -744,12 +753,12 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: AvancarEtapaMetodologia
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: EstagioProjeto
-    m_EventTreshold: 1
-  - m_ConditionMode: 3
-    m_ConditionEvent: ProgressoProjeto
-    m_EventTreshold: 0.33
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102732938466008820}
   m_Solo: 0
@@ -822,12 +831,12 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: AvancarEtapaMetodologia
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: EstagioProjeto
-    m_EventTreshold: 2
-  - m_ConditionMode: 3
-    m_ConditionEvent: ProgressoProjeto
-    m_EventTreshold: 0.66
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102635267267154860}
   m_Solo: 0

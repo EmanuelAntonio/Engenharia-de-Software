@@ -8,6 +8,10 @@ public class GerenciadorSalve : MonoBehaviour
     public ListaPerfis listaPerfis;
     // public PerfilSelecionado perfilSelecionado;
     public DadosPerfil perfilBase;
+    public ProjetoAtual projetoAtual;
+    public ListaFuncionarios listaFuncionarios;
+    public ListaMetodologias listaMetodologias;
+    public MetodologiaAtual metodologiaAtual;
 
     private string caminhoArquivo;
 
@@ -69,5 +73,26 @@ public class GerenciadorSalve : MonoBehaviour
                 perfil.DefineValores(perfilBase);
             }
         }
+
+        // TODO(andre:2018-06-30): Criar interface grafica para criar a metodologia.
+        // TODO(andre:2018-06-30): Salvar esses dados no arquivo de salve.
+        EtapaMetodologia etapaPlanejamento = new EtapaMetodologia(TipoEtapaMetodologia.Planejamento, 1.0f, 3.0f);
+        EtapaMetodologia etapaDesenvolvimento = new EtapaMetodologia(TipoEtapaMetodologia.Desenvolvimento, 1.0f, 3.0f);
+        EtapaMetodologia etapaValidacao = new EtapaMetodologia(TipoEtapaMetodologia.Validacao, 1.0f, 3.0f);
+        EtapaMetodologia etapaConcluir = new EtapaMetodologia(TipoEtapaMetodologia.Concluir, 2.0f);
+
+        Metodologia metodologia = new Metodologia(projetoAtual);
+        metodologia.etapas.Add(etapaPlanejamento);
+        metodologia.etapas.Add(etapaDesenvolvimento);
+        metodologia.etapas.Add(etapaValidacao);
+        metodologia.etapas.Add(etapaConcluir);
+
+        listaMetodologias.metodologias = new List<Metodologia>();
+        listaMetodologias.metodologias.Add(metodologia);
+        metodologiaAtual.metodologia = listaMetodologias.metodologias[0];
+
+        Funcionario funcionario = new Funcionario(10, 10, 10, 10);
+        listaFuncionarios.funcionarios = new List<Funcionario>();
+        listaFuncionarios.funcionarios.Add(funcionario);
     }
 }

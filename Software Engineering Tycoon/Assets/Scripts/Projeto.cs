@@ -14,7 +14,8 @@ public class Projeto
     public int tamanhoEmpresa;
     public float experienciaUsuario;
 
-    public Prioridades prioridades;
+    public Prioridades prioridadesDesign;
+    public Prioridades prioridadesTecnologia;
 
     public DescricaoTipoEmpresa descricaoTipoEmpresa;
 
@@ -22,9 +23,20 @@ public class Projeto
     public int pontosTecnologia;
     public int pontosDesign;
 
+    // TODO(andre:2018-07-01): Esses valores deveriam ser exibidos na hora de aceitar o projeto
+    public int pontosTecnologiaEsperado;
+    public int pontosDesignEsperado;
+
+    // TODO(andre:2018-07-01): Adicionar esses parametros na geracao de projetos?
+    public float penalidadeErro = 0.01f;
+    public float penalidadeTecnologia = 0.01f;
+    public float penalidadeDesign = 0.01f;
+
     public float avaliacao;
 
-    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario, Prioridades prioridades, DescricaoTipoEmpresa descricaoTipoEmpresa = null)
+    public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario,
+                   int pontosDesignEsperado, int pontosTecnologiaEsperado, Prioridades prioridadesDesign, Prioridades prioridadesTecnologia,
+                   DescricaoTipoEmpresa descricaoTipoEmpresa = null)
     {
         this.tipoEmpresa = tipoEmpresa;
         this.nomeEmpresa = nomeEmpresa;
@@ -35,54 +47,67 @@ public class Projeto
         this.tamanhoEmpresa = tamanhoEmpresa;
         this.experienciaUsuario = experienciaUsuario;
 
-        this.prioridades = prioridades;
+        this.pontosTecnologiaEsperado = pontosTecnologiaEsperado;
+        this.pontosDesignEsperado = pontosDesignEsperado;
+
+        this.prioridadesDesign = prioridadesDesign;
+        this.prioridadesTecnologia = prioridadesTecnologia;
 
         this.descricaoTipoEmpresa = descricaoTipoEmpresa;
     }
 
-    public void CalcularAvaliacao(Prioridades prioridadesEscolhidas)
+    public void CalcularAvaliacao()
     {
-        // TODO(andre:2018-06-13): Precomputar as prioridades normalizadas do projeto
-        Prioridades prioridadesNormalizadas = prioridades.Normalizada();
-        Prioridades prioridadesEscolhidasNormalizadas = prioridadesEscolhidas.Normalizada();
+        // TODO(andre:2018-07-01): Talvez dar algum bonus caso os pontos superem os valores esperados
+        // TODO(andre:2018-07-01): Talvez utilizar alguma formula diferente para calcular as penalidades.
+        // Alguma coisa que limite a quantidade de pontos perdidos para um único criterio como um logaritmo por exemplo
+        float resultado = 1;
 
-        float coletaDados              = Mathf.Abs(prioridadesNormalizadas.coletaDados              - prioridadesEscolhidasNormalizadas.coletaDados);
-        float estudoDominio            = Mathf.Abs(prioridadesNormalizadas.estudoDominio            - prioridadesEscolhidasNormalizadas.estudoDominio);
-        float documentacao             = Mathf.Abs(prioridadesNormalizadas.documentacao             - prioridadesEscolhidasNormalizadas.documentacao);
-        float legibilidade             = Mathf.Abs(prioridadesNormalizadas.legibilidade             - prioridadesEscolhidasNormalizadas.legibilidade);
-        float qualidadeSolucao         = Mathf.Abs(prioridadesNormalizadas.qualidadeSolucao         - prioridadesEscolhidasNormalizadas.qualidadeSolucao);
-        float desenvolvimentoInterface = Mathf.Abs(prioridadesNormalizadas.desenvolvimentoInterface - prioridadesEscolhidasNormalizadas.desenvolvimentoInterface);
-        float testes                   = Mathf.Abs(prioridadesNormalizadas.testes                   - prioridadesEscolhidasNormalizadas.testes);
-        float avaliacaoCliente         = Mathf.Abs(prioridadesNormalizadas.avaliacaoCliente         - prioridadesEscolhidasNormalizadas.avaliacaoCliente);
-        float implantacao              = Mathf.Abs(prioridadesNormalizadas.implantacao              - prioridadesEscolhidasNormalizadas.implantacao);
+        if (pontosDesign < pontosDesignEsperado)
+            resultado -= (pontosDesignEsperado - pontosDesign) * penalidadeDesign;
 
-        float diferencaMedia = (coletaDados + estudoDominio + documentacao +
-                                legibilidade + qualidadeSolucao + desenvolvimentoInterface +
-                                testes + avaliacaoCliente + implantacao) / 9;
+        if (pontosTecnologia < pontosTecnologiaEsperado)
+            resultado -= (pontosTecnologiaEsperado - pontosTecnologia) * penalidadeTecnologia;
 
-        this.avaliacao = Mathf.Max(1 - diferencaMedia * 3, 0);
+        resultado -= pontosErro * penalidadeErro;
+
+        this.avaliacao = Mathf.Max(0, resultado);
     }
 }
 
 [System.Serializable]
 public class Prioridades
 {
+    [Range(0.0f, 1.0f)]
     public float coletaDados;
+    [Range(0.0f, 1.0f)]
     public float estudoDominio;
+    [Range(0.0f, 1.0f)]
     public float documentacao;
 
+    [Space(8)]
+
+    [Range(0.0f, 1.0f)]
     public float legibilidade;
+    [Range(0.0f, 1.0f)]
     public float qualidadeSolucao;
+    [Range(0.0f, 1.0f)]
     public float desenvolvimentoInterface;
 
+    [Space(8)]
+
+    [Range(0.0f, 1.0f)]
     public float testes;
+    [Range(0.0f, 1.0f)]
     public float avaliacaoCliente;
+    [Range(0.0f, 1.0f)]
     public float implantacao;
 
-    // Usado nos testes unitarios
-    public void Contruct(float coletaDados, float estudoDominio, float documentacao,
-                         float legibilidade, float qualidadeSolucao, float desenvolvimentoInterface,
-                         float testes, float avaliacaoCliente, float implantacao)
+    public Prioridades() {}
+
+    public Prioridades(float coletaDados, float estudoDominio, float documentacao,
+                       float legibilidade, float qualidadeSolucao, float desenvolvimentoInterface,
+                       float testes, float avaliacaoCliente, float implantacao)
     {
         this.coletaDados = coletaDados;
         this.estudoDominio = estudoDominio;
@@ -95,6 +120,21 @@ public class Prioridades
         this.testes = testes;
         this.avaliacaoCliente = avaliacaoCliente;
         this.implantacao = implantacao;
+    }
+
+    public Prioridades(Prioridades prioridades)
+    {
+        this.coletaDados              = prioridades.coletaDados;
+        this.estudoDominio            = prioridades.estudoDominio;
+        this.documentacao             = prioridades.documentacao;
+
+        this.legibilidade             = prioridades.legibilidade;
+        this.qualidadeSolucao         = prioridades.qualidadeSolucao;
+        this.desenvolvimentoInterface = prioridades.desenvolvimentoInterface;
+
+        this.testes                   = prioridades.testes;
+        this.avaliacaoCliente         = prioridades.avaliacaoCliente;
+        this.implantacao              = prioridades.implantacao;
     }
 
     public float SomaPrioridades()
