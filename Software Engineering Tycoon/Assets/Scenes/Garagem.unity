@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44979477, g: 0.4998628, b: 0.57560426, a: 1}
+  m_IndirectSpecularColor: {r: 0.44979435, g: 0.4998622, b: 0.57560325, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -344,7 +344,7 @@ Prefab:
     - target: {fileID: 224835989940603200, guid: dda9a82d8e7fdae4c909d55f3860e0c9,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dda9a82d8e7fdae4c909d55f3860e0c9, type: 2}
@@ -544,7 +544,7 @@ Prefab:
     - target: {fileID: 224126061698410578, guid: 0cc60bef7fb0563468106d8511b1572a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cc60bef7fb0563468106d8511b1572a, type: 2}
@@ -687,7 +687,7 @@ Prefab:
     - target: {fileID: 224196507870706430, guid: 30ec82bc6db4fc4478ca12456fda1059,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30ec82bc6db4fc4478ca12456fda1059, type: 2}
@@ -742,11 +742,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1978287114}
   - {fileID: 866831767}
   - {fileID: 968572013}
   - {fileID: 600197999}
   - {fileID: 604896100}
-  - {fileID: 1978287114}
   - {fileID: 1216808569}
   - {fileID: 28452326}
   - {fileID: 386011006}
@@ -950,7 +950,7 @@ Prefab:
     - target: {fileID: 224942906331037816, guid: 90def118f7e0e3347914bf343820247a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90def118f7e0e3347914bf343820247a, type: 2}
@@ -970,7 +970,7 @@ Prefab:
     - target: {fileID: 224476020041046428, guid: 97065350c95eaea49ae2020b0f797cc0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97065350c95eaea49ae2020b0f797cc0, type: 2}
