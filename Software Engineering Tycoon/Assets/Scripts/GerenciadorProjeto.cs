@@ -19,6 +19,8 @@ public class GerenciadorProjeto : MonoBehaviour
     public float duracaoDia;
     public float dispesasMensais;
     private float tempoDesdeUltimoDia = 0;
+    private bool relogioParado = false;
+
 
     // MUITA GAMBIARRA
     public GameObject aceitarProjetoInterface;
@@ -48,7 +50,11 @@ public class GerenciadorProjeto : MonoBehaviour
 
     void Update()
     {
-        tempoDesdeUltimoDia += Time.deltaTime;
+        // Se o tempo nao tiver parado (em algum menu), incrementa o tempo
+        if (!relogioParado)
+        {
+            tempoDesdeUltimoDia += Time.deltaTime;
+        }
         // TODO(andre:2018-06-13): Considerar tamanhos de meses diferentes alem de ano bisexto
         while (tempoDesdeUltimoDia > duracaoDia)
         {
@@ -96,5 +102,15 @@ public class GerenciadorProjeto : MonoBehaviour
         projetoAtual.temProjeto = false;
 
         eventoSalvarJogo.Invoke();
+    }
+
+    public void PararRelogio()
+    {
+        relogioParado = true;
+    }
+
+    public void IniciarRelogio()
+    {
+        relogioParado = false;
     }
 }
