@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69368cb392a2f154d989537a18a7f663, type: 3}
+  m_Name: PesquisasDisponiveis
+  m_EditorClassIdentifier: 
+  categorias:
+  - {fileID: 11400000, guid: 663e824b8ae5aa242af54e8e05efa140, type: 2}
+  - {fileID: 11400000, guid: c5aa9b40a23ab934b9ed30732e7cbc6f, type: 2}
+  - {fileID: 11400000, guid: ba14a09e24cb2284f85af79017cb90aa, type: 2}
+  - {fileID: 11400000, guid: cde52d5753691994c8c85e91d15874db, type: 2}

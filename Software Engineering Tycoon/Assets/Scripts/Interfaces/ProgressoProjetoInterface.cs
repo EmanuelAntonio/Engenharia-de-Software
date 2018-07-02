@@ -6,6 +6,7 @@ using TMPro;
 
 public class ProgressoProjetoInterface : MonoBehaviour
 {
+    public PerfilSelecionado perfilSelecionado;
     public ProjetoAtual projetoAtual;
 
     private TextMeshProUGUI pontosDesign;
@@ -61,10 +62,8 @@ public class ProgressoProjetoInterface : MonoBehaviour
         pontosDesign.text     = projetoAtual.projeto.pontosDesign.ToString();
         pontosTecnologia.text = projetoAtual.projeto.pontosTecnologia.ToString();
         pontosErro.text       = projetoAtual.projeto.pontosErro.ToString();
-        pontosPesquisa.text   = 0.ToString();
+        pontosPesquisa.text   = perfilSelecionado.perfil.pontosPesquisa.ToString();
 
         barraProgresso.value = projetoAtual.progresso;
-
-        Debug.Log("NOVO");
     }
 }

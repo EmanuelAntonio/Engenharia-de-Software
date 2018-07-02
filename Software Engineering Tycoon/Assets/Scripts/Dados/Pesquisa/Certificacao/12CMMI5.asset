@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05b77a87c2f0b44aba1b0d1be9c441, type: 3}
+  m_Name: 12CMMI5
+  m_EditorClassIdentifier: 
+  nome: "CMMI N\xEDvel 5"
+  descricao: "Permite obter o n\xEDvel 5 da certifica\xE7\xE3o CMMI"
+  custoPontosPesquisa: 150
+  custoDinheiro: 25000
+  tempoPesquisa: 30
+  diaDesbloqueio: 1
+  mesDesbloqueio: 1
+  anoDesbloqueio: 1972
+  pesquisasDesbloqueadas: []
+  desbloqueada: 0
+  pesquisada: 0

@@ -83,7 +83,7 @@ public class GerenciadorJogoUI : MonoBehaviour
 
     public void ExibirContratarFuncionario()
     {
-        animator.SetTrigger("ExibirContratarFuncionario");
+        animator.SetTrigger(exibirContratarFuncionario);
     }
 
     public void AtualizarProgresso()
@@ -99,17 +99,6 @@ public class GerenciadorJogoUI : MonoBehaviour
 
     public void AvancarEtapaMetodologia()
     {
-        // int estagioAtual = animator.GetInteger(estagioProjeto);
-        //
-        // if (estagioAtual >= 3)
-        // {
-        //     animator.SetBool(temProjeto, false);
-        // }
-        // else
-        // {
-        //     animator.SetInteger(estagioProjeto, estagioAtual + 1);
-        // }
-
         // NOTE(andre:2018-06-30): O Mecanim não consegue tratar Enums
         TipoEtapaMetodologia tipoEtapaMetodologia = metodologiaAtual.metodologia.ObterTipoEtapa();
         switch (tipoEtapaMetodologia)

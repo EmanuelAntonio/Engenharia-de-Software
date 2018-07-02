@@ -35,7 +35,7 @@ public class GerenciadorEmpresas : MonoBehaviour
 
         foreach (DescricaoTipoEmpresa descricaoTipoEmpresa in descricaoTiposEmpresas)
         {
-            if (dificuldade > descricaoTipoEmpresa.dificuldadeMinima && dificuldade < descricaoTipoEmpresa.dificuldadeMaxima)
+            if (dificuldade >= descricaoTipoEmpresa.dificuldadeMinima && dificuldade <= descricaoTipoEmpresa.dificuldadeMaxima)
             {
                 possiveisEmpresas.Add(descricaoTipoEmpresa);
             }
