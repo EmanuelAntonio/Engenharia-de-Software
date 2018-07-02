@@ -53,19 +53,27 @@ public class GerenciadorEmpresas : MonoBehaviour
         int tamanho = Random.Range(tipoSelecionado.tamanhoMinimo, tipoSelecionado.tamanhoMaximo);
         float experienciaUsuario = Random.Range(tipoSelecionado.experienciaUsuarioMinima, tipoSelecionado.experienciaUsuarioMaxima);
 
-        Prioridades prioridades = new Prioridades();
-        // TODO(andre:2018-06-10): Gerar variacoes nos valores bases com base nos demais parametros
-        prioridades.coletaDados              = tipoSelecionado.prioridadeColetaDadosBase;
-        prioridades.estudoDominio            = tipoSelecionado.prioridadeEstudoDominioBase;
-        prioridades.documentacao             = tipoSelecionado.prioridadeDocumentacaoBase;
-        prioridades.legibilidade             = tipoSelecionado.prioridadeLegibilidadeBase;
-        prioridades.qualidadeSolucao         = tipoSelecionado.prioridadeQualidadeSolucaoBase;
-        prioridades.desenvolvimentoInterface = tipoSelecionado.prioridadeDesenvolvimentoInterfaceBase;
-        prioridades.testes                   = tipoSelecionado.prioridadeTestesBase;
-        prioridades.avaliacaoCliente         = tipoSelecionado.prioridadeAvaliacaoClienteBase;
-        prioridades.implantacao              = tipoSelecionado.prioridadeImplantacaoBase;
+        int pontosDesignEsperado = Random.Range(tipoSelecionado.pontosDesignEsperadoMinimo, tipoSelecionado.pontosDesignEsperadoMaximo);
+        int pontosTecnologiaEsperado = Random.Range(tipoSelecionado.pontosTecnologiaEsperadoMinimo, tipoSelecionado.pontosTecnologiaEsperadoMaximo);
 
-        Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario, prioridades, tipoSelecionado);
+        // Prioridades prioridadesDesign = new Prioridades();
+        // TODO(andre:2018-06-10): Gerar variacoes nos valores bases com base nos demais parametros
+        // prioridadesDesign.coletaDados              = tipoSelecionado.prioridadeColetaDadosBase;
+        // prioridadesDesign.estudoDominio            = tipoSelecionado.prioridadeEstudoDominioBase;
+        // prioridadesDesign.documentacao             = tipoSelecionado.prioridadeDocumentacaoBase;
+        // prioridadesDesign.legibilidade             = tipoSelecionado.prioridadeLegibilidadeBase;
+        // prioridadesDesign.qualidadeSolucao         = tipoSelecionado.prioridadeQualidadeSolucaoBase;
+        // prioridadesDesign.desenvolvimentoInterface = tipoSelecionado.prioridadeDesenvolvimentoInterfaceBase;
+        // prioridadesDesign.testes                   = tipoSelecionado.prioridadeTestesBase;
+        // prioridadesDesign.avaliacaoCliente         = tipoSelecionado.prioridadeAvaliacaoClienteBase;
+        // prioridadesDesign.implantacao              = tipoSelecionado.prioridadeImplantacaoBase;
+
+        Prioridades prioridadesDesign = new Prioridades(tipoSelecionado.prioridadesDesignBase);
+        Prioridades prioridadesTecnologia = new Prioridades(tipoSelecionado.prioridadesTecnologiaBase);
+
+        Projeto projeto = new Projeto(tipoEmpresa, nomeEmpresa, descricao, pagamento, multa, tamanho, experienciaUsuario,
+                                      pontosDesignEsperado, pontosTecnologiaEsperado, prioridadesDesign, prioridadesTecnologia,
+                                      tipoSelecionado);
 
         return projeto;
     }

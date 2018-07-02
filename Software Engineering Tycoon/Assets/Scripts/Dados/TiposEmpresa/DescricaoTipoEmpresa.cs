@@ -51,28 +51,21 @@ public class DescricaoTipoEmpresa : ScriptableObject
 
     [Space(16)]
 
-    [Range(0.0f, 1.0f)]
-    public float prioridadeColetaDadosBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeEstudoDominioBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeDocumentacaoBase;
+    [Range(0, 1000)]
+    public int pontosDesignEsperadoMinimo;
+    [Range(0, 1000)]
+    public int pontosDesignEsperadoMaximo;
+
+    [Range(0, 1000)]
+    public int pontosTecnologiaEsperadoMinimo;
+    [Range(0, 1000)]
+    public int pontosTecnologiaEsperadoMaximo;
+
+    [Space(16)]
+
+    public Prioridades prioridadesDesignBase;
 
     [Space(8)]
 
-    [Range(0.0f, 1.0f)]
-    public float prioridadeLegibilidadeBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeQualidadeSolucaoBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeDesenvolvimentoInterfaceBase;
-
-    [Space(8)]
-
-    [Range(0.0f, 1.0f)]
-    public float prioridadeTestesBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeAvaliacaoClienteBase;
-    [Range(0.0f, 1.0f)]
-    public float prioridadeImplantacaoBase;
+    public Prioridades prioridadesTecnologiaBase;
 }

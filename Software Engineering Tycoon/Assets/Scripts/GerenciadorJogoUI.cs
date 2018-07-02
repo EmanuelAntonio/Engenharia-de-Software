@@ -8,16 +8,20 @@ public class GerenciadorJogoUI : MonoBehaviour
 {
     public PerfilSelecionado perfilSelecionado;
     public ProjetoAtual projetoAtual;
+    public MetodologiaAtual metodologiaAtual;
 
     public Animator animator;
 
     private int acaoConfirmar;
     private int acaoFechar;
+    private int avancarEtapaMetodologia;
+    private int concluirProjeto;
     private int alternarMenuContexto;
     private int exibirRelatorio;
     private int exibirPesquisa;
     private int exibirAceitarProjeto;
     // private int exibirCriarEmpresa;
+    private int exibirContratarFuncionario;
     private int progressoProjeto;
     private int estagioProjeto;
     private int temProjeto;
@@ -27,11 +31,14 @@ public class GerenciadorJogoUI : MonoBehaviour
     {
         acaoConfirmar = Animator.StringToHash("AcaoConfirmar");
         acaoFechar = Animator.StringToHash("AcaoFechar");
+        avancarEtapaMetodologia = Animator.StringToHash("AvancarEtapaMetodologia");
+        concluirProjeto = Animator.StringToHash("ConcluirProjeto");
         alternarMenuContexto = Animator.StringToHash("AlternarMenuContexto");
         exibirRelatorio = Animator.StringToHash("ExibirRelatorio");
         exibirPesquisa = Animator.StringToHash("ExibirPesquisa");
         exibirAceitarProjeto = Animator.StringToHash("ExibirAceitarProjeto");
         // exibirCriarEmpresa = Animator.StringToHash("ExibirCriarEmpresa");
+        exibirContratarFuncionario = Animator.StringToHash("ExibirContratarFuncionario");
         progressoProjeto = Animator.StringToHash("ProgressoProjeto");
         estagioProjeto = Animator.StringToHash("EstagioProjeto");
         temProjeto = Animator.StringToHash("TemProjeto");
@@ -74,6 +81,11 @@ public class GerenciadorJogoUI : MonoBehaviour
         animator.SetTrigger("ExibirCriarEmpresa");
     }
 
+    public void ExibirContratarFuncionario()
+    {
+        animator.SetTrigger("ExibirContratarFuncionario");
+    }
+
     public void AtualizarProgresso()
     {
         animator.SetFloat(progressoProjeto, projetoAtual.progresso);
@@ -82,22 +94,48 @@ public class GerenciadorJogoUI : MonoBehaviour
     public void ComecarProjeto()
     {
         AtualizarProgresso();
-        animator.SetInteger(estagioProjeto, 0);
         animator.SetBool(temProjeto, true);
     }
 
-    public void AvancarEstagio()
+    public void AvancarEtapaMetodologia()
     {
-        int estagioAtual = animator.GetInteger(estagioProjeto);
+        // int estagioAtual = animator.GetInteger(estagioProjeto);
+        //
+        // if (estagioAtual >= 3)
+        // {
+        //     animator.SetBool(temProjeto, false);
+        // }
+        // else
+        // {
+        //     animator.SetInteger(estagioProjeto, estagioAtual + 1);
+        // }
 
-        if (estagioAtual >= 3)
+        // NOTE(andre:2018-06-30): O Mecanim não consegue tratar Enums
+        TipoEtapaMetodologia tipoEtapaMetodologia = metodologiaAtual.metodologia.ObterTipoEtapa();
+        switch (tipoEtapaMetodologia)
         {
-            animator.SetBool(temProjeto, false);
+            case TipoEtapaMetodologia.Concluir:
+                animator.SetInteger(estagioProjeto, 0);
+                break;
+            case TipoEtapaMetodologia.Planejamento:
+                animator.SetInteger(estagioProjeto, 1);
+                break;
+            case TipoEtapaMetodologia.Desenvolvimento:
+                animator.SetInteger(estagioProjeto, 2);
+                break;
+            case TipoEtapaMetodologia.Validacao:
+                animator.SetInteger(estagioProjeto, 3);
+                break;
         }
-        else
-        {
-            animator.SetInteger(estagioProjeto, estagioAtual + 1);
-        }
+
+        animator.SetTrigger(avancarEtapaMetodologia);
+    }
+
+    public void ConcluirProjeto()
+    {
+        animator.SetInteger(estagioProjeto, 0);
+        animator.SetBool(temProjeto, false);
+        animator.SetTrigger(concluirProjeto);
     }
 
     public void AtualizarEtapaTutorial()

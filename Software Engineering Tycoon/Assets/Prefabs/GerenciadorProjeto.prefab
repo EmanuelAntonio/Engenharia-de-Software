@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4831028792143818}
   - component: {fileID: 114705550513615948}
-  - component: {fileID: 114431144271192246}
+  - component: {fileID: 114210197534381210}
+  - component: {fileID: 114756141833017732}
+  - component: {fileID: 114564123529023298}
   m_Layer: 0
   m_Name: GerenciadorProjeto
   m_TagString: Untagged
@@ -41,7 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114431144271192246
+--- !u!114 &114210197534381210
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,12 +54,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evento: {fileID: 11400000, guid: c39586de890eba1468ee8f1b9d6e4dc6, type: 2}
+  evento: {fileID: 11400000, guid: 8b7e4cfc1efbad9409e3d68d43854b25, type: 2}
   resposta:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114705550513615948}
-        m_MethodName: ConcluirProjeto
+        m_MethodName: ComecarProjeto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114564123529023298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823298744588404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: 0a0b494136391f04db6f5ca78e1c9cdf, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114705550513615948}
+        m_MethodName: AvancarEtapaMetodologia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -81,8 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
+  metodologiaAtual: {fileID: 11400000, guid: 190d0fbe6e65ce14c8a022bbf7bafb6a, type: 2}
+  listaFuncionarios: {fileID: 11400000, guid: 5adf4d32c15180a4b8c1dff5ee40f625, type: 2}
   duracaoDia: 0.3
   dispesasMensais: 500
+  avancarEtapaMetodologiaSemDuracao: 0
   aceitarProjetoInterface: {fileID: 0}
   perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
   eventoSalvarJogo:
@@ -138,6 +171,82 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: b0ed7022d17ad7f4fbb29f5b2674fb82, type: 2}
         m_MethodName: Disparar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  eventoAvancarEtapaMetodologia:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0a0b494136391f04db6f5ca78e1c9cdf, type: 2}
+        m_MethodName: Disparar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  eventoAtualizarProgresso:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 93f5aa23e4bc7234e99702b4d6302279, type: 2}
+        m_MethodName: Disparar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  eventoConcluirProjeto:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c39586de890eba1468ee8f1b9d6e4dc6, type: 2}
+        m_MethodName: Disparar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114756141833017732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823298744588404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: 29a219c171dbdfd4eaa37298b3d9bce3, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114705550513615948}
+        m_MethodName: ComecarEtapaMetodologia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

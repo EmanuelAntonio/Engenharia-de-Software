@@ -18,6 +18,7 @@ public class MenuContextoInterface : MonoBehaviour
     private Button novoProjeto;
     private Button pesquisas;
     private Button relatorios;
+    private Button contratarFuncionario;
     private Button avancarEtapa;
 
     private bool _started = false;
@@ -26,6 +27,7 @@ public class MenuContextoInterface : MonoBehaviour
         novoProjeto = transform.Find("NovoProjeto").GetComponent<Button>();
         pesquisas = transform.Find("Pesquisas").GetComponent<Button>();
         relatorios = transform.Find("Relatorios").GetComponent<Button>();
+        contratarFuncionario = transform.Find("Funcionario").GetComponent<Button>();
         avancarEtapa = transform.Find("AvancarEtapa").GetComponent<Button>();
 
         _started = true;
@@ -42,9 +44,11 @@ public class MenuContextoInterface : MonoBehaviour
     void OnStartOrEnable()
     {
         // TODO(andre:2018-06-13): Mover essa logica para algum lugar que faça mais sentido
+        // TODO(allan:2018-07-02): Considerar numero de funcionarios ja contratados para mostrar a opção de contratação.
         novoProjeto.gameObject.SetActive(!projetoAtual.temProjeto);
         pesquisas.gameObject.SetActive(true);
         relatorios.gameObject.SetActive(true);
+        contratarFuncionario.gameObject.SetActive(perfilSelecionado.perfil.etapa > 0);
         avancarEtapa.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
     }
 

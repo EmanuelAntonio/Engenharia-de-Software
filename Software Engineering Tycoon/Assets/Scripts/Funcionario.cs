@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Funcionario {
+public class Funcionario
+{
+    public float pontosDesignAcumulados;
+    public float pontosTecnologiaAcumulados;
+    public float pontosErroAcumulados;
+    public float progresso;
+    public float ultimaAtualizacao;
 
     private int habilidadeTecnologia;
     private int habilidadeDesign;
@@ -11,13 +17,74 @@ public class Funcionario {
 
     private float salario;
 
-    public Funcionario(int tecnologia, int design, int pesquisa, float salario)
+    public Funcionario(int habilidadeTecnologia, int habilidadeDesign, int habilidadePesquisa, float salario)
     {
-        this.habilidadeTecnologia = tecnologia;
-        this.habilidadeDesign = design;
-        this.habilidadePesquisa = pesquisa;
+        this.habilidadeTecnologia = habilidadeTecnologia;
+        this.habilidadeDesign = habilidadeDesign;
+        this.habilidadePesquisa = habilidadePesquisa;
         this.salario = salario;
     }
+
+    public void ComecarProjeto()
+    {
+        pontosDesignAcumulados = 0;
+        pontosTecnologiaAcumulados = 0;
+        pontosErroAcumulados = 0;
+        progresso = 0;
+        ultimaAtualizacao = 0;
+    }
+
+    public void DesenvolverProjeto(ProjetoAtual projetoAtual, EtapaMetodologia etapaMetodologia)
+    {
+        Projeto projeto = projetoAtual.projeto;
+        Prioridades prioridadesEscolhidasNormalizadas = projetoAtual.prioridadesEscolhidas.Normalizada();
+
+        // TODO(andre:2018-06-30): Usar data interna do jogo pra calcular o progresso
+        float tempoPassado = Time.deltaTime;
+        progresso += tempoPassado;
+
+        float pontosDesign = etapaMetodologia.ObterMultiplicadorDesign(projeto, prioridadesEscolhidasNormalizadas);
+        float pontosTecnologia = etapaMetodologia.ObterMultiplicadorTecnologia(projeto, prioridadesEscolhidasNormalizadas);
+        // TODO(andre:2018-07-01): Definir como são gerados os pontos de erro
+        float pontosErro = 0;
+
+        pontosDesign *= tempoPassado * habilidadeDesign;
+        pontosTecnologia *= tempoPassado * habilidadeTecnologia;
+        pontosErro *= tempoPassado * 10;
+
+        // TODO(andre:2018-06-30): Utilizar aleatoriedade
+        pontosDesignAcumulados += pontosDesign;
+        pontosTecnologiaAcumulados += pontosTecnologia;
+        pontosErroAcumulados += pontosErro;
+
+        if (ultimaAtualizacao + etapaMetodologia.frequenciaAtualizacao < progresso)
+        {
+            ultimaAtualizacao = progresso;
+
+            float pontosDesignGerados = Random.Range(pontosDesignAcumulados * 0.1f, pontosDesignAcumulados);
+            float pontosTecnologiaGerados = Random.Range(pontosTecnologiaAcumulados * 0.1f, pontosTecnologiaAcumulados);
+            float pontosErroGerados = Random.Range(pontosErroAcumulados * 0.1f, pontosErroAcumulados);
+
+            Debug.Log("Pontos gerados: " + pontosDesignGerados + " | " + pontosTecnologiaGerados + " | " + pontosErroGerados);
+
+            projeto.pontosDesign += (int)pontosDesignGerados;
+            projeto.pontosTecnologia += (int)pontosTecnologiaGerados;
+            projeto.pontosErro += (int)pontosErroGerados;
+
+            pontosDesignAcumulados = 0;
+            pontosTecnologiaAcumulados = 0;
+            pontosErroAcumulados = 0;
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     public int GetHabilidadeTecnologia()
     {
@@ -58,5 +125,4 @@ public class Funcionario {
     {
         this.salario = salario;
     }
-
 }

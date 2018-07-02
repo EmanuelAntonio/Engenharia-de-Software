@@ -79,16 +79,4 @@ public class PrioridadesInterface : MonoBehaviour
                 break;
         }
     }
-
-    // Gambiarra
-    public void DefineValor(float valor)
-    {
-        projetoAtual.valor = valor;
-    }
-
-    // Gambiarra
-    public void DefineTempo(float tempo)
-    {
-        projetoAtual.tempo = tempo;
-    }
 }
