@@ -21,6 +21,7 @@ public class GerenciadorJogoUI : MonoBehaviour
     private int exibirPesquisa;
     private int exibirAceitarProjeto;
     // private int exibirCriarEmpresa;
+    private int exibirContratarFuncionario;
     private int progressoProjeto;
     private int estagioProjeto;
     private int temProjeto;
@@ -37,6 +38,7 @@ public class GerenciadorJogoUI : MonoBehaviour
         exibirPesquisa = Animator.StringToHash("ExibirPesquisa");
         exibirAceitarProjeto = Animator.StringToHash("ExibirAceitarProjeto");
         // exibirCriarEmpresa = Animator.StringToHash("ExibirCriarEmpresa");
+        exibirContratarFuncionario = Animator.StringToHash("ExibirContratarFuncionario");
         progressoProjeto = Animator.StringToHash("ProgressoProjeto");
         estagioProjeto = Animator.StringToHash("EstagioProjeto");
         temProjeto = Animator.StringToHash("TemProjeto");
@@ -77,6 +79,11 @@ public class GerenciadorJogoUI : MonoBehaviour
     {
         // animator.SetTrigger(exibirCriarEmpresa);
         animator.SetTrigger("ExibirCriarEmpresa");
+    }
+
+    public void ExibirContratarFuncionario()
+    {
+        animator.SetTrigger("ExibirContratarFuncionario");
     }
 
     public void AtualizarProgresso()
