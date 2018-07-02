@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,7 +379,7 @@ Prefab:
     - target: {fileID: 224126061698410578, guid: 0cc60bef7fb0563468106d8511b1572a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cc60bef7fb0563468106d8511b1572a, type: 2}
@@ -538,7 +538,7 @@ Prefab:
     - target: {fileID: 224835989940603200, guid: dda9a82d8e7fdae4c909d55f3860e0c9,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dda9a82d8e7fdae4c909d55f3860e0c9, type: 2}
@@ -602,7 +602,7 @@ Prefab:
     - target: {fileID: 224476020041046428, guid: 97065350c95eaea49ae2020b0f797cc0,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224476020041046428, guid: 97065350c95eaea49ae2020b0f797cc0,
         type: 2}
@@ -1102,7 +1102,7 @@ Prefab:
     - target: {fileID: 224196507870706430, guid: 30ec82bc6db4fc4478ca12456fda1059,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224196507870706430, guid: 30ec82bc6db4fc4478ca12456fda1059,
         type: 2}
@@ -1248,11 +1248,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1151161676}
   - {fileID: 169353178}
   - {fileID: 180466580}
   - {fileID: 1541711778}
   - {fileID: 1651782815}
-  - {fileID: 1151161676}
   - {fileID: 324569499}
   - {fileID: 195884610}
   - {fileID: 1792785762}
@@ -1352,7 +1352,7 @@ Prefab:
     - target: {fileID: 224942906331037816, guid: 90def118f7e0e3347914bf343820247a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224942906331037816, guid: 90def118f7e0e3347914bf343820247a,
         type: 2}
