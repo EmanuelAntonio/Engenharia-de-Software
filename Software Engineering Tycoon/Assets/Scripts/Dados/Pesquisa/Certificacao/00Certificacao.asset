@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5afc3f684dcfd42b7895798a98da0e, type: 3}
+  m_Name: 00Certificacao
+  m_EditorClassIdentifier: 
+  nome: "Certifica\xE7\xE3o"
+  pesquisas:
+  - {fileID: 11400000, guid: 781db86dc2088d347b9617d4abda8de8, type: 2}
+  - {fileID: 11400000, guid: 38b574cc5352f3043bd257982dbc2d4a, type: 2}
+  - {fileID: 11400000, guid: e2d51f3643bc03d40921548e846ab750, type: 2}
+  - {fileID: 11400000, guid: 76085365a4ef44d4ba6560a01d90d4b3, type: 2}
+  - {fileID: 11400000, guid: 7545aaed36ea2244b82175b72a23f809, type: 2}
+  - {fileID: 11400000, guid: 231debc8dd2e9124992e959794f06aab, type: 2}
+  - {fileID: 11400000, guid: a4972fd0dc0e9754b8bba4c4c791cfc1, type: 2}
+  - {fileID: 11400000, guid: f62afc4b99b2daa4389da616634dbacb, type: 2}
+  - {fileID: 11400000, guid: 1c9c781d29be4ed4aab6d997b4ea4116, type: 2}
+  - {fileID: 11400000, guid: b4f3662dc8f44a545824c756ee0223d9, type: 2}
+  - {fileID: 11400000, guid: 1ed0502ec137e7c4d893c355e670cdd9, type: 2}
+  - {fileID: 11400000, guid: bbb350a91ccd7374bb960ace7d1faa1b, type: 2}

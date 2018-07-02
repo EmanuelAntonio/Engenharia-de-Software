@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5afc3f684dcfd42b7895798a98da0e, type: 3}
+  m_Name: 00ColetaDados
+  m_EditorClassIdentifier: 
+  nome: Coleta de Dados
+  pesquisas:
+  - {fileID: 11400000, guid: 577a18da34ca58645b9ba33e79ca3731, type: 2}
+  - {fileID: 11400000, guid: 8bdb71a80c030eb4a8b7ddbdd8ef5cd0, type: 2}
+  - {fileID: 11400000, guid: e994d96962d9ccf4dbd09165c4825ff5, type: 2}
+  - {fileID: 11400000, guid: 3f6bb902686d9d94ca082f2bb56cdb90, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5afc3f684dcfd42b7895798a98da0e, type: 3}
+  m_Name: 00AtividadesGuardaChuva
+  m_EditorClassIdentifier: 
+  nome: Atividades Guarda Chuva
+  pesquisas:
+  - {fileID: 11400000, guid: 97f3db004a96f5140820e8f8addcb613, type: 2}
+  - {fileID: 11400000, guid: 8ab82d0b1631a13448388d64b2b77167, type: 2}
+  - {fileID: 11400000, guid: 3acafcd0a378af74c926c30653d57887, type: 2}
+  - {fileID: 11400000, guid: 65d6ee09bf74f75479682eb4e71fe89f, type: 2}
+  - {fileID: 11400000, guid: 2acf0df118b26ca48a62c15e1ee61fe0, type: 2}
+  - {fileID: 11400000, guid: 673cbc917870ba84c8bc09dd4d508b9c, type: 2}

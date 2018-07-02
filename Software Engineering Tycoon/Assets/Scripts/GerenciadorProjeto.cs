@@ -78,7 +78,7 @@ public class GerenciadorProjeto : MonoBehaviour
                 progressoEtapa += Time.deltaTime;
                 foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
                 {
-                    funcionario.DesenvolverProjeto(projetoAtual, etapaAtual);
+                    funcionario.DesenvolverProjeto(projetoAtual, perfilSelecionado.perfil, etapaAtual);
                 }
 
                 // GAMBIARRA: A ideia é que como a ultima etapa não tem tempo para concluir essa conta deveria funcionar de modo diferente
@@ -96,7 +96,7 @@ public class GerenciadorProjeto : MonoBehaviour
             {
                 foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
                 {
-                    funcionario.DesenvolverProjeto(projetoAtual, etapaAtual);
+                    funcionario.DesenvolverProjeto(projetoAtual, perfilSelecionado.perfil, etapaAtual);
                 }
 
                 // GAMBIARRA: A ideia é que por não ter tempo para concluir essa etapa deveria funcionar de modo diferente

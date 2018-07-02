@@ -1846,6 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72d75a91b769494da154e00eea67367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
   projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
 --- !u!114 &114834446416872514
 MonoBehaviour:
