@@ -54,6 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
+  funcionariosContratados: {fileID: 11400000, guid: 4e2904eeb65da12499dccd2bdc9c52bc,
+    type: 2}
   duracaoDia: 0.3
   dispesasMensais: 500
   eventoSalvarJogo:

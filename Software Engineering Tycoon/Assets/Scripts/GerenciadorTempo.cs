@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class GerenciadorTempo : MonoBehaviour
 {
     public PerfilSelecionado perfilSelecionado;
+    public ListaFuncionarios funcionariosContratados;
 
     public float duracaoDia;
     public float dispesasMensais;
@@ -48,11 +49,22 @@ public class GerenciadorTempo : MonoBehaviour
                 }
 
                 perfilSelecionado.perfil.verba -= dispesasMensais;
+                perfilSelecionado.perfil.verba -= MontanteSalarios();
                 eventoSalvarJogo.Invoke();
             }
 
             tempoDesdeUltimoDia -= duracaoDia;
         }
+    }
+
+    float MontanteSalarios()
+    {
+        float total = 0.0f;
+        foreach(Funcionario funcionario in funcionariosContratados.funcionarios)
+        {
+            total += funcionario.GetSalario();
+        }
+        return total;
     }
 
     public void PararRelogio()
