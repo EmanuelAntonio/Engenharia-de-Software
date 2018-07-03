@@ -13,9 +13,6 @@ public class GerenciadorProjeto : MonoBehaviour
 
     private bool avancarEtapaMetodologiaSemDuracao = false;
 
-    // MUITA GAMBIARRA
-    public GameObject aceitarProjetoInterface;
-
     public UnityEvent eventoSalvarJogo;
     public UnityEvent eventoGerarListaProjetos;
     public UnityEvent eventoCriarEmpresa;

@@ -177,6 +177,7 @@ ModelImporter:
     100342: vidro2_006
     100344: vidro_001
     100346: vidro_002
+    100348: Cylinder_005
     400000: 1Newplan_001
     400002: cadeira
     400004: cadeira_001
@@ -351,6 +352,7 @@ ModelImporter:
     400342: vidro2_006
     400344: vidro_001
     400346: vidro_002
+    400348: Cylinder_005
     2100000: folha
     2100002: wire_224086086
     2100004: vaso
@@ -401,6 +403,7 @@ ModelImporter:
     2100094: borda_001
     2100096: parede
     2100098: borda
+    2100100: cabelo
     2300000: 1Newplan_001
     2300002: cadeira
     2300004: cadeira_001
@@ -574,6 +577,7 @@ ModelImporter:
     2300340: vidro2_006
     2300342: vidro_001
     2300344: vidro_002
+    2300346: Cylinder_005
     3300000: 1Newplan_001
     3300002: cadeira
     3300004: cadeira_001
@@ -747,6 +751,7 @@ ModelImporter:
     3300340: vidro2_006
     3300342: vidro_001
     3300344: vidro_002
+    3300346: Cylinder_005
     4300000: Group_012_000
     4300002: Group_005_000
     4300004: Group_019_000
@@ -920,6 +925,7 @@ ModelImporter:
     4300340: janela
     4300342: chao
     4300344: parede
+    4300346: Cylinder_005
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

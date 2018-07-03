@@ -19,7 +19,9 @@ public class MenuContextoInterface : MonoBehaviour
     private Button pesquisas;
     private Button relatorios;
     private Button contratarFuncionario;
-    private Button avancarEtapa;
+    private Button avancarEscritorio;
+    private Button avancarPredio;
+    private Button salvarSair;
 
     private bool _started = false;
     void Start()
@@ -28,7 +30,9 @@ public class MenuContextoInterface : MonoBehaviour
         pesquisas = transform.Find("Pesquisas").GetComponent<Button>();
         relatorios = transform.Find("Relatorios").GetComponent<Button>();
         contratarFuncionario = transform.Find("Funcionario").GetComponent<Button>();
-        avancarEtapa = transform.Find("AvancarEtapa").GetComponent<Button>();
+        avancarEscritorio = transform.Find("AvancarEscritorio").GetComponent<Button>();
+        avancarPredio = transform.Find("AvancarPredio").GetComponent<Button>();
+        salvarSair = transform.Find("SalvarSair").GetComponent<Button>();
 
         _started = true;
         this.OnStartOrEnable();
@@ -49,14 +53,23 @@ public class MenuContextoInterface : MonoBehaviour
         pesquisas.gameObject.SetActive(true);
         relatorios.gameObject.SetActive(true);
         contratarFuncionario.gameObject.SetActive(perfilSelecionado.perfil.etapa > 0);
-        avancarEtapa.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
+        avancarEscritorio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
+        avancarPredio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 1 && perfilSelecionado.perfil.ano >= 1972 && perfilSelecionado.perfil.verba > 100000));
+        salvarSair.gameObject.SetActive(true);
     }
 
-    public void AvancarEtapa()
+    public void AvancarEtapa(int etapa)
     {
-        perfilSelecionado.perfil.etapa = 1;
+        perfilSelecionado.perfil.etapa = etapa;
         eventoSalvarJogo.Invoke();
 
         SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
+    }
+
+    public void SalvarSair()
+    {
+        eventoSalvarJogo.Invoke();
+
+        SceneManager.LoadScene(0);
     }
 }

@@ -4996,6 +4996,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pesquisa: {fileID: 0}
   perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
+  eventoPesquisar:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114899952081217726
 MonoBehaviour:
   m_ObjectHideFlags: 1

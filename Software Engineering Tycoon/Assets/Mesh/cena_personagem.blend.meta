@@ -40,6 +40,7 @@ ModelImporter:
     100068: tela
     100070: vidro
     100072: vidro2
+    100074: Cylinder_005_Cylinder_003
     400000: cadeira
     400002: //RootNode
     400004: chao
@@ -77,6 +78,7 @@ ModelImporter:
     400068: tela
     400070: vidro
     400072: vidro2
+    400074: Cylinder_005_Cylinder_003
     2100000: Character__Texture_psd
     2100002: calca__Texture_psd
     2100004: cabelo__Texture_psd
@@ -104,6 +106,7 @@ ModelImporter:
     2100048: borda_001
     2100050: parede
     2100052: borda
+    2100054: lixeira_001
     2300000: cadeira
     2300002: chao
     2300004: Character_Cube
@@ -140,6 +143,7 @@ ModelImporter:
     2300066: tela
     2300068: vidro
     2300070: vidro2
+    2300072: Cylinder_005_Cylinder_003
     3300000: cadeira
     3300002: chao
     3300004: Character_Cube
@@ -176,6 +180,7 @@ ModelImporter:
     3300066: tela
     3300068: vidro
     3300070: vidro2
+    3300072: Cylinder_005_Cylinder_003
     4300000: Character_Cube
     4300002: Character_Cube_001
     4300004: Character_Cube_002
@@ -212,6 +217,7 @@ ModelImporter:
     4300066: janela
     4300068: chao
     4300070: parede
+    4300072: Cylinder_005_Cylinder_003
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

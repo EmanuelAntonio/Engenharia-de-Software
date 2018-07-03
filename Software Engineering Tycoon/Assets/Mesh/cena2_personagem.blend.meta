@@ -99,6 +99,9 @@ ModelImporter:
     100186: vidro2
     100188: vidro2_001
     100190: vidro_001
+    100192: Cylinder_005_Cylinder_000
+    100194: Cylinder_005_Cylinder_001
+    100196: Cylinder_005_Cylinder_003
     400000: 1Newplan
     400002: 1Newplan_001
     400004: 1Newplan_002
@@ -195,6 +198,9 @@ ModelImporter:
     400186: vidro2
     400188: vidro2_001
     400190: vidro_001
+    400192: Cylinder_005_Cylinder_000
+    400194: Cylinder_005_Cylinder_001
+    400196: Cylinder_005_Cylinder_003
     2100000: calca__Texture_psd
     2100002: Character__Texture_psd
     2100004: cabelo__Texture_psd
@@ -241,6 +247,7 @@ ModelImporter:
     2100086: borda_001
     2100088: parede
     2100090: borda
+    2100092: lixeira_001
     2300000: 1Newplan
     2300002: 1Newplan_001
     2300004: 1Newplan_002
@@ -336,6 +343,9 @@ ModelImporter:
     2300184: vidro2
     2300186: vidro2_001
     2300188: vidro_001
+    2300190: Cylinder_005_Cylinder_000
+    2300192: Cylinder_005_Cylinder_001
+    2300194: Cylinder_005_Cylinder_003
     3300000: 1Newplan
     3300002: 1Newplan_001
     3300004: 1Newplan_002
@@ -431,6 +441,9 @@ ModelImporter:
     3300184: vidro2
     3300186: vidro2_001
     3300188: vidro_001
+    3300190: Cylinder_005_Cylinder_000
+    3300192: Cylinder_005_Cylinder_001
+    3300194: Cylinder_005_Cylinder_003
     4300000: Character_Cube_006
     4300002: Character_Cube_008
     4300004: Character_Cube_007
@@ -526,6 +539,9 @@ ModelImporter:
     4300184: janela
     4300186: chao
     4300188: parede
+    4300190: Cylinder_005_Cylinder_001
+    4300192: Cylinder_005_Cylinder_000
+    4300194: Cylinder_005_Cylinder_003
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
