@@ -68,4 +68,8 @@ public class DescricaoTipoEmpresa : ScriptableObject
     [Space(8)]
 
     public Prioridades prioridadesTecnologiaBase;
+
+    [Space(16)]
+
+    public List<string> listaDeDicas;
 }

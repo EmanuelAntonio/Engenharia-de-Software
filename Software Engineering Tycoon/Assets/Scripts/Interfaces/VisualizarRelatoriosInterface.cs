@@ -11,7 +11,6 @@ public class VisualizarRelatoriosInterface : MonoBehaviour
     public GameObject detalhesRelatorioPrefab;
 
     private Abas abasProjetos;
-    private Button aceitarProjetoBotao;
 
     public ListaProjetos projetosConcluidos;
 
@@ -25,7 +24,6 @@ public class VisualizarRelatoriosInterface : MonoBehaviour
     void Start()
     {
         abasProjetos = transform.Find("AreaProjetos/ListaProjetos").GetComponent<Abas>();
-        aceitarProjetoBotao = transform.Find("AceitarBotao").GetComponent<Button>();
 
         _started = true;
         this.OnStartOrEnable();
@@ -40,11 +38,7 @@ public class VisualizarRelatoriosInterface : MonoBehaviour
     // https://forum.unity.com/threads/awake-start-and-onenable-walked-into-a-bar.276712/
     void OnStartOrEnable()
     {
-        // TODO(andre>2018-06-25): Quando for criada a mensagem dizendo que a lista
-        // foi atualizada, atualizar a lista de projeto apenas quando receber a mensagem.
         AtualizarListaProjetos();
-
-        AtualizarBotaoAceitarProjeto();
     }
 
     public void AtualizarListaProjetos()
@@ -99,12 +93,5 @@ public class VisualizarRelatoriosInterface : MonoBehaviour
 
             abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
         }
-
-        AtualizarBotaoAceitarProjeto();
-    }
-
-    public void AtualizarBotaoAceitarProjeto()
-    {
-        aceitarProjetoBotao.interactable = (abasProjetos.abaAtiva != null);
     }
 }
