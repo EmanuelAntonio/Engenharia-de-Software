@@ -11,26 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59aaf0ef56326894f920c56799af37e4, type: 3}
   m_Name: ListaFuncionariosContratados
   m_EditorClassIdentifier: 
-  funcionarios:
-  - pontosDesignAcumulados: 0.01671039
-    pontosTecnologiaAcumulados: 0.01671039
-    pontosErroAcumulados: 0
-    pontosPesquisaAcumulados: 0.050131172
-    progresso: 14.142792
-    ultimaAtualizacao: 14.109371
-    habilidadeTecnologia: 10
-    habilidadeDesign: 10
-    habilidadePesquisa: 10
-    nome: 
-    salario: 10
-  - pontosDesignAcumulados: 0.01671039
-    pontosTecnologiaAcumulados: 0.01671039
-    pontosErroAcumulados: 0
-    pontosPesquisaAcumulados: 0.050131172
-    progresso: 14.142792
-    ultimaAtualizacao: 14.109371
-    habilidadeTecnologia: 10
-    habilidadeDesign: 10
-    habilidadePesquisa: 10
-    nome: Teste
-    salario: 10
+  funcionarios: []
