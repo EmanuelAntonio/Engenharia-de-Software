@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using System.IO;
 
 public class GerenciadorSalve : MonoBehaviour
 {
     public ListaPerfis listaPerfis;
-    // public PerfilSelecionado perfilSelecionado;
+    public PerfilSelecionado perfilSelecionado;
     public DadosPerfil perfilBase;
     public ProjetoAtual projetoAtual;
     public ListaFuncionarios listaFuncionarios;
     public ListaMetodologias listaMetodologias;
     public MetodologiaAtual metodologiaAtual;
+    public ListaPesquisas listaPesquisas;
 
     private string caminhoArquivo;
+
+    private DadosSalveLista listaDados;
 
     void Awake()
     {
@@ -41,22 +45,47 @@ public class GerenciadorSalve : MonoBehaviour
         }
     }
 
-    // public void SelecionarPerfil(int id)
+    // public void SelecionarPerfil(int indice)
     // {
-    //     perfilSelecionado.perfil = listaPerfis.perfis[id];
+    //     perfilSelecionado.temPerfil = true;
+    //     perfilSelecionado.perfil = listaPerfis.perfis[indice];
+    //     perfilSelecionado.indicePerfil = indice;
     // }
 
-    public void ApagarPerfil(int id)
+    public void ApagarPerfil(int indice)
     {
-        listaPerfis.perfis[id].DefineValores(perfilBase);
+        listaPerfis.perfis[indice].DefineValores(perfilBase);
+        AtualizarDadosSalve();
 
         Salvar();
     }
 
     public void Salvar()
     {
-        string jsonString = JsonUtility.ToJson(listaPerfis.Serializavel());
+        AtualizarDadosSalve();
+
+        string jsonString = JsonUtility.ToJson(listaDados, true);
         File.WriteAllText(caminhoArquivo, jsonString);
+    }
+
+    public void AtualizarDadosSalve()
+    {
+        for (int i = 0; i < listaDados.dados.Count; ++i)
+        {
+            listaDados.dados[i].perfil = listaPerfis.perfis[i].Serializavel();
+        }
+
+        if (perfilSelecionado.temPerfil)
+        {
+            int indice = perfilSelecionado.indicePerfil;
+
+            listaDados.dados[indice].funcionarios = listaFuncionarios.Serializavel();
+
+            listaDados.dados[indice].metodologias = listaMetodologias.Serializavel();
+            listaDados.dados[indice].indiceMetodologiaAtual = metodologiaAtual.indiceMetodologia;
+
+            listaDados.dados[indice].pesquisas = listaPesquisas.Serializavel();
+        }
     }
 
     public void Carregar()
@@ -64,35 +93,65 @@ public class GerenciadorSalve : MonoBehaviour
         if (File.Exists(caminhoArquivo))
         {
             string jsonString = File.ReadAllText(caminhoArquivo);
-            listaPerfis.DefineSerializavel(JsonUtility.FromJson<ListaPerfisSerializavel>(jsonString));
+            // TODO(andre:2018-07-02): Tentar utilizar FromJsonOverwrite
+            listaDados = JsonUtility.FromJson<DadosSalveLista>(jsonString);
+
+            Assert.AreEqual(listaDados.dados.Count, listaPerfis.perfis.Count, "Arquivo de salve incorreto");
+            for (int i = 0; i < listaDados.dados.Count; ++i)
+            {
+                listaPerfis.perfis[i].DefineSerializavel(listaDados.dados[i].perfil);
+            }
+
+            if (perfilSelecionado.temPerfil && !perfilSelecionado.perfil.novoPerfil)
+            {
+                listaFuncionarios.DefineSerializavel(listaDados.dados[perfilSelecionado.indicePerfil].funcionarios);
+
+                listaMetodologias.DefineSerializavel(listaDados.dados[perfilSelecionado.indicePerfil].metodologias);
+                if(listaMetodologias.metodologias.Count > 0)
+                {
+                    metodologiaAtual.indiceMetodologia = listaDados.dados[perfilSelecionado.indicePerfil].indiceMetodologiaAtual;
+                    metodologiaAtual.metodologia = listaMetodologias.metodologias[metodologiaAtual.indiceMetodologia];
+                }
+
+                listaPesquisas.DefineSerializavel(listaDados.dados[perfilSelecionado.indicePerfil].pesquisas);
+            }
         }
         else
         {
+            listaDados = new DadosSalveLista();
+
             foreach (DadosPerfil perfil in listaPerfis.perfis)
             {
                 perfil.DefineValores(perfilBase);
+
+                listaDados.dados.Add(new DadosSalve());
             }
+
+            AtualizarDadosSalve();
         }
-
-        // TODO(andre:2018-06-30): Criar interface grafica para criar a metodologia.
-        // TODO(andre:2018-06-30): Salvar esses dados no arquivo de salve.
-        EtapaMetodologia etapaPlanejamento = new EtapaMetodologia(TipoEtapaMetodologia.Planejamento, 1.0f, 3.0f);
-        EtapaMetodologia etapaDesenvolvimento = new EtapaMetodologia(TipoEtapaMetodologia.Desenvolvimento, 1.0f, 3.0f);
-        EtapaMetodologia etapaValidacao = new EtapaMetodologia(TipoEtapaMetodologia.Validacao, 1.0f, 3.0f);
-        EtapaMetodologia etapaConcluir = new EtapaMetodologia(TipoEtapaMetodologia.Concluir, 2.0f);
-
-        Metodologia metodologia = new Metodologia(projetoAtual);
-        metodologia.etapas.Add(etapaPlanejamento);
-        metodologia.etapas.Add(etapaDesenvolvimento);
-        metodologia.etapas.Add(etapaValidacao);
-        metodologia.etapas.Add(etapaConcluir);
-
-        listaMetodologias.metodologias = new List<Metodologia>();
-        listaMetodologias.metodologias.Add(metodologia);
-        metodologiaAtual.metodologia = listaMetodologias.metodologias[0];
-
-        Funcionario funcionario = new Funcionario(10, 10, 10, 10);
-        listaFuncionarios.funcionarios = new List<Funcionario>();
-        listaFuncionarios.funcionarios.Add(funcionario);
     }
+}
+
+[System.Serializable]
+public class DadosSalveLista
+{
+    public List<DadosSalve> dados;
+
+    public DadosSalveLista()
+    {
+        dados = new List<DadosSalve>();
+    }
+}
+
+[System.Serializable]
+public class DadosSalve
+{
+    public DadosPerfilSerializavel perfil;
+
+    public ListaFuncionariosSerializavel funcionarios;
+
+    public ListaMetodologiasSerializavel metodologias;
+    public int indiceMetodologiaAtual;
+
+    public ListaPesquisasSerializavel pesquisas;
 }

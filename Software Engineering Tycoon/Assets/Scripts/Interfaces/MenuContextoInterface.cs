@@ -7,8 +7,8 @@ using UnityEngine.Events;
 
 public class MenuContextoInterface : MonoBehaviour
 {
-    // private GerenciadorProjeto gerenciadorProjeto;
     public PerfilSelecionado perfilSelecionado;
+    public ListaFuncionarios listaFuncionariosContratados;
 
     public ProjetoAtual projetoAtual;
 
@@ -52,7 +52,7 @@ public class MenuContextoInterface : MonoBehaviour
         novoProjeto.gameObject.SetActive(!projetoAtual.temProjeto);
         pesquisas.gameObject.SetActive(true);
         relatorios.gameObject.SetActive(true);
-        contratarFuncionario.gameObject.SetActive(true);
+        contratarFuncionario.gameObject.SetActive(listaFuncionariosContratados.funcionarios.Count < perfilSelecionado.perfil.maximoFuncionarios);
         avancarEscritorio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
         avancarPredio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 1 && perfilSelecionado.perfil.ano >= 1972 && perfilSelecionado.perfil.verba > 100000));
         salvarSair.gameObject.SetActive(true);
@@ -61,6 +61,12 @@ public class MenuContextoInterface : MonoBehaviour
     public void AvancarEtapa(int etapa)
     {
         perfilSelecionado.perfil.etapa = etapa;
+
+        if (etapa == 1)
+            perfilSelecionado.perfil.maximoFuncionarios = 3;
+        if (etapa == 2)
+            perfilSelecionado.perfil.maximoFuncionarios = 5;
+
         eventoSalvarJogo.Invoke();
 
         SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
@@ -69,6 +75,7 @@ public class MenuContextoInterface : MonoBehaviour
     public void SalvarSair()
     {
         eventoSalvarJogo.Invoke();
+        perfilSelecionado.temPerfil = false;
 
         SceneManager.LoadScene(0);
     }

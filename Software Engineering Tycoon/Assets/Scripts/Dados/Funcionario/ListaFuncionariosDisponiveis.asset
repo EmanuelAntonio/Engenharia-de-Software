@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59aaf0ef56326894f920c56799af37e4, type: 3}
-  m_Name: ListaFuncionarios
+  m_Name: ListaFuncionariosDisponiveis
   m_EditorClassIdentifier: 
   funcionarios:
   - pontosDesignAcumulados: 0
@@ -19,9 +19,20 @@ MonoBehaviour:
     progresso: 0
     ultimaAtualizacao: 0
     habilidadeTecnologia: 10
-    habilidadeDesign: 10
-    habilidadePesquisa: 11
-    nome: Eduarda Pereira
+    habilidadeDesign: 17
+    habilidadePesquisa: 10
+    nome: Igor Lima
+    salario: 1110
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 10
+    habilidadeDesign: 14
+    habilidadePesquisa: 7
+    nome: Lucas Azevedo
     salario: 930
   - pontosDesignAcumulados: 0
     pontosTecnologiaAcumulados: 0
@@ -30,9 +41,20 @@ MonoBehaviour:
     progresso: 0
     ultimaAtualizacao: 0
     habilidadeTecnologia: 7
-    habilidadeDesign: 17
-    habilidadePesquisa: 13
-    nome: Luis Barbosa
+    habilidadeDesign: 16
+    habilidadePesquisa: 7
+    nome: Marisa Dias
+    salario: 900
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 9
+    habilidadeDesign: 16
+    habilidadePesquisa: 12
+    nome: Nicole Santos
     salario: 1110
   - pontosDesignAcumulados: 0
     pontosTecnologiaAcumulados: 0
@@ -41,29 +63,7 @@ MonoBehaviour:
     progresso: 0
     ultimaAtualizacao: 0
     habilidadeTecnologia: 11
-    habilidadeDesign: 9
-    habilidadePesquisa: 17
-    nome: Vinicius Lima
-    salario: 1110
-  - pontosDesignAcumulados: 0
-    pontosTecnologiaAcumulados: 0
-    pontosErroAcumulados: 0
-    pontosPesquisaAcumulados: 0
-    progresso: 0
-    ultimaAtualizacao: 0
-    habilidadeTecnologia: 8
-    habilidadeDesign: 11
+    habilidadeDesign: 15
     habilidadePesquisa: 11
-    nome: Amanda Oliveira
-    salario: 900
-  - pontosDesignAcumulados: 0
-    pontosTecnologiaAcumulados: 0
-    pontosErroAcumulados: 0
-    pontosPesquisaAcumulados: 0
-    progresso: 0
-    ultimaAtualizacao: 0
-    habilidadeTecnologia: 6
-    habilidadeDesign: 19
-    habilidadePesquisa: 8
-    nome: Alice Azevedo
-    salario: 990
+    nome: Isabella Lima
+    salario: 1110

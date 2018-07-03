@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e0c5deff425804ba6e0c1804368739, type: 3}
   m_Name: PerfilSelecionado
   m_EditorClassIdentifier: 
+  temPerfil: 0
   perfil: {fileID: 11400000, guid: 187f931035049b14fa1e674dfa47f2c9, type: 2}
+  indicePerfil: 1

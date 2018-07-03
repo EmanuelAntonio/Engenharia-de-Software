@@ -7,6 +7,7 @@ using UnityEngine;
 public class MetodologiaAtual : ScriptableObject
 {
     public Metodologia metodologia;
+    public int indiceMetodologia;
 
     // TODO(andre:2018-06-24): Considerar criar properties para acessar os valores
     // definidos em Metodologia

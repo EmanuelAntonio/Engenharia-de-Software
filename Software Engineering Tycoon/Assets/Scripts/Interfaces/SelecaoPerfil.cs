@@ -26,7 +26,6 @@ public class SelecaoPerfil : MonoBehaviour
 
     public void PreencherDadosPerfil(Transform perfil, int id)
     {
-        // DadosPerfil dadosPerfil = GerenciadorSalve.instancia.dados.perfil[id];
         DadosPerfil dadosPerfil = listaPerfis.perfis[id];
 
         Transform dados = perfil.Find("Dados");
@@ -76,14 +75,15 @@ public class SelecaoPerfil : MonoBehaviour
     {
         Debug.Log("Abrindo perfil " + id);
 
+        perfilSelecionado.temPerfil = true;
         perfilSelecionado.perfil = listaPerfis.perfis[id];
+        perfilSelecionado.indicePerfil = id;
         SceneManager.LoadScene(perfilSelecionado.perfil.etapa + 1);
     }
 
     public void ApagarPerfil(int id)
     {
         listaPerfis.perfis[id].DefineValores(perfilBase);
-        // Salvar();
 
         PreencherDadosPerfil(perfilPainel.transform.GetChild(id), id);
     }

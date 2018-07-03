@@ -8,7 +8,7 @@ public class GerenciadorProjeto : MonoBehaviour
 {
     public ProjetoAtual projetoAtual;
     public MetodologiaAtual metodologiaAtual;
-    public ListaFuncionarios listaFuncionarios;
+    public ListaFuncionarios listaFuncionariosContratados;
     public PerfilSelecionado perfilSelecionado;
 
     private bool avancarEtapaMetodologiaSemDuracao = false;
@@ -43,7 +43,7 @@ public class GerenciadorProjeto : MonoBehaviour
         projetoAtual.progresso = 0;
 
         metodologiaAtual.metodologia.indiceEtapaAtual = 0;
-        foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+        foreach (Funcionario funcionario in listaFuncionariosContratados.funcionarios)
         {
             funcionario.ComecarProjeto();
         }
@@ -73,7 +73,7 @@ public class GerenciadorProjeto : MonoBehaviour
             while (progressoEtapa < etapaAtual.duracao)
             {
                 progressoEtapa += Time.deltaTime;
-                foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+                foreach (Funcionario funcionario in listaFuncionariosContratados.funcionarios)
                 {
                     funcionario.DesenvolverProjeto(projetoAtual, perfilSelecionado.perfil, etapaAtual);
                 }
@@ -91,7 +91,7 @@ public class GerenciadorProjeto : MonoBehaviour
             avancarEtapaMetodologiaSemDuracao = false;
             while (!avancarEtapaMetodologiaSemDuracao)
             {
-                foreach (Funcionario funcionario in listaFuncionarios.funcionarios)
+                foreach (Funcionario funcionario in listaFuncionariosContratados.funcionarios)
                 {
                     funcionario.DesenvolverProjeto(projetoAtual, perfilSelecionado.perfil, etapaAtual);
                 }

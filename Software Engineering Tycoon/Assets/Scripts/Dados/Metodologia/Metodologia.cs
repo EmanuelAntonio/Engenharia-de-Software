@@ -5,14 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Metodologia
 {
-    public ProjetoAtual projetoAtual;
-
     public List<EtapaMetodologia> etapas;
     public int indiceEtapaAtual;
 
-    public Metodologia(ProjetoAtual projetoAtual)
+    public Metodologia()
     {
-        this.projetoAtual = projetoAtual;
         etapas = new List<EtapaMetodologia>();
     }
 

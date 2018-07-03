@@ -14,7 +14,6 @@ public class GerenciadorEmpresas : MonoBehaviour
     [Range(0, 1)]
     public float dificuldadeAtual;
 
-
     public int quantidadeMaximaFuncionarios;
     public ListaFuncionarios funcionariosDisponiveis;
     public float salarioBase;

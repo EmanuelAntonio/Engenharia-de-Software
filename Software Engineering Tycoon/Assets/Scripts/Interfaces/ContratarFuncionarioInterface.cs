@@ -10,7 +10,7 @@ public class ContratarFuncionarioInterface : MonoBehaviour
     public GameObject abaFuncionarioPrefab;
     public GameObject detalhesFuncionarioPrefab;
 
-    private Abas abasProjetos;
+    private Abas abasFuncionarios;
     private Button aceitarFuncionarioBotao;
 
     public ListaFuncionarios funcionariosDisponiveis;
@@ -19,7 +19,7 @@ public class ContratarFuncionarioInterface : MonoBehaviour
     private bool _started = false;
     void Start()
     {
-        abasProjetos = transform.Find("AreaFuncionarios/ListaFuncionarios").GetComponent<Abas>();
+        abasFuncionarios = transform.Find("AreaFuncionarios/ListaFuncionarios").GetComponent<Abas>();
         aceitarFuncionarioBotao = transform.Find("AceitarBotao").GetComponent<Button>();
 
         _started = true;
@@ -37,24 +37,24 @@ public class ContratarFuncionarioInterface : MonoBehaviour
     {
         // TODO(andre>2018-06-25): Quando for criada a mensagem dizendo que a lista
         // foi atualizada, atualizar a lista de projeto apenas quando receber a mensagem.
-        AtualizarListaProjetos();
+        AtualizarListaFuncionarios();
 
-        AtualizarBotaoAceitarProjeto();
+        AtualizarBotaoContratarFuncionario();
     }
 
-    public void AtualizarListaProjetos()
+    public void AtualizarListaFuncionarios()
     {
-        abasProjetos.LimparAbas();
+        abasFuncionarios.LimparAbas();
 
         foreach (Funcionario funcionario in funcionariosDisponiveis.funcionarios)
         {
-            GameObject abaProjeto = Instantiate(abaFuncionarioPrefab);
-            GameObject detalhesProjeto = Instantiate(detalhesFuncionarioPrefab);
+            GameObject abaFuncionario = Instantiate(abaFuncionarioPrefab);
+            GameObject detalhesFuncionario = Instantiate(detalhesFuncionarioPrefab);
 
-            GameObject abaNome = abaProjeto.transform.Find("Nome").gameObject;
+            GameObject abaNome = abaFuncionario.transform.Find("Nome").gameObject;
             abaNome.GetComponent<TextMeshProUGUI>().text = funcionario.GetNome();
 
-            Transform detalhesTransform = detalhesProjeto.transform;
+            Transform detalhesTransform = detalhesFuncionario.transform;
 
             GameObject detalhesNomeEmpresa = detalhesTransform.Find("Nome").gameObject;
             detalhesNomeEmpresa.GetComponent<TextMeshProUGUI>().text = funcionario.GetNome();
@@ -71,29 +71,29 @@ public class ContratarFuncionarioInterface : MonoBehaviour
             GameObject detalhesPagamento = detalhesTransform.Find("MultaPagamento/Pagamento").gameObject;
             detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Salário: R$ " + funcionario.GetSalario().ToString();
 
-            abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
+            abasFuncionarios.CriarAba(abaFuncionario, detalhesFuncionario);
         }
 
-        AtualizarBotaoAceitarProjeto();
+        AtualizarBotaoContratarFuncionario();
     }
 
     public void AceitarFuncionarioSelecionado()
     {
-        int funcionarioSelecionado = abasProjetos.ObterAbaSelecionada();
+        int funcionarioSelecionado = abasFuncionarios.ObterAbaSelecionada();
 
         if (funcionarioSelecionado >= 0)
         {
             funcionariosContratados.funcionarios.Add(funcionariosDisponiveis.funcionarios[funcionarioSelecionado]);
 
-            abasProjetos.RemoverAba(funcionarioSelecionado);
+            abasFuncionarios.RemoverAba(funcionarioSelecionado);
             funcionariosDisponiveis.funcionarios.RemoveAt(funcionarioSelecionado);
 
-            AtualizarBotaoAceitarProjeto();
+            AtualizarBotaoContratarFuncionario();
         }
     }
 
-    public void AtualizarBotaoAceitarProjeto()
+    public void AtualizarBotaoContratarFuncionario()
     {
-        aceitarFuncionarioBotao.interactable = (abasProjetos.abaAtiva != null);
+        aceitarFuncionarioBotao.interactable = (abasFuncionarios.abaAtiva != null);
     }
 }

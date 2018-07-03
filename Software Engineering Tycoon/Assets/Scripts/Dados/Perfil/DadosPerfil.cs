@@ -12,7 +12,7 @@ public class DadosPerfil : ScriptableObject
     public int mes;
     public int ano;
     public int etapa;
-    public int maximoFuncionario;
+    public int maximoFuncionarios;
     public int pontosPesquisa;
     public float verba;
     public bool novoPerfil;
@@ -22,49 +22,49 @@ public class DadosPerfil : ScriptableObject
     // instância para outra
     public void DefineValores(DadosPerfil perfil)
     {
-        nomeEmpresa       = perfil.nomeEmpresa;
-        nomeJogador       = perfil.nomeJogador;
-        dia               = perfil.dia;
-        mes               = perfil.mes;
-        ano               = perfil.ano;
-        etapa             = perfil.etapa;
-        maximoFuncionario = perfil.maximoFuncionario;
-        pontosPesquisa    = perfil.pontosPesquisa;
-        verba             = perfil.verba;
-        novoPerfil        = perfil.novoPerfil;
-        etapaTutorial     = perfil.etapaTutorial;
+        nomeEmpresa        = perfil.nomeEmpresa;
+        nomeJogador        = perfil.nomeJogador;
+        dia                = perfil.dia;
+        mes                = perfil.mes;
+        ano                = perfil.ano;
+        etapa              = perfil.etapa;
+        maximoFuncionarios = perfil.maximoFuncionarios;
+        pontosPesquisa     = perfil.pontosPesquisa;
+        verba              = perfil.verba;
+        novoPerfil         = perfil.novoPerfil;
+        etapaTutorial      = perfil.etapaTutorial;
     }
 
     public void DefineSerializavel(DadosPerfilSerializavel perfil)
     {
-        nomeEmpresa       = perfil.nomeEmpresa;
-        nomeJogador       = perfil.nomeJogador;
-        dia               = perfil.dia;
-        mes               = perfil.mes;
-        ano               = perfil.ano;
-        etapa             = perfil.etapa;
-        maximoFuncionario = perfil.maximoFuncionario;
-        pontosPesquisa    = perfil.pontosPesquisa;
-        verba             = perfil.verba;
-        novoPerfil        = perfil.novoPerfil;
-        etapaTutorial     = perfil.etapaTutorial;
+        nomeEmpresa        = perfil.nomeEmpresa;
+        nomeJogador        = perfil.nomeJogador;
+        dia                = perfil.dia;
+        mes                = perfil.mes;
+        ano                = perfil.ano;
+        etapa              = perfil.etapa;
+        maximoFuncionarios = perfil.maximoFuncionarios;
+        pontosPesquisa     = perfil.pontosPesquisa;
+        verba              = perfil.verba;
+        novoPerfil         = perfil.novoPerfil;
+        etapaTutorial      = perfil.etapaTutorial;
     }
 
     public DadosPerfilSerializavel Serializavel()
     {
         DadosPerfilSerializavel resultado = new DadosPerfilSerializavel();
 
-        resultado.nomeEmpresa       = nomeEmpresa;
-        resultado.nomeJogador       = nomeJogador;
-        resultado.dia               = dia;
-        resultado.mes               = mes;
-        resultado.ano               = ano;
-        resultado.etapa             = etapa;
-        resultado.maximoFuncionario = maximoFuncionario;
-        resultado.pontosPesquisa    = pontosPesquisa;
-        resultado.verba             = verba;
-        resultado.novoPerfil        = novoPerfil;
-        resultado.etapaTutorial     = etapaTutorial;
+        resultado.nomeEmpresa        = nomeEmpresa;
+        resultado.nomeJogador        = nomeJogador;
+        resultado.dia                = dia;
+        resultado.mes                = mes;
+        resultado.ano                = ano;
+        resultado.etapa              = etapa;
+        resultado.maximoFuncionarios = maximoFuncionarios;
+        resultado.pontosPesquisa     = pontosPesquisa;
+        resultado.verba              = verba;
+        resultado.novoPerfil         = novoPerfil;
+        resultado.etapaTutorial      = etapaTutorial;
 
         return resultado;
     }
@@ -79,7 +79,7 @@ public class DadosPerfilSerializavel
     public int mes;
     public int ano;
     public int etapa;
-    public int maximoFuncionario;
+    public int maximoFuncionarios;
     public int pontosPesquisa;
     public float verba;
     public bool novoPerfil;

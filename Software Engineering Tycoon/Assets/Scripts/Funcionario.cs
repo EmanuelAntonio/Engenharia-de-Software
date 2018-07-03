@@ -12,12 +12,11 @@ public class Funcionario
     public float progresso;
     public float ultimaAtualizacao;
 
+
     [SerializeField]
     private int habilidadeTecnologia;
-
     [SerializeField]
     private int habilidadeDesign;
-
     [SerializeField]
     private int habilidadePesquisa;
 

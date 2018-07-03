@@ -66,4 +66,27 @@ public class Pesquisa : ScriptableObject
             pesquisa.desbloqueada = true;
         }
     }
+
+    public void DefineSerializavel(PesquisaSerializavel serializavel)
+    {
+        desbloqueada = serializavel.desbloqueada;
+        pesquisada = serializavel.pesquisada;
+    }
+
+    public PesquisaSerializavel Serializavel()
+    {
+        PesquisaSerializavel resultado = new PesquisaSerializavel();
+
+        resultado.desbloqueada = desbloqueada;
+        resultado.pesquisada = pesquisada;
+
+        return resultado;
+    }
+}
+
+[System.Serializable]
+public class PesquisaSerializavel
+{
+    public bool desbloqueada;
+    public bool pesquisada;
 }

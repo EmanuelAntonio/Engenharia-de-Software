@@ -11,4 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59aaf0ef56326894f920c56799af37e4, type: 3}
   m_Name: ListaFuncionariosContratados
   m_EditorClassIdentifier: 
-  funcionarios: []
+  funcionarios:
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 10
+    habilidadeDesign: 10
+    habilidadePesquisa: 10
+    nome: rfghghf
+    salario: 10

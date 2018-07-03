@@ -81,8 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listaPerfis: {fileID: 11400000, guid: f93b9319959a5cf48ad9c6bae09a01bb, type: 2}
+  perfilSelecionado: {fileID: 11400000, guid: eb3766776921b5749aec25527fca1fd6, type: 2}
   perfilBase: {fileID: 11400000, guid: 215e586392bd2544e8f1080cc58ac6a1, type: 2}
   projetoAtual: {fileID: 11400000, guid: 1afeae2b6a58eb647a8845035014475b, type: 2}
-  listaFuncionarios: {fileID: 11400000, guid: 5adf4d32c15180a4b8c1dff5ee40f625, type: 2}
+  listaFuncionarios: {fileID: 11400000, guid: 4e2904eeb65da12499dccd2bdc9c52bc, type: 2}
   listaMetodologias: {fileID: 11400000, guid: d400157cd0b12384096b2b557235d775, type: 2}
   metodologiaAtual: {fileID: 11400000, guid: 190d0fbe6e65ce14c8a022bbf7bafb6a, type: 2}
+  listaPesquisas: {fileID: 11400000, guid: eb5e03cb4f93bf7489a0a3b3a02dbea3, type: 2}

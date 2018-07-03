@@ -17,7 +17,7 @@ MonoBehaviour:
   mes: 1
   ano: 1970
   etapa: 0
-  maximoFuncionario: 0
+  maximoFuncionarios: 1
   pontosPesquisa: 0
   verba: 15000
   novoPerfil: 1
