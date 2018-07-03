@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class GerenciadorProjeto : MonoBehaviour
 {
     public ProjetoAtual projetoAtual;
+    public ListaProjetos projetosConcluidos;
     public MetodologiaAtual metodologiaAtual;
     public ListaFuncionarios listaFuncionariosContratados;
     public PerfilSelecionado perfilSelecionado;
@@ -131,6 +132,8 @@ public class GerenciadorProjeto : MonoBehaviour
         projetoAtual.projeto.CalcularAvaliacao();
         perfilSelecionado.perfil.verba += projetoAtual.projeto.valorPagamento * projetoAtual.projeto.avaliacao;
         projetoAtual.temProjeto = false;
+
+        projetosConcluidos.projetos.Add(projetoAtual.projeto);
 
         eventoConcluirProjeto.Invoke();
         eventoSalvarJogo.Invoke();
