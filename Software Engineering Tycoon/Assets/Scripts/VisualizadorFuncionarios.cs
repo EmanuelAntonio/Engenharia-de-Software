@@ -13,7 +13,7 @@ public class VisualizadorFuncionarios : MonoBehaviour {
 
     public void AtualizarFuncionarios()
     {
-        int numChilds = 0;
+        int numChilds = 1;
         foreach(Transform modeloFuncionario in transform)
         {
             numChilds++;

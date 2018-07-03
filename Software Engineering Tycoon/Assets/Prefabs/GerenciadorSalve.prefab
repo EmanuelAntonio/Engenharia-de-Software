@@ -88,3 +88,5 @@ MonoBehaviour:
   listaMetodologias: {fileID: 11400000, guid: d400157cd0b12384096b2b557235d775, type: 2}
   metodologiaAtual: {fileID: 11400000, guid: 190d0fbe6e65ce14c8a022bbf7bafb6a, type: 2}
   listaPesquisas: {fileID: 11400000, guid: eb5e03cb4f93bf7489a0a3b3a02dbea3, type: 2}
+  listaProjetosConcluidos: {fileID: 11400000, guid: 0761d04f98d10554aad90921a5751028,
+    type: 2}

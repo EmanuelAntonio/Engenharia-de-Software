@@ -14,6 +14,7 @@ public class GerenciadorSalve : MonoBehaviour
     public ListaMetodologias listaMetodologias;
     public MetodologiaAtual metodologiaAtual;
     public ListaPesquisas listaPesquisas;
+    public ListaProjetos listaProjetosConcluidos;
 
     private string caminhoArquivo;
 
@@ -90,6 +91,8 @@ public class GerenciadorSalve : MonoBehaviour
 
     public void Carregar()
     {
+        listaProjetosConcluidos.projetos.Clear();
+
         if (File.Exists(caminhoArquivo))
         {
             string jsonString = File.ReadAllText(caminhoArquivo);

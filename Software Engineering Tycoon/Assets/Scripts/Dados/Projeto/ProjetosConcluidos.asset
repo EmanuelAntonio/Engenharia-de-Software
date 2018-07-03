@@ -11,4 +11,126 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5c387bc7c99964a972ef2771928ca0, type: 3}
   m_Name: ProjetosConcluidos
   m_EditorClassIdentifier: 
-  projetos: []
+  projetos:
+  - tipoEmpresa: Posto de Gasolina
+    nomeEmpresa: Alessandreia Inc.
+    descricao: O cliente precisa de um software para gerenciar as vendas e o estoque
+      do posto de gasolina
+    valorPagamento: 10616.13
+    multaAtraso: 119.06
+    tamanhoEmpresa: 18
+    experienciaUsuario: 0.1480937
+    prioridadesDesign:
+      coletaDados: 0.1
+      estudoDominio: 0.5
+      documentacao: 0.1
+      legibilidade: 0.1
+      qualidadeSolucao: 0.1
+      desenvolvimentoInterface: 0.8
+      testes: 0.1
+      avaliacaoCliente: 0.5
+      implantacao: 0.1
+    prioridadesTecnologia:
+      coletaDados: 0.494
+      estudoDominio: 0.308
+      documentacao: 0.489
+      legibilidade: 0.316
+      qualidadeSolucao: 0.687
+      desenvolvimentoInterface: 0.127
+      testes: 0.473
+      avaliacaoCliente: 1
+      implantacao: 0.473
+    descricaoTipoEmpresa: {fileID: 11400000, guid: e86d53fd56f5a1e43bfd26ee1b0fee15,
+      type: 2}
+    pontosErro: 0
+    pontosTecnologia: 56
+    pontosDesign: 36
+    pontosTecnologiaEsperado: 27
+    pontosDesignEsperado: 22
+    penalidadeErro: 0.01
+    penalidadeTecnologia: 0.01
+    penalidadeDesign: 0.01
+    avaliacao: 1
+    dicaProjeto: "Essa \xE9 uma dica boa"
+  - tipoEmpresa: Padaria
+    nomeEmpresa: "Padaria do p\xE3o"
+    descricao: O cliente precisa de um software para gerenciar as vendas e o estoque
+      da padaria
+    valorPagamento: 3455.42
+    multaAtraso: 41.78
+    tamanhoEmpresa: 3
+    experienciaUsuario: 0.08683475
+    prioridadesDesign:
+      coletaDados: 0.1
+      estudoDominio: 0.5
+      documentacao: 0.1
+      legibilidade: 0.1
+      qualidadeSolucao: 0.1
+      desenvolvimentoInterface: 0.8
+      testes: 0.1
+      avaliacaoCliente: 0.5
+      implantacao: 0.1
+    prioridadesTecnologia:
+      coletaDados: 0.4
+      estudoDominio: 0.1
+      documentacao: 0.146
+      legibilidade: 0.139
+      qualidadeSolucao: 0.287
+      desenvolvimentoInterface: 0.1
+      testes: 0.168
+      avaliacaoCliente: 1
+      implantacao: 0.168
+    descricaoTipoEmpresa: {fileID: 11400000, guid: e962d651b2266d64da4932a54656d096,
+      type: 2}
+    pontosErro: 0
+    pontosTecnologia: 0
+    pontosDesign: 0
+    pontosTecnologiaEsperado: 16
+    pontosDesignEsperado: 10
+    penalidadeErro: 0.01
+    penalidadeTecnologia: 0.01
+    penalidadeDesign: 0.01
+    avaliacao: 0.74
+    dicaProjeto: "Avalia\xE7\xE3o com o Cliente\xE9 pouco importante para esse tipo
+      de projeto."
+  - tipoEmpresa: Posto de Gasolina
+    nomeEmpresa: Alessandreia Inc.
+    descricao: O cliente precisa de um software para gerenciar as vendas e o estoque
+      do posto de gasolina
+    valorPagamento: 5442.93
+    multaAtraso: 91.98
+    tamanhoEmpresa: 22
+    experienciaUsuario: 0.17537825
+    prioridadesDesign:
+      coletaDados: 0.1
+      estudoDominio: 0.5
+      documentacao: 0.1
+      legibilidade: 0.1
+      qualidadeSolucao: 0.1
+      desenvolvimentoInterface: 0.8
+      testes: 0.1
+      avaliacaoCliente: 0.5
+      implantacao: 0.1
+    prioridadesTecnologia:
+      coletaDados: 0.494
+      estudoDominio: 0.308
+      documentacao: 0.489
+      legibilidade: 0.316
+      qualidadeSolucao: 0.687
+      desenvolvimentoInterface: 0.127
+      testes: 0.473
+      avaliacaoCliente: 1
+      implantacao: 0.473
+    descricaoTipoEmpresa: {fileID: 11400000, guid: e86d53fd56f5a1e43bfd26ee1b0fee15,
+      type: 2}
+    pontosErro: 0
+    pontosTecnologia: 26
+    pontosDesign: 21
+    pontosTecnologiaEsperado: 17
+    pontosDesignEsperado: 20
+    penalidadeErro: 0.01
+    penalidadeTecnologia: 0.01
+    penalidadeDesign: 0.01
+    avaliacao: 1
+    dicaProjeto: "Qualidade da Solu\xE7\xE3o \xE9 pouco importante para esse tipo
+      de projeto."
