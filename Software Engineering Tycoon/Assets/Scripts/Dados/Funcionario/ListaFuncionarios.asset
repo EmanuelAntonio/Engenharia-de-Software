@@ -11,4 +11,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59aaf0ef56326894f920c56799af37e4, type: 3}
   m_Name: ListaFuncionarios
   m_EditorClassIdentifier: 
-  funcionarios: []
+  funcionarios:
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 10
+    habilidadeDesign: 10
+    habilidadePesquisa: 11
+    nome: Eduarda Pereira
+    salario: 930
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 7
+    habilidadeDesign: 17
+    habilidadePesquisa: 13
+    nome: Luis Barbosa
+    salario: 1110
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 11
+    habilidadeDesign: 9
+    habilidadePesquisa: 17
+    nome: Vinicius Lima
+    salario: 1110
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 8
+    habilidadeDesign: 11
+    habilidadePesquisa: 11
+    nome: Amanda Oliveira
+    salario: 900
+  - pontosDesignAcumulados: 0
+    pontosTecnologiaAcumulados: 0
+    pontosErroAcumulados: 0
+    pontosPesquisaAcumulados: 0
+    progresso: 0
+    ultimaAtualizacao: 0
+    habilidadeTecnologia: 6
+    habilidadeDesign: 19
+    habilidadePesquisa: 8
+    nome: Alice Azevedo
+    salario: 990

@@ -14,6 +14,12 @@ public class GerenciadorTempo : MonoBehaviour
 
     public UnityEvent eventoSalvarJogo;
     public UnityEvent eventoGerarListaProjetos;
+    public UnityEvent eventoGerarListaFuncionarios;
+
+    void Start()
+    {
+        eventoGerarListaFuncionarios.Invoke();
+    }
 
     void Update()
     {
@@ -33,6 +39,7 @@ public class GerenciadorTempo : MonoBehaviour
                 perfilSelecionado.perfil.mes += 1;
 
                 eventoGerarListaProjetos.Invoke();
+                eventoGerarListaFuncionarios.Invoke();
 
                 if (perfilSelecionado.perfil.mes > 12)
                 {

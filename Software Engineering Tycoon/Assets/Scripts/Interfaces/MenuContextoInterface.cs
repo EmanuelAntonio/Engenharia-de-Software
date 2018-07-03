@@ -52,7 +52,7 @@ public class MenuContextoInterface : MonoBehaviour
         novoProjeto.gameObject.SetActive(!projetoAtual.temProjeto);
         pesquisas.gameObject.SetActive(true);
         relatorios.gameObject.SetActive(true);
-        contratarFuncionario.gameObject.SetActive(perfilSelecionado.perfil.etapa > 0);
+        contratarFuncionario.gameObject.SetActive(true);
         avancarEscritorio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 0 && perfilSelecionado.perfil.ano >= 1971 && perfilSelecionado.perfil.verba > 30000));
         avancarPredio.gameObject.SetActive((!projetoAtual.temProjeto && perfilSelecionado.perfil.etapa == 1 && perfilSelecionado.perfil.ano >= 1972 && perfilSelecionado.perfil.verba > 100000));
         salvarSair.gameObject.SetActive(true);

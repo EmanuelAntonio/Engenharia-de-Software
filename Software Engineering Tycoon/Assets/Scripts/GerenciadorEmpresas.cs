@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GerenciadorEmpresas : MonoBehaviour
 {
+    private GeradorNomes geradorNomes = null;
     public List<DescricaoTipoEmpresa> descricaoTiposEmpresas;
 
     public float quantidadeMaximaProjetos;
@@ -12,6 +13,12 @@ public class GerenciadorEmpresas : MonoBehaviour
     // TODO:(andre:2018-06-25): Remover dificuldade dessa classe e mover para o perfil
     [Range(0, 1)]
     public float dificuldadeAtual;
+
+
+    public int quantidadeMaximaFuncionarios;
+    public ListaFuncionarios funcionariosDisponiveis;
+    public float salarioBase;
+    public int pontosHabilidadesBase;
 
     public void AtualizarListaProjetos()
     {
@@ -76,5 +83,36 @@ public class GerenciadorEmpresas : MonoBehaviour
                                       tipoSelecionado);
 
         return projeto;
+    }
+
+    public void AtualizarListaFuncionarios()
+    {
+        if (geradorNomes == null)
+            geradorNomes = new GeradorNomes();
+
+        funcionariosDisponiveis.funcionarios.Clear();
+        for (int i = 0; i < quantidadeMaximaFuncionarios; ++i)
+        {
+            funcionariosDisponiveis.funcionarios.Add(GerarFuncionario(pontosHabilidadesBase + Random.Range(0, (int)(0.3f* pontosHabilidadesBase))));
+        }
+    }
+
+    public Funcionario GerarFuncionario(int totalPontos)
+    {
+        float minimoArea = 0.2f;
+        float porcentagemDesign = Random.Range(minimoArea, 1.0f - 2.0f*minimoArea);
+        float porcentagemTecnologia = Random.Range(minimoArea, 1.0f - porcentagemDesign - minimoArea);
+
+        int pontoTecnologia = (int)(porcentagemTecnologia * totalPontos);
+        int pontoDesign     = (int)(porcentagemDesign     * totalPontos);
+        int pontoPesquisa   = totalPontos - pontoDesign - pontoTecnologia;
+        float salario = salarioBase * totalPontos;
+
+        Funcionario funcionario = new Funcionario(pontoTecnologia, pontoDesign, pontoPesquisa, salario);
+
+        string nomeAleatorio = geradorNomes.GerarNome();
+        funcionario.SetNome(nomeAleatorio);
+
+        return funcionario;
     }
 }

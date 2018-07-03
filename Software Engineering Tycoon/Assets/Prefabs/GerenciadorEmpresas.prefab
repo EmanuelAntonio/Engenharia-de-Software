@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4354535264917208}
   - component: {fileID: 114503558022864902}
   - component: {fileID: 114376513460130968}
+  - component: {fileID: 114665700164932660}
   m_Layer: 0
   m_Name: GerenciadorEmpresas
   m_TagString: Untagged
@@ -92,4 +93,37 @@ MonoBehaviour:
   quantidadeMaximaProjetos: 5
   projetosDisponiveis: {fileID: 11400000, guid: 33d899c7a031e4b44be54a27410012d9,
     type: 2}
-  dificuldadeAtual: 0.5
+  dificuldadeAtual: 0.6
+  quantidadeMaximaFuncionarios: 5
+  funcionariosDisponiveis: {fileID: 11400000, guid: 5adf4d32c15180a4b8c1dff5ee40f625,
+    type: 2}
+  salarioBase: 30
+  pontosHabilidadesBase: 30
+--- !u!114 &114665700164932660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046590847819752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e54107e6b2456a44a471cdbce483735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: 829fad9379146f04fb9965acfee759f7, type: 2}
+  resposta:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114503558022864902}
+        m_MethodName: AtualizarListaFuncionarios
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

@@ -13,8 +13,8 @@ public class ContratarFuncionarioInterface : MonoBehaviour
     private Abas abasProjetos;
     private Button aceitarFuncionarioBotao;
 
-    public ProjetoAtual projetoAtual;
-    public ListaProjetos projetosDisponiveis;
+    public ListaFuncionarios funcionariosDisponiveis;
+    public ListaFuncionarios funcionariosContratados;
 
     private bool _started = false;
     void Start()
@@ -46,27 +46,30 @@ public class ContratarFuncionarioInterface : MonoBehaviour
     {
         abasProjetos.LimparAbas();
 
-        foreach (Projeto projeto in projetosDisponiveis.projetos)
+        foreach (Funcionario funcionario in funcionariosDisponiveis.funcionarios)
         {
             GameObject abaProjeto = Instantiate(abaFuncionarioPrefab);
             GameObject detalhesProjeto = Instantiate(detalhesFuncionarioPrefab);
 
             GameObject abaNome = abaProjeto.transform.Find("Nome").gameObject;
-            abaNome.GetComponent<TextMeshProUGUI>().text = projeto.tipoEmpresa;
+            abaNome.GetComponent<TextMeshProUGUI>().text = funcionario.GetNome();
 
             Transform detalhesTransform = detalhesProjeto.transform;
 
             GameObject detalhesNomeEmpresa = detalhesTransform.Find("Nome").gameObject;
-            detalhesNomeEmpresa.GetComponent<TextMeshProUGUI>().text = projeto.nomeEmpresa;
+            detalhesNomeEmpresa.GetComponent<TextMeshProUGUI>().text = funcionario.GetNome();
 
             GameObject requisitosDesign = detalhesTransform.Find("Requisitos/Design/Texto").gameObject;
-            requisitosDesign.GetComponent<TextMeshProUGUI>().text = projeto.pontosDesignEsperado.ToString();
+            requisitosDesign.GetComponent<TextMeshProUGUI>().text = funcionario.GetHabilidadeDesign().ToString();
 
             GameObject requisitosTecnologia = detalhesTransform.Find("Requisitos/Tecnologia/Texto").gameObject;
-            requisitosTecnologia.GetComponent<TextMeshProUGUI>().text = projeto.pontosTecnologiaEsperado.ToString();
+            requisitosTecnologia.GetComponent<TextMeshProUGUI>().text = funcionario.GetHabilidadeTecnologia().ToString();
+
+            GameObject requisitosPesquisa = detalhesTransform.Find("Requisitos/Pesquisa/Texto").gameObject;
+            requisitosPesquisa.GetComponent<TextMeshProUGUI>().text = funcionario.GetHabilidadePesquisa().ToString();
 
             GameObject detalhesPagamento = detalhesTransform.Find("MultaPagamento/Pagamento").gameObject;
-            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Salário: R$ " + projeto.valorPagamento;
+            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Salário: R$ " + funcionario.GetSalario().ToString();
 
             abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
         }
@@ -74,17 +77,16 @@ public class ContratarFuncionarioInterface : MonoBehaviour
         AtualizarBotaoAceitarProjeto();
     }
 
-    public void AceitarProjetoSelecionado()
+    public void AceitarFuncionarioSelecionado()
     {
-        int projetoSelecionado = abasProjetos.ObterAbaSelecionada();
+        int funcionarioSelecionado = abasProjetos.ObterAbaSelecionada();
 
-        if (projetoSelecionado >= 0)
+        if (funcionarioSelecionado >= 0)
         {
-            projetoAtual.temProjeto = true;
-            projetoAtual.projeto = projetosDisponiveis.projetos[projetoSelecionado];
+            funcionariosContratados.funcionarios.Add(funcionariosDisponiveis.funcionarios[funcionarioSelecionado]);
 
-            abasProjetos.RemoverAba(projetoSelecionado);
-            projetosDisponiveis.projetos.RemoveAt(projetoSelecionado);
+            abasProjetos.RemoverAba(funcionarioSelecionado);
+            funcionariosDisponiveis.funcionarios.RemoveAt(funcionarioSelecionado);
 
             AtualizarBotaoAceitarProjeto();
         }

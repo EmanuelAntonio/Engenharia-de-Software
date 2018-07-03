@@ -12,10 +12,19 @@ public class Funcionario
     public float progresso;
     public float ultimaAtualizacao;
 
+    [SerializeField]
     private int habilidadeTecnologia;
+
+    [SerializeField]
     private int habilidadeDesign;
+
+    [SerializeField]
     private int habilidadePesquisa;
 
+    [SerializeField]
+    private string nome;
+
+    [SerializeField]
     private float salario;
 
     public Funcionario(int habilidadeTecnologia, int habilidadeDesign, int habilidadePesquisa, float salario)
@@ -124,5 +133,15 @@ public class Funcionario
     public void SetSalario(float salario)
     {
         this.salario = salario;
+    }
+
+    public void SetNome(string nome)
+    {
+        this.nome = nome;
+    }
+
+    public string GetNome()
+    {
+        return this.nome;
     }
 }
