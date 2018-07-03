@@ -34,6 +34,8 @@ public class Projeto
 
     public float avaliacao;
 
+    public string dicaProjeto;
+
     public Projeto(string tipoEmpresa, string nomeEmpresa, string descricao, float valorPagamento, float multaAtraso, int tamanhoEmpresa, float experienciaUsuario,
                    int pontosDesignEsperado, int pontosTecnologiaEsperado, Prioridades prioridadesDesign, Prioridades prioridadesTecnologia,
                    DescricaoTipoEmpresa descricaoTipoEmpresa = null)
@@ -54,6 +56,8 @@ public class Projeto
         this.prioridadesTecnologia = prioridadesTecnologia;
 
         this.descricaoTipoEmpresa = descricaoTipoEmpresa;
+
+        this.dicaProjeto = "";
     }
 
     public void CalcularAvaliacao()

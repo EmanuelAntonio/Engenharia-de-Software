@@ -89,7 +89,7 @@ public class VisualizarRelatoriosInterface : MonoBehaviour
             requisitosTecnologiaEsp.GetComponent<TextMeshProUGUI>().text = projeto.pontosTecnologiaEsperado.ToString();
 
             GameObject detalhesPagamento = detalhesTransform.Find("Dica").gameObject;
-            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = "Uma dica sobre o desenvolvimento vem aqui";
+            detalhesPagamento.GetComponent<TextMeshProUGUI>().text = projeto.dicaProjeto;
 
             abasProjetos.CriarAba(abaProjeto, detalhesProjeto);
         }
